@@ -18,10 +18,10 @@ export default class Preload extends Phaser.Scene {
 	editorCreate(): void {
 
 		// progress
-		const progress = this.add.text(400, 349, "", {});
+		const progress = this.add.text(400, 360, "", {});
 		progress.setOrigin(0.5, 0.5);
 		progress.text = "0%";
-		progress.setStyle({ "fontSize": "30px" });
+		progress.setStyle({ "fontFamily": "monospace", "fontSize": "40px" });
 
 		// bicho_preload
 		this.add.image(400, 259, "bicho-preload");

@@ -19,11 +19,12 @@
                 "PreloadText"
             ],
             "x": 400,
-            "y": 349,
+            "y": 360,
             "originX": 0.5,
             "originY": 0.5,
             "text": "0%",
-            "fontSize": "30px"
+            "fontFamily": "monospace",
+            "fontSize": "40px"
         },
         {
             "type": "Image",
