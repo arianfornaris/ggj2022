@@ -26,7 +26,7 @@
 },
 "Bicho-Up_1.png":
 {
-	"frame": {"x":0,"y":130,"w":140,"h":130},
+	"frame": {"x":420,"y":0,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -34,7 +34,7 @@
 },
 "Bicho-Up_2.png":
 {
-	"frame": {"x":140,"y":130,"w":140,"h":130},
+	"frame": {"x":560,"y":0,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -42,7 +42,7 @@
 },
 "Bicho-Up_3.png":
 {
-	"frame": {"x":280,"y":130,"w":140,"h":130},
+	"frame": {"x":0,"y":130,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -50,7 +50,7 @@
 },
 "Bicho-Walk_1.png":
 {
-	"frame": {"x":0,"y":260,"w":140,"h":130},
+	"frame": {"x":140,"y":130,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -58,7 +58,7 @@
 },
 "Bicho-Walk_2.png":
 {
-	"frame": {"x":140,"y":260,"w":140,"h":130},
+	"frame": {"x":280,"y":130,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -66,7 +66,7 @@
 },
 "Bicho.png":
 {
-	"frame": {"x":280,"y":260,"w":140,"h":130},
+	"frame": {"x":420,"y":130,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -74,7 +74,7 @@
 },
 "Conejo.png":
 {
-	"frame": {"x":0,"y":390,"w":140,"h":130},
+	"frame": {"x":560,"y":130,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -82,7 +82,7 @@
 },
 "Conejo_Down.png":
 {
-	"frame": {"x":140,"y":390,"w":140,"h":130},
+	"frame": {"x":0,"y":260,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -90,7 +90,7 @@
 },
 "Conejo_Idle1.png":
 {
-	"frame": {"x":280,"y":390,"w":140,"h":130},
+	"frame": {"x":140,"y":260,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -98,7 +98,7 @@
 },
 "Conejo_Idle2.png":
 {
-	"frame": {"x":0,"y":520,"w":140,"h":130},
+	"frame": {"x":280,"y":260,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -106,7 +106,7 @@
 },
 "Conejo_up1.png":
 {
-	"frame": {"x":140,"y":520,"w":140,"h":130},
+	"frame": {"x":420,"y":260,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -114,7 +114,7 @@
 },
 "Conejo_up2.png":
 {
-	"frame": {"x":280,"y":520,"w":140,"h":130},
+	"frame": {"x":560,"y":260,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -122,7 +122,7 @@
 },
 "Conejo_up3.png":
 {
-	"frame": {"x":0,"y":650,"w":140,"h":130},
+	"frame": {"x":0,"y":390,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -130,7 +130,7 @@
 },
 "Conejo_walk1.png":
 {
-	"frame": {"x":140,"y":650,"w":140,"h":130},
+	"frame": {"x":140,"y":390,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
@@ -138,19 +138,51 @@
 },
 "Conejo_walk2.png":
 {
-	"frame": {"x":280,"y":650,"w":140,"h":130},
+	"frame": {"x":280,"y":390,"w":140,"h":130},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
 	"sourceSize": {"w":140,"h":130}
+},
+"Flor_0.png":
+{
+	"frame": {"x":420,"y":390,"w":120,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
+	"sourceSize": {"w":120,"h":120}
+},
+"Flor_1.png":
+{
+	"frame": {"x":540,"y":390,"w":120,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
+	"sourceSize": {"w":120,"h":120}
+},
+"Flor_2.png":
+{
+	"frame": {"x":0,"y":520,"w":120,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
+	"sourceSize": {"w":120,"h":120}
+},
+"Flor_4.png":
+{
+	"frame": {"x":120,"y":520,"w":120,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
+	"sourceSize": {"w":120,"h":120}
 }},
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "character.png",
 	"format": "RGBA8888",
-	"size": {"w":420,"h":780},
+	"size": {"w":700,"h":640},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:199e05f780d3fcbb0a6a1aa71991a411:8bcbaaf5be0310897eed2f236b41c953:42e475aa4a03af306bdc7acb5ff91d19$"
+	"smartupdate": "$TexturePacker:SmartUpdate:83b93903dde5aa3685f8484c79899918:ba57ba3ce68f4f463039f6fd4441f02a:42e475aa4a03af306bdc7acb5ff91d19$"
 }
 }

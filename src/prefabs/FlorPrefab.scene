@@ -1,0 +1,33 @@
+{
+    "id": "0aca9e22-1fc6-4705-8176-a760a531bdbf",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT"
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "c4d8f7ae-4b9e-4d4d-acb5-a69e304826ff",
+            "label": "flor_0_png",
+            "components": [],
+            "texture": {
+                "key": "character",
+                "frame": "Flor_0.png"
+            },
+            "x": 300,
+            "y": 146
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

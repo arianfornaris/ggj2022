@@ -1,23 +1,23 @@
 
 // You can write more code here
 
-import ArcadeSpritePrefab from "./ArcadeSpritePrefab";
-import PlayerPrefab from "./PlayerPrefab";
-
 /* START OF COMPILED CODE */
 
-export default class SemillaPrefab extends ArcadeSpritePrefab {
+import Phaser from "phaser";
+
+export default class FlorPrefab extends Phaser.GameObjects.Sprite {
 
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
-		super(scene, x, y, texture || "plataformas", frame ?? "semilla.png");
+		super(scene, x ?? 300, y ?? 146, texture || "character", frame ?? "Flor_0.png");
 
 		/* START-USER-CTR-CODE */
+		this.play("Flor");
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
 
-	randomOffset = 0;
+	// Write your code here.
 
 	/* END-USER-CODE */
 }

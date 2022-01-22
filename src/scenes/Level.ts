@@ -8,6 +8,7 @@ import Parallax from "../components/Parallax";
 import PlataformaLargaPrefab from "../prefabs/PlataformaLargaPrefab";
 import PlayerPrefab from "../prefabs/PlayerPrefab";
 import SemillaPrefab from "../prefabs/SemillaPrefab";
+import FlorPrefab from "../prefabs/FlorPrefab";
 import ControllerButtonPrefab from "../prefabs/ControllerButtonPrefab";
 
 export default class Level extends Phaser.Scene {
@@ -161,13 +162,9 @@ export default class Level extends Phaser.Scene {
 		const tierra_png_2_3 = this.add.image(2896, 257, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_2_3);
 
-		// flor6
-		const flor6 = this.add.image(1187, 188, "flor6");
-		macetasLayer.add(flor6);
-
-		// flor6_1
-		const flor6_1 = this.add.image(2110, 205, "flor6");
-		macetasLayer.add(flor6_1);
+		// florPrefab
+		const florPrefab = new FlorPrefab(this, 1175, 190);
+		macetasLayer.add(florPrefab);
 
 		// controllerLayer
 		const controllerLayer = this.add.layer();
@@ -199,6 +196,10 @@ export default class Level extends Phaser.Scene {
 		// fireButton
 		const fireButton = new ControllerButtonPrefab(this, 723, 320);
 		controllerLayer.add(fireButton);
+
+		// florPrefab_1
+		const florPrefab_1 = new FlorPrefab(this, 1844, 190);
+		this.add.existing(florPrefab_1);
 
 		// fondo (components)
 		const fondoParallax = new Parallax(fondo);

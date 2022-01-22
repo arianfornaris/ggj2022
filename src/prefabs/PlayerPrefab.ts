@@ -26,13 +26,13 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	public platformsLayer: Phaser.GameObjects.Layer[] = [];
 	public semillasLayers: Phaser.GameObjects.Layer[] = [];
-	public controller: {changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab} | undefined;
+	public controller: { changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab } | undefined;
 
 	/* START-USER-CODE */
 
 	private _goodBoyState = true;
-	private _buttonUpDown = false;
 	private _jumpCount = 0;
+	private _semillas: SemillaPrefab[] = [];
 
 	private debugText!: Phaser.GameObjects.Text;
 
@@ -56,6 +56,11 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		this.body.velocity.x = PLAYER_VELOCITY_MOVE;
 	}
 
+	private get characterName() {
+
+		return this._goodBoyState ? "Conejo" : "Bicho";
+	}
+
 	private jump() {
 
 		// jump!
@@ -63,6 +68,8 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		if (this.body.touching.down) {
 
 			this._jumpCount = 0;
+
+			this.play(this.characterName + "-Up", true);
 		}
 
 		if (this._jumpCount < 3) {
@@ -101,34 +108,35 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 		// play animation
 
-		const charName = this._goodBoyState ? "Conejo" : "Bicho";
+		if (this.body.touching.down) {
 
-		if (this.x === this._lastX) {
-
-			this.play(charName + "-Idle", true);
-
-		} else if (this.body.touching.down) {
-
-			this.play(charName + "-Walk", true);
+			this.play(this.characterName + "-Walk", true);
 
 		} else {
 
-			this.play(charName + "-Up", true);
+			if (this.body.velocity.y > 0) {
+
+				this.play(this.characterName + "-Down", true);
+			}
+		}
+
+		this.updateSemillas();
+	}
+
+	private updateSemillas() {
+
+		for (let i = 0; i < this._semillas.length; i++) {
+
+			const semilla = this._semillas[i];
+
+			semilla.x = this.x - 40 + i + semilla.randomOffset;
+			semilla.y = this.y + 25 - i * semilla.height * 0.2;
 		}
 	}
 
-	private _lastX = 0;
-
 	private initTiming() {
 
-		this.scene.time.addEvent({
-			delay: 1000,
-			repeat: -1,
-			callback: () => {
-
-				this._lastX = this.x;
-			}
-		});
+		//TODO
 	}
 
 	private changeCharacter() {
@@ -166,19 +174,50 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 		if (this._goodBoyState) {
 
-			semilla.attachToPlayer(this);
+			this.attachToPlayer(semilla);
 		}
+	}
+
+	private attachToPlayer(semilla: SemillaPrefab) {
+
+		semilla.randomOffset = Phaser.Math.Between(0, 5);
+		this._semillas.push(semilla);
+
+		semilla.body.enable = false;
+
+		this.scene.add.tween({
+			targets: semilla,
+			scaleX: 0.5,
+			scaleY: 0.5,
+			duration: 200,
+			ease: Phaser.Math.Easing.Quadratic.In
+		});
 	}
 
 	private initInput() {
 
 		this.scene.input.keyboard.on("keydown-SPACE", () => this.changeCharacter());
 		this.scene.input.keyboard.on("keydown-UP", () => this.jump());
+		this.scene.input.keyboard.on("keydown-ENTER", () => this.doAction());
+
 		this.controller?.upButton.on("pointerdown", () => this.jump());
 		this.controller?.changeButton.on("pointerdown", () => this.changeCharacter());
 
 		this.debugText = this.scene.add.text(10, 10, "debug");
 		this.debugText.setScrollFactor(0, 0);
+	}
+
+	private doAction() {
+
+		if (this._goodBoyState) {
+
+			this.plant();
+		}
+	}
+
+	private plant() {
+
+		alert("plant");
 	}
 
 	/* END-USER-CODE */

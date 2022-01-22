@@ -496,26 +496,16 @@
                     "y": 257
                 },
                 {
-                    "type": "Image",
-                    "id": "25e837ac-0246-4cff-b475-7d3521bacba2",
-                    "label": "flor6",
+                    "prefabId": "0aca9e22-1fc6-4705-8176-a760a531bdbf",
+                    "id": "759cd32c-c898-45cd-96dc-000810774da4",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "florPrefab",
                     "components": [],
-                    "texture": {
-                        "key": "flor6"
-                    },
-                    "x": 1187,
-                    "y": 188
-                },
-                {
-                    "type": "Image",
-                    "id": "bd0e698b-a1f5-4b3e-92c1-880dc476b0fa",
-                    "label": "flor6_1",
-                    "components": [],
-                    "texture": {
-                        "key": "flor6"
-                    },
-                    "x": 2110,
-                    "y": 205
+                    "x": 1175,
+                    "y": 190
                 }
             ]
         },
@@ -645,6 +635,18 @@
                     "y": 320
                 }
             ]
+        },
+        {
+            "prefabId": "0aca9e22-1fc6-4705-8176-a760a531bdbf",
+            "id": "c6bbc667-e548-4f69-b9af-54035ddecfed",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "florPrefab_1",
+            "components": [],
+            "x": 1844,
+            "y": 190
         }
     ],
     "plainObjects": [],
