@@ -5,23 +5,23 @@ import Preload from "./scenes/Preload";
 
 class Boot extends Phaser.Scene {
 
-    constructor() {
-        super("Boot");
-    }
+	constructor() {
+		super("Boot");
+	}
 
-    preload() {
+	preload() {
 
-        this.load.pack("pack", preloadPackUrl);
-    }
+		this.load.pack("pack", preloadPackUrl);
+	}
 
-    create() {
+	create() {
 
-       this.scene.start("Preload");
-    }
+		this.scene.start("Preload");
+	}
 }
 
 window.addEventListener('load', function () {
-	
+
 	const game = new Phaser.Game({
 		width: 800,
 		height: 600,
@@ -36,9 +36,17 @@ window.addEventListener('load', function () {
 				debug: false
 			}
 		},
+		input: {
+			"activePointers": 3
+		},
 		scene: [Boot, Preload, Level]
 	});
 
 	game.scene.start("Boot");
+
+	this.document.addEventListener("pointerdown", () => {
+
+		game.scale.startFullscreen();
+	});
 
 });

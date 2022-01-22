@@ -1,0 +1,147 @@
+{
+    "anims": [
+        {
+            "key": "Bicho-Idle",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "character",
+                    "frame": "Bicho-Idle_1.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Bicho-Idle_2.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 4,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "Bicho-Up",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "character",
+                    "frame": "Bicho-Up_1.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Bicho-Up_2.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Bicho-Up_3.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 4,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "Bicho-Walk",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "character",
+                    "frame": "Bicho-Walk_1.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Bicho-Walk_2.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 4,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "Conejo-Idle",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "character",
+                    "frame": "Conejo_Idle1.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Conejo_Idle2.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 4,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "Conejo-Up",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "character",
+                    "frame": "Conejo_up1.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Conejo_up2.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Conejo_up3.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 4,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "Conejo-Walk",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "character",
+                    "frame": "Conejo_walk1.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Conejo_walk2.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 4,
+            "skipMissedFrames": true,
+            "repeat": -1
+        }
+    ],
+    "globalTimeScale": 1,
+    "meta": {
+        "app": "Phaser Editor 2D v3",
+        "contentType": "Phaser v3 Animations"
+    }
+}

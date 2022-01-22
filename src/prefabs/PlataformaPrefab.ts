@@ -15,6 +15,7 @@ export default class PlataformaPrefab extends ArcadeSpritePrefab {
 		this.body.gravity.set(0, 0);
 		this.body.immovable = true;
 		this.body.setMass(10000);
+		//this.body.checkCollision = { down: false, left: false, right: false, up: true, none: false };
 
 		/* END-USER-CTR-CODE */
 	}

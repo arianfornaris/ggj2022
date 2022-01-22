@@ -6,9 +6,9 @@
 import Phaser from "phaser";
 import Parallax from "../components/Parallax";
 import PlataformaLargaPrefab from "../prefabs/PlataformaLargaPrefab";
-import PlataformaCortaPrefab from "../prefabs/PlataformaCortaPrefab";
 import PlayerPrefab from "../prefabs/PlayerPrefab";
 import SemillaPrefab from "../prefabs/SemillaPrefab";
+import ControllerButtonPrefab from "../prefabs/ControllerButtonPrefab";
 
 export default class Level extends Phaser.Scene {
 
@@ -27,7 +27,7 @@ export default class Level extends Phaser.Scene {
 		fondo.setOrigin(0, 0);
 
 		// bola
-		const bola = this.add.image(400, 626, "Bola");
+		const bola = this.add.image(400, 1444, "Bola");
 		bola.setOrigin(0.5, 1);
 
 		// lunasLayer
@@ -49,100 +49,156 @@ export default class Level extends Phaser.Scene {
 		const plataformasLayer = this.add.layer();
 
 		// plataformaLargaPrefab
-		const plataformaLargaPrefab = new PlataformaLargaPrefab(this, 445, 251, "plataformas", "plataform_2piel.png");
+		const plataformaLargaPrefab = new PlataformaLargaPrefab(this, 445, 285.9, "plataformas", "plataform_2piel.png");
 		plataformasLayer.add(plataformaLargaPrefab);
 
-		// plataformaCortaPrefab
-		const plataformaCortaPrefab = new PlataformaCortaPrefab(this, 226, 251);
-		plataformasLayer.add(plataformaCortaPrefab);
-
-		// plataformaCortaPrefab_1
-		const plataformaCortaPrefab_1 = new PlataformaCortaPrefab(this, 675.3177522831313, 151.06518015163007, "plataformas", "plataform_1piel.png");
-		plataformasLayer.add(plataformaCortaPrefab_1);
-
-		// plataformaCortaPrefab_2
-		const plataformaCortaPrefab_2 = new PlataformaCortaPrefab(this, 720.6626282258102, 4.361169748845714);
-		plataformasLayer.add(plataformaCortaPrefab_2);
-
-		// plataformaCortaPrefab_3
-		const plataformaCortaPrefab_3 = new PlataformaCortaPrefab(this, 109.84047582148979, 167.069254013752, "plataformas", "plataform_1piel.png");
-		plataformasLayer.add(plataformaCortaPrefab_3);
-
-		// plataformaCortaPrefab_4
-		const plataformaCortaPrefab_4 = new PlataformaCortaPrefab(this, -43.198225868668544, 147.3978345079431);
-		plataformasLayer.add(plataformaCortaPrefab_4);
-
 		// plataformaLargaPrefab_1
-		const plataformaLargaPrefab_1 = new PlataformaLargaPrefab(this, -311.60013588105437, 145.7304888642561, "plataformas", "plataform_2piel.png");
+		const plataformaLargaPrefab_1 = new PlataformaLargaPrefab(this, 785, 321, "plataformas", "plataform_2piel.png");
 		plataformasLayer.add(plataformaLargaPrefab_1);
 
 		// plataformaLargaPrefab_2
-		const plataformaLargaPrefab_2 = new PlataformaLargaPrefab(this, -124.88594082296518, 401.795670658207);
+		const plataformaLargaPrefab_2 = new PlataformaLargaPrefab(this, 1125, 285.9, "plataformas", "plataform_2rojo.png");
 		plataformasLayer.add(plataformaLargaPrefab_2);
 
 		// plataformaLargaPrefab_3
-		const plataformaLargaPrefab_3 = new PlataformaLargaPrefab(this, 886.0380581344034, 396.460979370833);
+		const plataformaLargaPrefab_3 = new PlataformaLargaPrefab(this, 1465, 242, "plataformas", "plataform_2piel.png");
 		plataformasLayer.add(plataformaLargaPrefab_3);
+
+		// plataformaLargaPrefab_4
+		const plataformaLargaPrefab_4 = new PlataformaLargaPrefab(this, 1805, 285.9, "plataformas", "plataform_2rojo.png");
+		plataformasLayer.add(plataformaLargaPrefab_4);
+
+		// plataformaLargaPrefab_5
+		const plataformaLargaPrefab_5 = new PlataformaLargaPrefab(this, 2145, 302, "plataformas", "plataform_2piel.png");
+		plataformasLayer.add(plataformaLargaPrefab_5);
+
+		// plataformaLargaPrefab_6
+		const plataformaLargaPrefab_6 = new PlataformaLargaPrefab(this, 2485, 268, "plataformas", "plataform_2rojo.png");
+		plataformasLayer.add(plataformaLargaPrefab_6);
+
+		// plataformaLargaPrefab_7
+		const plataformaLargaPrefab_7 = new PlataformaLargaPrefab(this, 2825, 291, "plataformas", "plataform_2rojo.png");
+		plataformasLayer.add(plataformaLargaPrefab_7);
+
+		// plataformaLargaPrefab_8
+		const plataformaLargaPrefab_8 = new PlataformaLargaPrefab(this, 3165, 253, "plataformas", "plataform_2piel.png");
+		plataformasLayer.add(plataformaLargaPrefab_8);
+
+		// plataformaLargaPrefab_9
+		const plataformaLargaPrefab_9 = new PlataformaLargaPrefab(this, 3505, 285.9, "plataformas", "plataform_2piel.png");
+		plataformasLayer.add(plataformaLargaPrefab_9);
 
 		// charactersLayer
 		const charactersLayer = this.add.layer();
 
-		// playerPrefab
-		const playerPrefab = new PlayerPrefab(this, 410, 101, "character", "Bicho.png");
-		charactersLayer.add(playerPrefab);
+		// player
+		const player = new PlayerPrefab(this, 410, 101, "character", "Bicho.png");
+		charactersLayer.add(player);
 
 		// semillasLayers
 		const semillasLayers = this.add.layer();
 
 		// semilla_png
-		const semilla_png = new SemillaPrefab(this, 248, 48);
+		const semilla_png = new SemillaPrefab(this, 1678, 48);
 		semillasLayers.add(semilla_png);
 
 		// semilla_png_1
-		const semilla_png_1 = new SemillaPrefab(this, 61.510868072509766, -42.15974426269531);
+		const semilla_png_1 = new SemillaPrefab(this, 1491, -42);
 		semillasLayers.add(semilla_png_1);
 
 		// semilla_png_2
-		const semilla_png_2 = new SemillaPrefab(this, -150.985595703125, -44.815948486328125);
+		const semilla_png_2 = new SemillaPrefab(this, 1275, -38);
 		semillasLayers.add(semilla_png_2);
 
 		// semilla_png_3
-		const semilla_png_3 = new SemillaPrefab(this, -336.9200134277344, -82.0028305053711);
+		const semilla_png_3 = new SemillaPrefab(this, 959, -37);
 		semillasLayers.add(semilla_png_3);
+
+		// semilla_png_1_1
+		const semilla_png_1_1 = new SemillaPrefab(this, 2398, 87);
+		semillasLayers.add(semilla_png_1_1);
+
+		// semilla_png_1_2
+		const semilla_png_1_2 = new SemillaPrefab(this, 2597, -62);
+		semillasLayers.add(semilla_png_1_2);
+
+		// semilla_png_1_3
+		const semilla_png_1_3 = new SemillaPrefab(this, 2865, 44);
+		semillasLayers.add(semilla_png_1_3);
 
 		// macetasLayer
 		const macetasLayer = this.add.layer();
 
 		// tierra_png_3
-		const tierra_png_3 = this.add.image(523, 218, "plataformas", "tierra.png");
+		const tierra_png_3 = this.add.image(523, 260, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_3);
 
 		// tierra_png_2
-		const tierra_png_2 = this.add.image(357, 219, "plataformas", "tierra.png");
+		const tierra_png_2 = this.add.image(1170, 261, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_2);
 
 		// tierra_png_1
-		const tierra_png_1 = this.add.image(-43, 114, "plataformas", "tierra.png");
+		const tierra_png_1 = this.add.image(-676, 118, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_1);
 
 		// tierra_png
-		const tierra_png = this.add.image(-170, 372, "plataformas", "tierra.png");
+		const tierra_png = this.add.image(-347, 517, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png);
 
-		// plataform_1rojo_png
-		this.add.image(223, 951, "plataformas", "plataform_1rojo.png");
+		// tierra_png_4
+		const tierra_png_4 = this.add.image(1093, 506, "plataformas", "tierra.png");
+		macetasLayer.add(tierra_png_4);
 
-		// plataform_1piel_png
-		this.add.image(594, 856, "plataformas", "plataform_1piel.png");
+		// tierra_png_2_1
+		const tierra_png_2_1 = this.add.image(1843, 261, "plataformas", "tierra.png");
+		macetasLayer.add(tierra_png_2_1);
 
-		// plataform_1rojo_png_1
-		this.add.image(-157, 1020, "plataformas", "plataform_1rojo.png");
+		// tierra_png_2_2
+		const tierra_png_2_2 = this.add.image(2098, 276, "plataformas", "tierra.png");
+		macetasLayer.add(tierra_png_2_2);
 
-		// plataform_1rojo_png_2
-		this.add.image(787, 1284, "plataformas", "plataform_1rojo.png");
+		// tierra_png_2_3
+		const tierra_png_2_3 = this.add.image(2896, 257, "plataformas", "tierra.png");
+		macetasLayer.add(tierra_png_2_3);
 
-		// plataform_1piel_png_1
-		this.add.image(76, 1397, "plataformas", "plataform_1piel.png");
+		// flor6
+		const flor6 = this.add.image(1187, 188, "flor6");
+		macetasLayer.add(flor6);
+
+		// flor6_1
+		const flor6_1 = this.add.image(2110, 205, "flor6");
+		macetasLayer.add(flor6_1);
+
+		// controllerLayer
+		const controllerLayer = this.add.layer();
+
+		// action_png
+		const action_png = this.add.image(723, 321, "ui", "action.png");
+		controllerLayer.add(action_png);
+
+		// left_png
+		const left_png = this.add.image(78, 500, "ui", "left.png");
+		controllerLayer.add(left_png);
+
+		// up_png
+		const up_png = this.add.image(699, 500, "ui", "up.png");
+		controllerLayer.add(up_png);
+
+		// right_png
+		const right_png = this.add.image(137, 500, "ui", "right.png");
+		controllerLayer.add(right_png);
+
+		// upButton
+		const upButton = new ControllerButtonPrefab(this, 643, 516, 348, 184);
+		controllerLayer.add(upButton);
+
+		// changeButton
+		const changeButton = new ControllerButtonPrefab(this, 116, 513, 254, 194);
+		controllerLayer.add(changeButton);
+
+		// fireButton
+		const fireButton = new ControllerButtonPrefab(this, 723, 320);
+		controllerLayer.add(fireButton);
 
 		// fondo (components)
 		const fondoParallax = new Parallax(fondo);
@@ -163,12 +219,45 @@ export default class Level extends Phaser.Scene {
 		const luna_Morada_pngParallax = new Parallax(luna_Morada_png);
 		luna_Morada_pngParallax.factor = 0.04;
 
-		// playerPrefab (prefab fields)
-		playerPrefab.platformsLayer = [plataformasLayer];
-		playerPrefab.semillasLayers = [semillasLayers];
+		// player (prefab fields)
+		player.platformsLayer = [plataformasLayer];
+		player.semillasLayers = [semillasLayers];
+		player.controller = {changeButton, upButton, fireButton};
+
+		// action_png (components)
+		const action_pngParallax = new Parallax(action_png);
+		action_pngParallax.factor = 0;
+
+		// left_png (components)
+		const left_pngParallax = new Parallax(left_png);
+		left_pngParallax.factor = 0;
+
+		// up_png (components)
+		const up_pngParallax = new Parallax(up_png);
+		up_pngParallax.factor = 0;
+
+		// right_png (components)
+		const right_pngParallax = new Parallax(right_png);
+		right_pngParallax.factor = 0;
+
+		// upButton (components)
+		const upButtonParallax = new Parallax(upButton);
+		upButtonParallax.factor = 0;
+
+		// changeButton (components)
+		const changeButtonParallax = new Parallax(changeButton);
+		changeButtonParallax.factor = 0;
+
+		// fireButton (components)
+		const fireButtonParallax = new Parallax(fireButton);
+		fireButtonParallax.factor = 0;
+
+		this.player = player;
 
 		this.events.emit("scene-awake");
 	}
+
+	private player!: PlayerPrefab;
 
 	/* START-USER-CODE */
 
@@ -177,6 +266,11 @@ export default class Level extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+	}
+
+	update() {
+
+		this.player.updatePrefab();
 	}
 
 	/* END-USER-CODE */
