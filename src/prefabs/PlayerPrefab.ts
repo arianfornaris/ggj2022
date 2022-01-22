@@ -3,6 +3,7 @@
 
 import ArcadeSpritePrefab from "./ArcadeSpritePrefab";
 import ControllerButtonPrefab from "./ControllerButtonPrefab";
+import FlorPrefab from "./FlorPrefab";
 import SemillaPrefab from "./SemillaPrefab";
 
 const PLAYER_VELOCITY_UP = -600;
@@ -15,7 +16,7 @@ const WORLD_BOTTOM = 1300;
 export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
-		super(scene, x ?? 337, y ?? 152, texture || "character", frame ?? "Conejo.png");
+		super(scene, x ?? 337, y ?? 152, texture || "character", frame ?? "Bicho-Idle_1.png");
 
 		/* START-USER-CTR-CODE */
 
@@ -27,12 +28,14 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 	public platformsLayer: Phaser.GameObjects.Layer[] = [];
 	public semillasLayers: Phaser.GameObjects.Layer[] = [];
 	public controller: { changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab } | undefined;
+	public macetasLayers: Phaser.GameObjects.Layer[] = [];
 
 	/* START-USER-CODE */
 
 	private _goodBoyState = true;
 	private _jumpCount = 0;
 	private _semillas: SemillaPrefab[] = [];
+	private _currentMaceta?: ArcadeSpritePrefab;
 
 	private debugText!: Phaser.GameObjects.Text;
 
@@ -121,16 +124,33 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		}
 
 		this.updateSemillas();
+
+		this.updateMacetas();
+	}
+
+	private updateMacetas() {
+
+		this._currentMaceta = undefined;
+
+		for (const layer of this.macetasLayers) {
+
+			this.arcade.overlap(this, layer.list, (player, obj) => {
+
+				this._currentMaceta = obj as ArcadeSpritePrefab;
+			});
+		}
 	}
 
 	private updateSemillas() {
+
+		const falling = this.anims.currentAnim && this.anims.currentAnim.key.indexOf("Down") > 0;
 
 		for (let i = 0; i < this._semillas.length; i++) {
 
 			const semilla = this._semillas[i];
 
 			semilla.x = this.x - 40 + i + semilla.randomOffset;
-			semilla.y = this.y + 25 - i * semilla.height * 0.2;
+			semilla.y = this.y + 25 - i * semilla.height * 0.2 - (falling ? 30 : 0);
 		}
 	}
 
@@ -166,11 +186,12 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 		for (const layer of this.semillasLayers) {
 
-			this.arcade.add.overlap(this, layer.list, (player, obj) => this.playerVsSemilla(player as any, obj as any));
+			this.arcade.add.overlap(this, layer.list, (player, obj) => this.playerVsSemilla(
+				obj as any));
 		}
 	}
 
-	private playerVsSemilla(player: PlayerPrefab, semilla: SemillaPrefab) {
+	private playerVsSemilla(semilla: SemillaPrefab) {
 
 		if (this._goodBoyState) {
 
@@ -217,7 +238,18 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	private plant() {
 
-		alert("plant");
+		if (this._currentMaceta) {
+
+			const semilla = this._semillas.pop();
+
+			if (semilla) {
+
+				const flor = new FlorPrefab(this.scene, this._currentMaceta.x, this._currentMaceta.y - 70);
+				this.scene.add.existing(flor);
+
+				semilla.visible = false;
+			}
+		}
 	}
 
 	/* END-USER-CODE */

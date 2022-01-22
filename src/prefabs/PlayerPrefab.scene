@@ -22,7 +22,7 @@
             "components": [],
             "texture": {
                 "key": "character",
-                "frame": "Conejo.png"
+                "frame": "Bicho-Idle_1.png"
             },
             "x": 337,
             "y": 152
@@ -67,6 +67,17 @@
             "type": {
                 "id": "expression",
                 "expressionType": "{changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab} | undefined"
+            }
+        },
+        {
+            "name": "macetasLayers",
+            "label": "Macetas Layers",
+            "tooltip": "Property 1",
+            "defValue": "[]",
+            "customDefinition": false,
+            "type": {
+                "id": "expression",
+                "expressionType": "Phaser.GameObjects.Layer[]"
             }
         }
     ]

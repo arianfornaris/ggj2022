@@ -8,7 +8,7 @@ import Parallax from "../components/Parallax";
 import PlataformaLargaPrefab from "../prefabs/PlataformaLargaPrefab";
 import PlayerPrefab from "../prefabs/PlayerPrefab";
 import SemillaPrefab from "../prefabs/SemillaPrefab";
-import FlorPrefab from "../prefabs/FlorPrefab";
+import ArcadeSpritePrefab from "../prefabs/ArcadeSpritePrefab";
 import ControllerButtonPrefab from "../prefabs/ControllerButtonPrefab";
 
 export default class Level extends Phaser.Scene {
@@ -131,40 +131,36 @@ export default class Level extends Phaser.Scene {
 		const macetasLayer = this.add.layer();
 
 		// tierra_png_3
-		const tierra_png_3 = this.add.image(523, 260, "plataformas", "tierra.png");
+		const tierra_png_3 = new ArcadeSpritePrefab(this, 1171, 262, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_3);
 
 		// tierra_png_2
-		const tierra_png_2 = this.add.image(1170, 261, "plataformas", "tierra.png");
+		const tierra_png_2 = new ArcadeSpritePrefab(this, 2158, 277, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_2);
 
 		// tierra_png_1
-		const tierra_png_1 = this.add.image(-676, 118, "plataformas", "tierra.png");
+		const tierra_png_1 = new ArcadeSpritePrefab(this, 397, 256, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_1);
 
 		// tierra_png
-		const tierra_png = this.add.image(-347, 517, "plataformas", "tierra.png");
+		const tierra_png = new ArcadeSpritePrefab(this, 823, 289, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png);
 
 		// tierra_png_4
-		const tierra_png_4 = this.add.image(1093, 506, "plataformas", "tierra.png");
+		const tierra_png_4 = new ArcadeSpritePrefab(this, 1839, 262, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_4);
 
 		// tierra_png_2_1
-		const tierra_png_2_1 = this.add.image(1843, 261, "plataformas", "tierra.png");
+		const tierra_png_2_1 = new ArcadeSpritePrefab(this, 2756, 258, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_2_1);
 
 		// tierra_png_2_2
-		const tierra_png_2_2 = this.add.image(2098, 276, "plataformas", "tierra.png");
+		const tierra_png_2_2 = new ArcadeSpritePrefab(this, 3119, 229, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_2_2);
 
 		// tierra_png_2_3
-		const tierra_png_2_3 = this.add.image(2896, 257, "plataformas", "tierra.png");
+		const tierra_png_2_3 = new ArcadeSpritePrefab(this, 3495, 258, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_2_3);
-
-		// florPrefab
-		const florPrefab = new FlorPrefab(this, 1175, 190);
-		macetasLayer.add(florPrefab);
 
 		// controllerLayer
 		const controllerLayer = this.add.layer();
@@ -197,10 +193,6 @@ export default class Level extends Phaser.Scene {
 		const fireButton = new ControllerButtonPrefab(this, 723, 320);
 		controllerLayer.add(fireButton);
 
-		// florPrefab_1
-		const florPrefab_1 = new FlorPrefab(this, 1844, 190);
-		this.add.existing(florPrefab_1);
-
 		// fondo (components)
 		const fondoParallax = new Parallax(fondo);
 		fondoParallax.factor = 0;
@@ -224,6 +216,7 @@ export default class Level extends Phaser.Scene {
 		player.platformsLayer = [plataformasLayer];
 		player.semillasLayers = [semillasLayers];
 		player.controller = {changeButton, upButton, fireButton};
+		player.macetasLayers = [macetasLayer];
 
 		// action_png (components)
 		const action_pngParallax = new Parallax(action_png);

@@ -284,13 +284,15 @@
                         "platformsLayer",
                         "texture",
                         "semillasLayers",
-                        "controller"
+                        "controller",
+                        "macetasLayers"
                     ],
                     "label": "player",
                     "scope": "CLASS",
                     "platformsLayer": "[plataformasLayer]",
                     "semillasLayers": "[semillasLayers]",
                     "controller": "{changeButton, upButton, fireButton}",
+                    "macetasLayers": "[macetasLayer]",
                     "components": [],
                     "texture": {
                         "key": "character",
@@ -400,112 +402,140 @@
             "components": [],
             "list": [
                 {
-                    "type": "Image",
+                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
                     "id": "d76847f6-711a-450a-9a24-b3d25a5480b0",
+                    "unlock": [
+                        "x",
+                        "texture",
+                        "y"
+                    ],
                     "label": "tierra_png_3",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 523,
-                    "y": 260
+                    "x": 1171,
+                    "y": 262
                 },
                 {
-                    "type": "Image",
+                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
                     "id": "f0fbd590-c780-4f1b-9103-d37a8ad7c485",
+                    "unlock": [
+                        "x",
+                        "texture",
+                        "y"
+                    ],
                     "label": "tierra_png_2",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 1170,
-                    "y": 261
+                    "x": 2158,
+                    "y": 277
                 },
                 {
-                    "type": "Image",
+                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
                     "id": "45362090-5312-4b02-bc5d-9623a8630547",
+                    "unlock": [
+                        "x",
+                        "texture",
+                        "y"
+                    ],
                     "label": "tierra_png_1",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": -676,
-                    "y": 118
+                    "x": 397,
+                    "y": 256
                 },
                 {
-                    "type": "Image",
+                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
                     "id": "8c14a160-1850-474e-9d5f-6bd78827072f",
+                    "unlock": [
+                        "x",
+                        "texture",
+                        "y"
+                    ],
                     "label": "tierra_png",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": -347,
-                    "y": 517
+                    "x": 823,
+                    "y": 289
                 },
                 {
-                    "type": "Image",
+                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
                     "id": "dcf86db2-8fb7-4720-ad54-2def2f4bbd21",
+                    "unlock": [
+                        "x",
+                        "texture",
+                        "y"
+                    ],
                     "label": "tierra_png_4",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 1093,
-                    "y": 506
+                    "x": 1839,
+                    "y": 262
                 },
                 {
-                    "type": "Image",
+                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
                     "id": "b436c339-8238-45db-a0bb-04564ce54e85",
+                    "unlock": [
+                        "x",
+                        "texture",
+                        "y"
+                    ],
                     "label": "tierra_png_2_1",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 1843,
-                    "y": 261
+                    "x": 2756,
+                    "y": 258
                 },
                 {
-                    "type": "Image",
+                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
                     "id": "e1a2df2f-8de2-471d-8cd4-46abd395f668",
+                    "unlock": [
+                        "x",
+                        "texture",
+                        "y"
+                    ],
                     "label": "tierra_png_2_2",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 2098,
-                    "y": 276
+                    "x": 3119,
+                    "y": 229
                 },
                 {
-                    "type": "Image",
+                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
                     "id": "cf0298e2-3786-45a9-911e-cf3c6fe20d12",
+                    "unlock": [
+                        "x",
+                        "texture",
+                        "y"
+                    ],
                     "label": "tierra_png_2_3",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 2896,
-                    "y": 257
-                },
-                {
-                    "prefabId": "0aca9e22-1fc6-4705-8176-a760a531bdbf",
-                    "id": "759cd32c-c898-45cd-96dc-000810774da4",
-                    "unlock": [
-                        "x",
-                        "y"
-                    ],
-                    "label": "florPrefab",
-                    "components": [],
-                    "x": 1175,
-                    "y": 190
+                    "x": 3495,
+                    "y": 258
                 }
             ]
         },
@@ -635,18 +665,6 @@
                     "y": 320
                 }
             ]
-        },
-        {
-            "prefabId": "0aca9e22-1fc6-4705-8176-a760a531bdbf",
-            "id": "c6bbc667-e548-4f69-b9af-54035ddecfed",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "florPrefab_1",
-            "components": [],
-            "x": 1844,
-            "y": 190
         }
     ],
     "plainObjects": [],
