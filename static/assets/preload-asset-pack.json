@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "assets/preload/bicho-preload.png",
+                "type": "image",
+                "key": "bicho-preload"
+            },
+            {
                 "url": "assets/guapen.png",
                 "type": "image",
                 "key": "guapen"
