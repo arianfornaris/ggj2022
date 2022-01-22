@@ -92,9 +92,9 @@
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>2048</int>
+            <int>800</int>
             <key>height</key>
-            <int>2048</int>
+            <int>800</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -185,7 +185,24 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">Animation MALO/Down/Bicho-Down.png</key>
+            <key type="filename">Animation MALO/Idle/Bicho-Idle_1.png</key>
+            <key type="filename">Animation MALO/Idle/Bicho-Idle_2.png</key>
+            <key type="filename">Animation MALO/Up/Bicho-Up_1.png</key>
+            <key type="filename">Animation MALO/Up/Bicho-Up_2.png</key>
+            <key type="filename">Animation MALO/Up/Bicho-Up_3.png</key>
+            <key type="filename">Animation MALO/Walk/Bicho-Walk_1.png</key>
+            <key type="filename">Animation MALO/Walk/Bicho-Walk_2.png</key>
+            <key type="filename">Conejo animacion/Conejo_Down.png</key>
+            <key type="filename">Conejo animacion/Conejo_Idle1.png</key>
+            <key type="filename">Conejo animacion/Conejo_Idle2.png</key>
+            <key type="filename">Conejo animacion/Conejo_up1.png</key>
+            <key type="filename">Conejo animacion/Conejo_up2.png</key>
+            <key type="filename">Conejo animacion/Conejo_up3.png</key>
+            <key type="filename">Conejo animacion/Conejo_walk1.png</key>
+            <key type="filename">Conejo animacion/Conejo_walk2.png</key>
             <key type="filename">Juego GlobalNEW/Bicho.png</key>
+            <key type="filename">conejor/Conejo.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -197,21 +214,6 @@
                 <rect>35,33,70,65</rect>
                 <key>scale9Paddings</key>
                 <rect>35,33,70,65</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">Juego GlobalNEW/Conejo.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>35,32,69,65</rect>
-                <key>scale9Paddings</key>
-                <rect>35,32,69,65</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -219,7 +221,19 @@
         <key>fileList</key>
         <array>
             <filename>Juego GlobalNEW/Bicho.png</filename>
-            <filename>Juego GlobalNEW/Conejo.png</filename>
+            <filename>conejor/Conejo.png</filename>
+            <filename>Animation MALO/Down</filename>
+            <filename>Animation MALO/Idle</filename>
+            <filename>Animation MALO/Up</filename>
+            <filename>Animation MALO/Walk</filename>
+            <filename>Conejo animacion/Conejo_Down.png</filename>
+            <filename>Conejo animacion/Conejo_Idle1.png</filename>
+            <filename>Conejo animacion/Conejo_Idle2.png</filename>
+            <filename>Conejo animacion/Conejo_up1.png</filename>
+            <filename>Conejo animacion/Conejo_up2.png</filename>
+            <filename>Conejo animacion/Conejo_up3.png</filename>
+            <filename>Conejo animacion/Conejo_walk1.png</filename>
+            <filename>Conejo animacion/Conejo_walk2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

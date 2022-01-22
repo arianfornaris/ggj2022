@@ -2,6 +2,7 @@
     "id": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
     "sceneType": "PREFAB",
     "settings": {
+        "snapEnabled": true,
         "exportClass": true,
         "autoImport": true,
         "preloadMethodName": "",
@@ -34,5 +35,27 @@
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 3
-    }
+    },
+    "prefabProperties": [
+        {
+            "name": "moveDistance",
+            "label": "Move Distance",
+            "tooltip": "Property 1",
+            "defValue": 0,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
+        },
+        {
+            "name": "moveVelocity",
+            "label": "Move Velocity",
+            "tooltip": "Property 1",
+            "defValue": 0,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
+        }
+    ]
 }

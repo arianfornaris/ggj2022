@@ -8,7 +8,7 @@ import Phaser from "phaser";
 
 export default class Parallax extends UserComponent {
 
-	constructor(gameObject: Phaser.GameObjects.Image) {
+	constructor(gameObject: Phaser.GameObjects.GameObject) {
 		super(gameObject);
 
 		this.gameObject = gameObject;
@@ -19,18 +19,18 @@ export default class Parallax extends UserComponent {
 		/* END-USER-CTR-CODE */
 	}
 
-	static getComponent(gameObject: Phaser.GameObjects.Image): Parallax {
+	static getComponent(gameObject: Phaser.GameObjects.GameObject): Parallax {
 		return (gameObject as any)["__Parallax"];
 	}
 
-	private gameObject: Phaser.GameObjects.Image;
+	private gameObject: Phaser.GameObjects.GameObject;
 	public factor: number = 0.1;
 
 	/* START-USER-CODE */
 
 	protected awake(): void {
 
-		this.gameObject.setScrollFactor(this.factor, this.factor);
+		(this.gameObject as Phaser.GameObjects.Image).setScrollFactor(this.factor, this.factor);
 	}
 
 	/* END-USER-CODE */

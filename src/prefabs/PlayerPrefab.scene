@@ -57,6 +57,17 @@
                 "id": "expression",
                 "expressionType": "Phaser.GameObjects.Layer[]"
             }
+        },
+        {
+            "name": "controller",
+            "label": "Controller",
+            "tooltip": "Property 1",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "expression",
+                "expressionType": "{leftButton: ControllerButtonPrefab, rightButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab} | undefined"
+            }
         }
     ]
 }

@@ -36,7 +36,7 @@
                 "key": "Bola"
             },
             "x": 400,
-            "y": 626,
+            "y": 1444,
             "originY": 1
         },
         {
@@ -112,81 +112,11 @@
                         "frame": "plataform_2piel.png"
                     },
                     "x": 445,
-                    "y": 251
-                },
-                {
-                    "prefabId": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
-                    "id": "0ec46bfd-2499-40e6-af74-170f90728214",
-                    "unlock": [
-                        "x",
-                        "y"
-                    ],
-                    "label": "plataformaCortaPrefab",
-                    "components": [],
-                    "x": 226,
-                    "y": 251
-                },
-                {
-                    "prefabId": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
-                    "id": "917d28fc-3704-4d09-a0c7-4c0ec7575725",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "texture"
-                    ],
-                    "label": "plataformaCortaPrefab_1",
-                    "components": [],
-                    "texture": {
-                        "key": "plataformas",
-                        "frame": "plataform_1piel.png"
-                    },
-                    "x": 675.3177522831313,
-                    "y": 151.06518015163007
-                },
-                {
-                    "prefabId": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
-                    "id": "0df581ec-0878-48bd-a133-9039bfd1eded",
-                    "unlock": [
-                        "x",
-                        "y"
-                    ],
-                    "label": "plataformaCortaPrefab_2",
-                    "components": [],
-                    "x": 720.6626282258102,
-                    "y": 4.361169748845714
-                },
-                {
-                    "prefabId": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
-                    "id": "c8e19594-cc5c-4316-85d9-61bc17d8f938",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "texture"
-                    ],
-                    "label": "plataformaCortaPrefab_3",
-                    "components": [],
-                    "texture": {
-                        "key": "plataformas",
-                        "frame": "plataform_1piel.png"
-                    },
-                    "x": 109.84047582148979,
-                    "y": 167.069254013752
-                },
-                {
-                    "prefabId": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
-                    "id": "cb598c4c-6186-4092-a660-0e21e4827333",
-                    "unlock": [
-                        "x",
-                        "y"
-                    ],
-                    "label": "plataformaCortaPrefab_4",
-                    "components": [],
-                    "x": -43.198225868668544,
-                    "y": 147.3978345079431
+                    "y": 285.9
                 },
                 {
                     "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
-                    "id": "a89a4263-b0c0-4265-a46a-72e0a78c5a39",
+                    "id": "91856d6a-791d-48e9-9e04-118c22bdb268",
                     "unlock": [
                         "x",
                         "y",
@@ -198,32 +128,144 @@
                         "key": "plataformas",
                         "frame": "plataform_2piel.png"
                     },
-                    "x": -311.60013588105437,
-                    "y": 145.7304888642561
+                    "x": 785,
+                    "y": 321
                 },
                 {
                     "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
-                    "id": "5b7c07d5-a772-41f9-8ea1-3a7b2f8e060e",
+                    "id": "1d300273-cf6c-4f9c-a9f6-3f54699b9b77",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "texture"
                     ],
                     "label": "plataformaLargaPrefab_2",
                     "components": [],
-                    "x": -124.88594082296518,
-                    "y": 401.795670658207
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_2rojo.png"
+                    },
+                    "x": 1125,
+                    "y": 285.9
                 },
                 {
                     "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
-                    "id": "7a429512-578d-47a5-8fc1-2242f0059b51",
+                    "id": "c3f4573e-9d64-4ed9-9aaf-e6386561febd",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "texture"
                     ],
                     "label": "plataformaLargaPrefab_3",
                     "components": [],
-                    "x": 886.0380581344034,
-                    "y": 396.460979370833
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_2piel.png"
+                    },
+                    "x": 1465,
+                    "y": 242
+                },
+                {
+                    "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
+                    "id": "8777c1cb-c914-4b8c-9a47-01cfd77ede34",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "plataformaLargaPrefab_4",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_2rojo.png"
+                    },
+                    "x": 1805,
+                    "y": 285.9
+                },
+                {
+                    "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
+                    "id": "f796c75f-aaba-4be9-a854-4749a12fb671",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "plataformaLargaPrefab_5",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_2piel.png"
+                    },
+                    "x": 2145,
+                    "y": 302
+                },
+                {
+                    "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
+                    "id": "22c3e1ba-9067-4e80-a948-bcaff386ea44",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "plataformaLargaPrefab_6",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_2rojo.png"
+                    },
+                    "x": 2485,
+                    "y": 268
+                },
+                {
+                    "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
+                    "id": "1c14e74b-933c-4347-8338-ff886e7ef3e7",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "plataformaLargaPrefab_7",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_2rojo.png"
+                    },
+                    "x": 2825,
+                    "y": 291
+                },
+                {
+                    "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
+                    "id": "0176667d-3942-4468-91a6-041f84cf1f0d",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "plataformaLargaPrefab_8",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_2piel.png"
+                    },
+                    "x": 3165,
+                    "y": 253
+                },
+                {
+                    "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
+                    "id": "b797cfdb-bfe2-462b-bd4d-c4c4a4ec3509",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "plataformaLargaPrefab_9",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_2piel.png"
+                    },
+                    "x": 3505,
+                    "y": 285.9
                 }
             ]
         },
@@ -241,11 +283,14 @@
                         "y",
                         "platformsLayer",
                         "texture",
-                        "semillasLayers"
+                        "semillasLayers",
+                        "controller"
                     ],
-                    "label": "playerPrefab",
+                    "label": "player",
+                    "scope": "CLASS",
                     "platformsLayer": "[plataformasLayer]",
                     "semillasLayers": "[semillasLayers]",
+                    "controller": "{leftButton, rightButton, upButton, fireButton}",
                     "components": [],
                     "texture": {
                         "key": "character",
@@ -271,7 +316,7 @@
                     ],
                     "label": "semilla_png",
                     "components": [],
-                    "x": 248,
+                    "x": 1678,
                     "y": 48
                 },
                 {
@@ -283,8 +328,8 @@
                     ],
                     "label": "semilla_png_1",
                     "components": [],
-                    "x": 61.510868072509766,
-                    "y": -42.15974426269531
+                    "x": 1491,
+                    "y": -42
                 },
                 {
                     "prefabId": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
@@ -295,8 +340,8 @@
                     ],
                     "label": "semilla_png_2",
                     "components": [],
-                    "x": -150.985595703125,
-                    "y": -44.815948486328125
+                    "x": 1275,
+                    "y": -38
                 },
                 {
                     "prefabId": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
@@ -307,8 +352,44 @@
                     ],
                     "label": "semilla_png_3",
                     "components": [],
-                    "x": -336.9200134277344,
-                    "y": -82.0028305053711
+                    "x": 959,
+                    "y": -37
+                },
+                {
+                    "prefabId": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
+                    "id": "8d5b2e49-1f45-444a-a5da-bfc23fc3c1b7",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "semilla_png_1_1",
+                    "components": [],
+                    "x": 2398,
+                    "y": 87
+                },
+                {
+                    "prefabId": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
+                    "id": "99850a1a-f821-4ddc-9c95-dc1f6cdad537",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "semilla_png_1_2",
+                    "components": [],
+                    "x": 2597,
+                    "y": -62
+                },
+                {
+                    "prefabId": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
+                    "id": "e51c30a4-d36a-4cbf-9b0f-96ad3b1ce580",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "semilla_png_1_3",
+                    "components": [],
+                    "x": 2865,
+                    "y": 44
                 }
             ]
         },
@@ -328,7 +409,7 @@
                         "frame": "tierra.png"
                     },
                     "x": 523,
-                    "y": 218
+                    "y": 260
                 },
                 {
                     "type": "Image",
@@ -339,8 +420,8 @@
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 357,
-                    "y": 219
+                    "x": 1170,
+                    "y": 261
                 },
                 {
                     "type": "Image",
@@ -351,8 +432,8 @@
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": -43,
-                    "y": 114
+                    "x": -676,
+                    "y": 118
                 },
                 {
                     "type": "Image",
@@ -363,70 +444,220 @@
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": -170,
-                    "y": 372
+                    "x": -347,
+                    "y": 517
+                },
+                {
+                    "type": "Image",
+                    "id": "dcf86db2-8fb7-4720-ad54-2def2f4bbd21",
+                    "label": "tierra_png_4",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "tierra.png"
+                    },
+                    "x": 1093,
+                    "y": 506
+                },
+                {
+                    "type": "Image",
+                    "id": "b436c339-8238-45db-a0bb-04564ce54e85",
+                    "label": "tierra_png_2_1",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "tierra.png"
+                    },
+                    "x": 1843,
+                    "y": 261
+                },
+                {
+                    "type": "Image",
+                    "id": "e1a2df2f-8de2-471d-8cd4-46abd395f668",
+                    "label": "tierra_png_2_2",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "tierra.png"
+                    },
+                    "x": 2098,
+                    "y": 276
+                },
+                {
+                    "type": "Image",
+                    "id": "cf0298e2-3786-45a9-911e-cf3c6fe20d12",
+                    "label": "tierra_png_2_3",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "tierra.png"
+                    },
+                    "x": 2896,
+                    "y": 257
+                },
+                {
+                    "type": "Image",
+                    "id": "25e837ac-0246-4cff-b475-7d3521bacba2",
+                    "label": "flor6",
+                    "components": [],
+                    "texture": {
+                        "key": "flor6"
+                    },
+                    "x": 1187,
+                    "y": 188
+                },
+                {
+                    "type": "Image",
+                    "id": "bd0e698b-a1f5-4b3e-92c1-880dc476b0fa",
+                    "label": "flor6_1",
+                    "components": [],
+                    "texture": {
+                        "key": "flor6"
+                    },
+                    "x": 2110,
+                    "y": 205
                 }
             ]
         },
         {
-            "type": "Image",
-            "id": "454ea8c9-052b-4bc5-a588-190f85790ff7",
-            "label": "plataform_1rojo_png",
+            "type": "Layer",
+            "id": "8b0992da-1535-4997-b1e0-0e1e455913a2",
+            "label": "controllerLayer",
             "components": [],
-            "texture": {
-                "key": "plataformas",
-                "frame": "plataform_1rojo.png"
-            },
-            "x": 223,
-            "y": 951
-        },
-        {
-            "type": "Image",
-            "id": "167ca727-1e43-43ce-a50e-80a7c85a3f80",
-            "label": "plataform_1piel_png",
-            "components": [],
-            "texture": {
-                "key": "plataformas",
-                "frame": "plataform_1piel.png"
-            },
-            "x": 594,
-            "y": 856
-        },
-        {
-            "type": "Image",
-            "id": "19afe2ad-1f72-431b-8c2f-78fc94ff5eff",
-            "label": "plataform_1rojo_png_1",
-            "components": [],
-            "texture": {
-                "key": "plataformas",
-                "frame": "plataform_1rojo.png"
-            },
-            "x": -157,
-            "y": 1020
-        },
-        {
-            "type": "Image",
-            "id": "b3580f49-7663-4561-b671-a91f31989dcc",
-            "label": "plataform_1rojo_png_2",
-            "components": [],
-            "texture": {
-                "key": "plataformas",
-                "frame": "plataform_1rojo.png"
-            },
-            "x": 787,
-            "y": 1284
-        },
-        {
-            "type": "Image",
-            "id": "b6750ae7-f61d-40a1-8396-65b5821e866e",
-            "label": "plataform_1piel_png_1",
-            "components": [],
-            "texture": {
-                "key": "plataformas",
-                "frame": "plataform_1piel.png"
-            },
-            "x": 76,
-            "y": 1397
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "b96d9a85-3090-4c71-9e38-91b8ae725900",
+                    "label": "action_png",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0,
+                    "texture": {
+                        "key": "ui",
+                        "frame": "action.png"
+                    },
+                    "x": 723,
+                    "y": 321
+                },
+                {
+                    "type": "Image",
+                    "id": "56a63468-e724-4f4a-a97d-bd3c2d4067fd",
+                    "label": "left_png",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0,
+                    "texture": {
+                        "key": "ui",
+                        "frame": "left.png"
+                    },
+                    "x": 78,
+                    "y": 513
+                },
+                {
+                    "type": "Image",
+                    "id": "e39bf9fd-4498-43b5-846f-f3dbc8ca670a",
+                    "label": "up_png",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0,
+                    "texture": {
+                        "key": "ui",
+                        "frame": "up.png"
+                    },
+                    "x": 605,
+                    "y": 513
+                },
+                {
+                    "type": "Image",
+                    "id": "c031d47f-52fd-4a1d-8daf-9e6cf73c96e4",
+                    "label": "right_png",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0,
+                    "texture": {
+                        "key": "ui",
+                        "frame": "right.png"
+                    },
+                    "x": 208,
+                    "y": 513
+                },
+                {
+                    "prefabId": "a8c174ca-ac12-4ce3-8890-1ab1372cf835",
+                    "id": "23cf8855-363a-4ea3-b0af-54ec3d82a3d7",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "action",
+                        "player"
+                    ],
+                    "label": "leftButton",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0,
+                    "x": 68,
+                    "y": 543
+                },
+                {
+                    "prefabId": "a8c174ca-ac12-4ce3-8890-1ab1372cf835",
+                    "id": "15b05117-c523-4fd0-9629-835e05550c86",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "action",
+                        "player",
+                        "width",
+                        "height"
+                    ],
+                    "label": "upButton",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0,
+                    "x": 661,
+                    "y": 514,
+                    "width": 278,
+                    "height": 157
+                },
+                {
+                    "prefabId": "a8c174ca-ac12-4ce3-8890-1ab1372cf835",
+                    "id": "72638970-6eeb-4b54-bf0d-fb16e72e4fca",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "action",
+                        "player"
+                    ],
+                    "label": "rightButton",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0,
+                    "x": 214,
+                    "y": 538
+                },
+                {
+                    "prefabId": "a8c174ca-ac12-4ce3-8890-1ab1372cf835",
+                    "id": "d853f631-590e-4f67-bb28-bd0e499f3838",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "action",
+                        "player"
+                    ],
+                    "label": "fireButton",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0,
+                    "x": 723,
+                    "y": 320
+                }
+            ]
         }
     ],
     "plainObjects": [],

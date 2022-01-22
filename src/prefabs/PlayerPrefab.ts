@@ -2,12 +2,13 @@
 // You can write more code here
 
 import ArcadeSpritePrefab from "./ArcadeSpritePrefab";
+import ControllerButtonPrefab from "./ControllerButtonPrefab";
 import SemillaPrefab from "./SemillaPrefab";
 
-
-const PLAYER_VELOCITY_UP = -800;
+const PLAYER_VELOCITY_UP = -600;
 const PLAYER_VELOCITY_MOVE = 200;
 const WORLD_GRAVITY = 1800;
+const WORLD_BOTTOM = 1300;
 
 /* START OF COMPILED CODE */
 
@@ -25,10 +26,15 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	public platformsLayer: Phaser.GameObjects.Layer[] = [];
 	public semillasLayers: Phaser.GameObjects.Layer[] = [];
+	public controller: { leftButton: ControllerButtonPrefab, rightButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab } | undefined;
 
 	/* START-USER-CODE */
 
 	private _goodBoyState = true;
+	private _buttonUpDown = false;
+	private _jumpCount = 0;
+
+	private debugText!: Phaser.GameObjects.Text;
 
 	private get arcade() {
 
@@ -39,23 +45,88 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 		this.initArcade();
 
-		this.initKeyboard();
+		this.initInput();
 
 		this.initCamera();
 
 		this.initTiming();
 
-		this.updateCharacterTexture();
+		this.scene.events.on("update", () => this.updatePrefab());
+
+		this.body.velocity.x = PLAYER_VELOCITY_MOVE;
 	}
+
+	private jump() {
+
+		// jump!
+
+		if (this.body.touching.down) {
+
+			this._jumpCount = 0;
+		}
+
+		if (this._jumpCount < 3) {
+
+			this.body.velocity.y = PLAYER_VELOCITY_UP;
+
+			this._jumpCount++;
+		}
+	}
+
+	updatePrefab() {
+
+		if (this.y > WORLD_BOTTOM) {
+
+			this.body.velocity.y = PLAYER_VELOCITY_UP * 2;
+		}
+
+		const pressed = new Set();
+
+		const { activePointer, pointer1, pointer2, pointer3 } = this.scene.input;
+
+		for (const pointer of [activePointer, pointer1, pointer2, pointer3]) {
+
+			if (pointer.isDown) {
+
+				const objs = this.scene.input.hitTestPointer(pointer);
+
+				for (const obj of objs) {
+
+					pressed.add(obj);
+				}
+			}
+		}
+
+		this.debugText.text = "pressed btns " + pressed.size;
+
+		// play animation
+
+		const charName = this._goodBoyState ? "Conejo" : "Bicho";
+
+		if (this.x === this._lastX) {
+
+			this.play(charName + "-Idle", true);
+ 
+		} else if (this.body.touching.down) {
+
+			this.play(charName + "-Walk", true);
+
+		} else {
+
+			this.play(charName + "-Up", true);
+		}
+	}
+
+	private _lastX = 0;
 
 	private initTiming() {
 
 		this.scene.time.addEvent({
+			delay: 1000,
 			repeat: -1,
-			delay: 4000,
 			callback: () => {
 
-				this.swapCharacter();
+				this._lastX = this.x;
 			}
 		});
 	}
@@ -64,19 +135,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 		this._goodBoyState = !this._goodBoyState;
 
-		this.updateCharacterTexture();
-	}
-
-	private updateCharacterTexture() {
-
-		if (this._goodBoyState) {
-
-			this.setTexture("character", "Conejo.png");
-
-		} else {
-
-			this.setTexture("character", "Bicho.png");
-		}
+		this.body.velocity.x = PLAYER_VELOCITY_MOVE * (this._goodBoyState ? 1 : -1);
 	}
 
 	private initCamera() {
@@ -91,7 +150,6 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 		this.body.gravity.set(0, WORLD_GRAVITY);
 		this.body.setSize(60, 100);
-		this.body.checkCollision = { down: true, left: false, right: false, up: false, none: false };
 
 		for (const layer of this.platformsLayer) {
 
@@ -112,44 +170,13 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		}
 	}
 
-	private initKeyboard() {
+	private initInput() {
 
-		this.scene.input.keyboard.on("keydown-UP", () => {
+		this.scene.input.keyboard.on("keydown-SPACE", () => this.swapCharacter());
+		this.scene.input.keyboard.on("keydown-UP", () => this.jump());
 
-			if (this.body.touching.down) {
-
-				this.body.velocity.y = PLAYER_VELOCITY_UP;
-			}
-		});
-
-		const left = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
-		const right = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
-
-		this.scene.events.on("update", () => {
-
-			if (left.isDown) {
-
-				this.body.velocity.x = -PLAYER_VELOCITY_MOVE;
-
-			} else if (right.isDown) {
-
-				this.body.velocity.x = PLAYER_VELOCITY_MOVE;
-
-			} else {
-
-				this.body.velocity.x = 0;
-			}
-		});
-
-		// this.scene.input.keyboard.on("keydown-LEFT", () => {
-
-		// 	this.body.velocity.x = -PLAYER_VELOCITY_MOVE;
-		// });
-
-		// this.scene.input.keyboard.on("keydown-RIGHT", () => {
-
-		// 	this.body.velocity.x = PLAYER_VELOCITY_MOVE;
-		// });
+		this.debugText = this.scene.add.text(10, 10, "debug");
+		this.debugText.setScrollFactor(0, 0);
 	}
 
 	/* END-USER-CODE */

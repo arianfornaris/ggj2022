@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "assets/animations.json",
+                "type": "animation",
+                "key": "animations"
+            },
+            {
                 "url": "assets/environment/Bola.png",
                 "type": "image",
                 "key": "Bola"
@@ -11,6 +16,11 @@
                 "textureURL": "assets/character/character.png",
                 "type": "atlas",
                 "key": "character"
+            },
+            {
+                "url": "assets/environment/flor6.png",
+                "type": "image",
+                "key": "flor6"
             },
             {
                 "url": "assets/environment/Fondo.png",
@@ -27,6 +37,12 @@
                 "textureURL": "assets/environment/plataformas.png",
                 "type": "atlas",
                 "key": "plataformas"
+            },
+            {
+                "atlasURL": "assets/ui/ui.json",
+                "textureURL": "assets/ui/ui.png",
+                "type": "atlas",
+                "key": "ui"
             }
         ]
     },
