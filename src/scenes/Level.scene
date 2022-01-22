@@ -402,7 +402,7 @@
             "components": [],
             "list": [
                 {
-                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
+                    "prefabId": "76b90121-7073-4f33-a969-f32d7904416f",
                     "id": "d76847f6-711a-450a-9a24-b3d25a5480b0",
                     "unlock": [
                         "x",
@@ -416,10 +416,10 @@
                         "frame": "tierra.png"
                     },
                     "x": 1171,
-                    "y": 262
+                    "y": 260
                 },
                 {
-                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
+                    "prefabId": "76b90121-7073-4f33-a969-f32d7904416f",
                     "id": "f0fbd590-c780-4f1b-9103-d37a8ad7c485",
                     "unlock": [
                         "x",
@@ -432,11 +432,11 @@
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 2158,
-                    "y": 277
+                    "x": 2113,
+                    "y": 269
                 },
                 {
-                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
+                    "prefabId": "76b90121-7073-4f33-a969-f32d7904416f",
                     "id": "45362090-5312-4b02-bc5d-9623a8630547",
                     "unlock": [
                         "x",
@@ -449,11 +449,11 @@
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 397,
+                    "x": 389,
                     "y": 256
                 },
                 {
-                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
+                    "prefabId": "76b90121-7073-4f33-a969-f32d7904416f",
                     "id": "8c14a160-1850-474e-9d5f-6bd78827072f",
                     "unlock": [
                         "x",
@@ -466,11 +466,11 @@
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 823,
-                    "y": 289
+                    "x": 828,
+                    "y": 295
                 },
                 {
-                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
+                    "prefabId": "76b90121-7073-4f33-a969-f32d7904416f",
                     "id": "dcf86db2-8fb7-4720-ad54-2def2f4bbd21",
                     "unlock": [
                         "x",
@@ -484,10 +484,10 @@
                         "frame": "tierra.png"
                     },
                     "x": 1839,
-                    "y": 262
+                    "y": 260
                 },
                 {
-                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
+                    "prefabId": "76b90121-7073-4f33-a969-f32d7904416f",
                     "id": "b436c339-8238-45db-a0bb-04564ce54e85",
                     "unlock": [
                         "x",
@@ -500,11 +500,11 @@
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 2756,
-                    "y": 258
+                    "x": 2762,
+                    "y": 266
                 },
                 {
-                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
+                    "prefabId": "76b90121-7073-4f33-a969-f32d7904416f",
                     "id": "e1a2df2f-8de2-471d-8cd4-46abd395f668",
                     "unlock": [
                         "x",
@@ -517,25 +517,8 @@
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 3119,
-                    "y": 229
-                },
-                {
-                    "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
-                    "id": "cf0298e2-3786-45a9-911e-cf3c6fe20d12",
-                    "unlock": [
-                        "x",
-                        "texture",
-                        "y"
-                    ],
-                    "label": "tierra_png_2_3",
-                    "components": [],
-                    "texture": {
-                        "key": "plataformas",
-                        "frame": "tierra.png"
-                    },
-                    "x": 3495,
-                    "y": 258
+                    "x": 3559,
+                    "y": 254
                 }
             ]
         },

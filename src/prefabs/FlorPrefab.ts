@@ -1,5 +1,5 @@
+import SemillaPrefab from "./SemillaPrefab";
 
-// You can write more code here
 
 /* START OF COMPILED CODE */
 
@@ -17,7 +17,22 @@ export default class FlorPrefab extends Phaser.GameObjects.Sprite {
 
 	/* START-USER-CODE */
 
-	// Write your code here.
+	semilla?: SemillaPrefab;
+
+	addToWorld(semilla: SemillaPrefab) {
+
+		this.semilla = semilla;
+		semilla.visible = false;
+		
+		this.scene.add.existing(this);
+
+		this.scene.add.tween({
+			targets: this, alpha: {
+				from: 0,
+				to: 1
+			}
+		});
+	}
 
 	/* END-USER-CODE */
 }

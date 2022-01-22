@@ -1,6 +1,7 @@
 
 // You can write more code here
 
+import MacetaPrefab from "~/scenes/MacetaPrefab";
 import ArcadeSpritePrefab from "./ArcadeSpritePrefab";
 import ControllerButtonPrefab from "./ControllerButtonPrefab";
 import FlorPrefab from "./FlorPrefab";
@@ -35,7 +36,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 	private _goodBoyState = true;
 	private _jumpCount = 0;
 	private _semillas: SemillaPrefab[] = [];
-	private _currentMaceta?: ArcadeSpritePrefab;
+	private _currentMaceta?: MacetaPrefab;
 
 	private debugText!: Phaser.GameObjects.Text;
 
@@ -136,7 +137,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 			this.arcade.overlap(this, layer.list, (player, obj) => {
 
-				this._currentMaceta = obj as ArcadeSpritePrefab;
+				this._currentMaceta = obj as MacetaPrefab;
 			});
 		}
 	}
@@ -238,16 +239,17 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	private plant() {
 
-		if (this._currentMaceta) {
+		if (this._currentMaceta && !this._currentMaceta.flor) {
 
 			const semilla = this._semillas.pop();
 
 			if (semilla) {
 
 				const flor = new FlorPrefab(this.scene, this._currentMaceta.x, this._currentMaceta.y - 70);
-				this.scene.add.existing(flor);
 
-				semilla.visible = false;
+				flor.addToWorld(semilla);
+
+				this._currentMaceta.flor = flor;
 			}
 		}
 	}
