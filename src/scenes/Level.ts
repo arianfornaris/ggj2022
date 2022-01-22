@@ -177,28 +177,24 @@ export default class Level extends Phaser.Scene {
 		controllerLayer.add(action_png);
 
 		// left_png
-		const left_png = this.add.image(78, 513, "ui", "left.png");
+		const left_png = this.add.image(78, 500, "ui", "left.png");
 		controllerLayer.add(left_png);
 
 		// up_png
-		const up_png = this.add.image(605, 513, "ui", "up.png");
+		const up_png = this.add.image(699, 500, "ui", "up.png");
 		controllerLayer.add(up_png);
 
 		// right_png
-		const right_png = this.add.image(208, 513, "ui", "right.png");
+		const right_png = this.add.image(137, 500, "ui", "right.png");
 		controllerLayer.add(right_png);
 
-		// leftButton
-		const leftButton = new ControllerButtonPrefab(this, 68, 543);
-		controllerLayer.add(leftButton);
-
 		// upButton
-		const upButton = new ControllerButtonPrefab(this, 661, 514, 278, 157);
+		const upButton = new ControllerButtonPrefab(this, 643, 516, 348, 184);
 		controllerLayer.add(upButton);
 
-		// rightButton
-		const rightButton = new ControllerButtonPrefab(this, 214, 538);
-		controllerLayer.add(rightButton);
+		// changeButton
+		const changeButton = new ControllerButtonPrefab(this, 116, 513, 254, 194);
+		controllerLayer.add(changeButton);
 
 		// fireButton
 		const fireButton = new ControllerButtonPrefab(this, 723, 320);
@@ -226,7 +222,7 @@ export default class Level extends Phaser.Scene {
 		// player (prefab fields)
 		player.platformsLayer = [plataformasLayer];
 		player.semillasLayers = [semillasLayers];
-		player.controller = {leftButton, rightButton, upButton, fireButton};
+		player.controller = {changeButton, upButton, fireButton};
 
 		// action_png (components)
 		const action_pngParallax = new Parallax(action_png);
@@ -244,17 +240,13 @@ export default class Level extends Phaser.Scene {
 		const right_pngParallax = new Parallax(right_png);
 		right_pngParallax.factor = 0;
 
-		// leftButton (components)
-		const leftButtonParallax = new Parallax(leftButton);
-		leftButtonParallax.factor = 0;
-
 		// upButton (components)
 		const upButtonParallax = new Parallax(upButton);
 		upButtonParallax.factor = 0;
 
-		// rightButton (components)
-		const rightButtonParallax = new Parallax(rightButton);
-		rightButtonParallax.factor = 0;
+		// changeButton (components)
+		const changeButtonParallax = new Parallax(changeButton);
+		changeButtonParallax.factor = 0;
 
 		// fireButton (components)
 		const fireButtonParallax = new Parallax(fireButton);

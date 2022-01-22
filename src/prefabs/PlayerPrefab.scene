@@ -66,7 +66,7 @@
             "customDefinition": false,
             "type": {
                 "id": "expression",
-                "expressionType": "{leftButton: ControllerButtonPrefab, rightButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab} | undefined"
+                "expressionType": "{changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab} | undefined"
             }
         }
     ]

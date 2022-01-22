@@ -26,7 +26,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	public platformsLayer: Phaser.GameObjects.Layer[] = [];
 	public semillasLayers: Phaser.GameObjects.Layer[] = [];
-	public controller: { leftButton: ControllerButtonPrefab, rightButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab } | undefined;
+	public controller: {changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab} | undefined;
 
 	/* START-USER-CODE */
 
@@ -106,7 +106,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		if (this.x === this._lastX) {
 
 			this.play(charName + "-Idle", true);
- 
+
 		} else if (this.body.touching.down) {
 
 			this.play(charName + "-Walk", true);
@@ -131,7 +131,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		});
 	}
 
-	private swapCharacter() {
+	private changeCharacter() {
 
 		this._goodBoyState = !this._goodBoyState;
 
@@ -172,8 +172,10 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	private initInput() {
 
-		this.scene.input.keyboard.on("keydown-SPACE", () => this.swapCharacter());
+		this.scene.input.keyboard.on("keydown-SPACE", () => this.changeCharacter());
 		this.scene.input.keyboard.on("keydown-UP", () => this.jump());
+		this.controller?.upButton.on("pointerdown", () => this.jump());
+		this.controller?.changeButton.on("pointerdown", () => this.changeCharacter());
 
 		this.debugText = this.scene.add.text(10, 10, "debug");
 		this.debugText.setScrollFactor(0, 0);

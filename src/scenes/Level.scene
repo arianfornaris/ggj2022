@@ -290,7 +290,7 @@
                     "scope": "CLASS",
                     "platformsLayer": "[plataformasLayer]",
                     "semillasLayers": "[semillasLayers]",
-                    "controller": "{leftButton, rightButton, upButton, fireButton}",
+                    "controller": "{changeButton, upButton, fireButton}",
                     "components": [],
                     "texture": {
                         "key": "character",
@@ -553,7 +553,7 @@
                         "frame": "left.png"
                     },
                     "x": 78,
-                    "y": 513
+                    "y": 500
                 },
                 {
                     "type": "Image",
@@ -567,8 +567,8 @@
                         "key": "ui",
                         "frame": "up.png"
                     },
-                    "x": 605,
-                    "y": 513
+                    "x": 699,
+                    "y": 500
                 },
                 {
                     "type": "Image",
@@ -582,25 +582,8 @@
                         "key": "ui",
                         "frame": "right.png"
                     },
-                    "x": 208,
-                    "y": 513
-                },
-                {
-                    "prefabId": "a8c174ca-ac12-4ce3-8890-1ab1372cf835",
-                    "id": "23cf8855-363a-4ea3-b0af-54ec3d82a3d7",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "action",
-                        "player"
-                    ],
-                    "label": "leftButton",
-                    "components": [
-                        "Parallax"
-                    ],
-                    "Parallax.factor": 0,
-                    "x": 68,
-                    "y": 543
+                    "x": 137,
+                    "y": 500
                 },
                 {
                     "prefabId": "a8c174ca-ac12-4ce3-8890-1ab1372cf835",
@@ -618,10 +601,10 @@
                         "Parallax"
                     ],
                     "Parallax.factor": 0,
-                    "x": 661,
-                    "y": 514,
-                    "width": 278,
-                    "height": 157
+                    "x": 643,
+                    "y": 516,
+                    "width": 348,
+                    "height": 184
                 },
                 {
                     "prefabId": "a8c174ca-ac12-4ce3-8890-1ab1372cf835",
@@ -630,15 +613,19 @@
                         "x",
                         "y",
                         "action",
-                        "player"
+                        "player",
+                        "width",
+                        "height"
                     ],
-                    "label": "rightButton",
+                    "label": "changeButton",
                     "components": [
                         "Parallax"
                     ],
                     "Parallax.factor": 0,
-                    "x": 214,
-                    "y": 538
+                    "x": 116,
+                    "y": 513,
+                    "width": 254,
+                    "height": 194
                 },
                 {
                     "prefabId": "a8c174ca-ac12-4ce3-8890-1ab1372cf835",
