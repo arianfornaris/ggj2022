@@ -24,12 +24,13 @@ export default class Parallax extends UserComponent {
 	}
 
 	private gameObject: Phaser.GameObjects.Image;
+	public factor: number = 0.1;
 
 	/* START-USER-CODE */
 
 	protected awake(): void {
 
-		this.gameObject.setScrollFactor(0, 0);
+		this.gameObject.setScrollFactor(this.factor, this.factor);
 	}
 
 	/* END-USER-CODE */

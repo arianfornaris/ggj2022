@@ -1,28 +1,84 @@
 {"frames": {
 
-"plataform1.png":
+"Luna_amarilla.png":
 {
-	"frame": {"x":0,"y":0,"w":120,"h":120},
+	"frame": {"x":110,"y":0,"w":90,"h":75},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
-	"sourceSize": {"w":120,"h":120}
+	"spriteSourceSize": {"x":0,"y":0,"w":90,"h":75},
+	"sourceSize": {"w":90,"h":75}
 },
-"plataform2.png":
+"Luna_Grande.png":
 {
-	"frame": {"x":120,"y":0,"w":330,"h":100},
+	"frame": {"x":330,"y":235,"w":180,"h":170},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":330,"h":100},
-	"sourceSize": {"w":330,"h":100}
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":170},
+	"sourceSize": {"w":180,"h":170}
+},
+"Luna_Morada.png":
+{
+	"frame": {"x":270,"y":0,"w":110,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":110,"h":110},
+	"sourceSize": {"w":110,"h":110}
+},
+"plataform_1piel.png":
+{
+	"frame": {"x":380,"y":0,"w":125,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":110},
+	"sourceSize": {"w":125,"h":110}
+},
+"plataform_1rojo.png":
+{
+	"frame": {"x":0,"y":110,"w":125,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":110},
+	"sourceSize": {"w":125,"h":110}
+},
+"plataform_2piel.png":
+{
+	"frame": {"x":125,"y":110,"w":330,"h":125},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":330,"h":125},
+	"sourceSize": {"w":330,"h":125}
+},
+"plataform_2rojo.png":
+{
+	"frame": {"x":0,"y":235,"w":330,"h":125},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":330,"h":125},
+	"sourceSize": {"w":330,"h":125}
+},
+"semilla.png":
+{
+	"frame": {"x":200,"y":0,"w":70,"h":85},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":85},
+	"sourceSize": {"w":70,"h":85}
+},
+"tierra.png":
+{
+	"frame": {"x":0,"y":0,"w":110,"h":45},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":110,"h":45},
+	"sourceSize": {"w":110,"h":45}
 }},
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "plataformas.png",
 	"format": "RGBA8888",
-	"size": {"w":450,"h":120},
+	"size": {"w":510,"h":405},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:0d45757445e3f7defa6774ac8ff58573:1d8bc08d05afd761966dd4cc06c49928:9d06137e571379e0644f85df28983fb5$"
+	"smartupdate": "$TexturePacker:SmartUpdate:73a5f29a78252e6606e9dd9dcc15a506:236ffb64f012cad0ae7fbee76b502233:9d06137e571379e0644f85df28983fb5$"
 }
 }

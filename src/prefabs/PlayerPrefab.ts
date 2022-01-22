@@ -2,6 +2,7 @@
 // You can write more code here
 
 import ArcadeSpritePrefab from "./ArcadeSpritePrefab";
+import SemillaPrefab from "./SemillaPrefab";
 
 
 const PLAYER_VELOCITY_UP = -800;
@@ -23,8 +24,11 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 	}
 
 	public platformsLayer: Phaser.GameObjects.Layer[] = [];
+	public semillasLayers: Phaser.GameObjects.Layer[] = [];
 
 	/* START-USER-CODE */
+
+	private _goodBoyState = true;
 
 	private get arcade() {
 
@@ -38,6 +42,41 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		this.initKeyboard();
 
 		this.initCamera();
+
+		this.initTiming();
+
+		this.updateCharacterTexture();
+	}
+
+	private initTiming() {
+
+		this.scene.time.addEvent({
+			repeat: -1,
+			delay: 4000,
+			callback: () => {
+
+				this.swapCharacter();
+			}
+		});
+	}
+
+	private swapCharacter() {
+
+		this._goodBoyState = !this._goodBoyState;
+
+		this.updateCharacterTexture();
+	}
+
+	private updateCharacterTexture() {
+
+		if (this._goodBoyState) {
+
+			this.setTexture("character", "Conejo.png");
+
+		} else {
+
+			this.setTexture("character", "Bicho.png");
+		}
 	}
 
 	private initCamera() {
@@ -57,6 +96,19 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		for (const layer of this.platformsLayer) {
 
 			this.arcade.add.collider(this, layer.list);
+		}
+
+		for (const layer of this.semillasLayers) {
+
+			this.arcade.add.overlap(this, layer.list, (player, obj) => this.playerVsSemilla(player as any, obj as any));
+		}
+	}
+
+	private playerVsSemilla(player: PlayerPrefab, semilla: SemillaPrefab) {
+
+		if (this._goodBoyState) {
+
+			semilla.attachToPlayer(this);
 		}
 	}
 

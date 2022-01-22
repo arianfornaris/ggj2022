@@ -185,7 +185,7 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">Plataform_Fondol/plataform1.png</key>
+            <key type="filename">lunas/Luna_Grande.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -194,13 +194,13 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>30,30,60,60</rect>
+                <rect>45,43,90,85</rect>
                 <key>scale9Paddings</key>
-                <rect>30,30,60,60</rect>
+                <rect>45,43,90,85</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">Plataform_Fondol/plataform2.png</key>
+            <key type="filename">lunas/Luna_Morada.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -209,17 +209,101 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>83,25,165,50</rect>
+                <rect>28,28,55,55</rect>
                 <key>scale9Paddings</key>
-                <rect>83,25,165,50</rect>
+                <rect>28,28,55,55</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">lunas/Luna_amarilla.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>23,19,45,37</rect>
+                <key>scale9Paddings</key>
+                <rect>23,19,45,37</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">plataform colorl/plataform_1piel.png</key>
+            <key type="filename">plataform colorl/plataform_1rojo.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>31,28,63,55</rect>
+                <key>scale9Paddings</key>
+                <rect>31,28,63,55</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">plataform colorl/plataform_2piel.png</key>
+            <key type="filename">plataform colorl/plataform_2rojo.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>83,31,165,63</rect>
+                <key>scale9Paddings</key>
+                <rect>83,31,165,63</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">recursosl/semilla.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>18,21,35,43</rect>
+                <key>scale9Paddings</key>
+                <rect>18,21,35,43</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">recursosl/tierra.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>28,11,55,23</rect>
+                <key>scale9Paddings</key>
+                <rect>28,11,55,23</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>Plataform_Fondol/plataform1.png</filename>
-            <filename>Plataform_Fondol/plataform2.png</filename>
+            <filename>recursosl/tierra.png</filename>
+            <filename>recursosl/semilla.png</filename>
+            <filename>plataform colorl/plataform_1piel.png</filename>
+            <filename>plataform colorl/plataform_1rojo.png</filename>
+            <filename>plataform colorl/plataform_2piel.png</filename>
+            <filename>plataform colorl/plataform_2rojo.png</filename>
+            <filename>lunas/Luna_Grande.png</filename>
+            <filename>lunas/Luna_Morada.png</filename>
+            <filename>lunas/Luna_amarilla.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

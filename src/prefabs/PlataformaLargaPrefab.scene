@@ -22,7 +22,7 @@
             "components": [],
             "texture": {
                 "key": "plataformas",
-                "frame": "plataform2.png"
+                "frame": "plataform_2rojo.png"
             },
             "x": 358,
             "y": 157

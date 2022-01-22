@@ -1,5 +1,5 @@
 {
-    "id": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
+    "id": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
     "sceneType": "PREFAB",
     "settings": {
         "exportClass": true,
@@ -11,21 +11,19 @@
     },
     "displayList": [
         {
-            "prefabId": "b4d072da-03e7-49cf-b5c3-372cb20928ba",
-            "id": "8ef047bc-12ef-4e3f-bb0f-2045eeaa5f82",
+            "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
+            "id": "b3b8549b-7a7c-4584-928b-9be5c0d78416",
             "unlock": [
                 "x",
-                "y",
                 "texture"
             ],
-            "label": "plataformaPrefab",
+            "label": "semilla_png_3",
             "components": [],
             "texture": {
                 "key": "plataformas",
-                "frame": "plataform_1rojo.png"
+                "frame": "semilla.png"
             },
-            "x": 319,
-            "y": 130
+            "x": 0
         }
     ],
     "plainObjects": [],

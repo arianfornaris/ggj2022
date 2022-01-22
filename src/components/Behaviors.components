@@ -16,7 +16,18 @@
             "name": "Parallax",
             "baseClass": "UserComponent",
             "gameObjectType": "Phaser.GameObjects.Image",
-            "properties": []
+            "properties": [
+                {
+                    "name": "factor",
+                    "label": "Factor",
+                    "tooltip": "Property 1",
+                    "defValue": 0.1,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
         }
     ],
     "meta": {

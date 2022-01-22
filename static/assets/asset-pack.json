@@ -2,15 +2,20 @@
     "section1": {
         "files": [
             {
-                "url": "assets/environment/background.png",
+                "url": "assets/environment/Bola.png",
                 "type": "image",
-                "key": "background"
+                "key": "Bola"
             },
             {
                 "atlasURL": "assets/character/character.json",
                 "textureURL": "assets/character/character.png",
                 "type": "atlas",
                 "key": "character"
+            },
+            {
+                "url": "assets/environment/Fondo.png",
+                "type": "image",
+                "key": "Fondo"
             },
             {
                 "url": "assets/FufuSuperDino.png",

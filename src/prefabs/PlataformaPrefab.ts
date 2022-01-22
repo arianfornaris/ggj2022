@@ -11,7 +11,7 @@ export default class PlataformaPrefab extends ArcadeSpritePrefab {
 		super(scene, x ?? 315, y ?? 142, texture, frame);
 
 		/* START-USER-CTR-CODE */
-		
+
 		this.body.gravity.set(0, 0);
 		this.body.immovable = true;
 		this.body.setMass(10000);

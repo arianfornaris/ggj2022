@@ -8,10 +8,10 @@ import PlataformaPrefab from "./PlataformaPrefab";
 export default class PlataformaCortaPrefab extends PlataformaPrefab {
 
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
-		super(scene, x ?? 319, y ?? 130, texture || "plataformas", frame ?? "plataform1.png");
+		super(scene, x ?? 319, y ?? 130, texture || "plataformas", frame ?? "plataform_1rojo.png");
 
 		/* START-USER-CTR-CODE */
-		this.body.setSize(100, 30);
+		this.body.setSize(100, 70);
 		/* END-USER-CTR-CODE */
 	}
 

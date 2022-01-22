@@ -12,16 +12,84 @@
     "displayList": [
         {
             "type": "Image",
-            "id": "de5d2bb0-ec62-44f9-9a5c-2855175545f7",
-            "label": "background",
+            "id": "82a944f5-f0db-49cb-b88e-550743d0a219",
+            "label": "fondo",
             "components": [
                 "Parallax"
             ],
+            "Parallax.factor": 0,
             "texture": {
-                "key": "background"
+                "key": "Fondo"
             },
             "originX": 0,
             "originY": 0
+        },
+        {
+            "type": "Image",
+            "id": "c3f19aa9-c068-47ee-a106-0731bf1f0e37",
+            "label": "bola",
+            "components": [
+                "Parallax"
+            ],
+            "Parallax.factor": 0.15,
+            "texture": {
+                "key": "Bola"
+            },
+            "x": 400,
+            "y": 626,
+            "originY": 1
+        },
+        {
+            "type": "Layer",
+            "id": "d0f01b81-26de-4c1e-95c5-ff0bfe60072b",
+            "label": "lunasLayer",
+            "components": [],
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "62eeff8e-6d95-4338-9a1f-9bd5592091ce",
+                    "label": "luna_amarilla_png",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0.05,
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "Luna_amarilla.png"
+                    },
+                    "x": 83,
+                    "y": 58
+                },
+                {
+                    "type": "Image",
+                    "id": "64af91c3-0e56-4eb6-93ab-754ce84d9678",
+                    "label": "luna_Grande_png",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "Luna_Grande.png"
+                    },
+                    "x": 403,
+                    "y": 167
+                },
+                {
+                    "type": "Image",
+                    "id": "79597db1-d56c-4fad-99d3-8ffc3c706c49",
+                    "label": "luna_Morada_png",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0.04,
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "Luna_Morada.png"
+                    },
+                    "x": 721,
+                    "y": 105
+                }
+            ]
         },
         {
             "type": "Layer",
@@ -34,10 +102,15 @@
                     "id": "81c0b150-76c1-4740-98a1-a15fcea2cc68",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "texture"
                     ],
                     "label": "plataformaLargaPrefab",
                     "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_2piel.png"
+                    },
                     "x": 445,
                     "y": 251
                 },
@@ -58,10 +131,15 @@
                     "id": "917d28fc-3704-4d09-a0c7-4c0ec7575725",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "texture"
                     ],
                     "label": "plataformaCortaPrefab_1",
                     "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_1piel.png"
+                    },
                     "x": 675.3177522831313,
                     "y": 151.06518015163007
                 },
@@ -82,10 +160,15 @@
                     "id": "c8e19594-cc5c-4316-85d9-61bc17d8f938",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "texture"
                     ],
                     "label": "plataformaCortaPrefab_3",
                     "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_1piel.png"
+                    },
                     "x": 109.84047582148979,
                     "y": 167.069254013752
                 },
@@ -98,18 +181,23 @@
                     ],
                     "label": "plataformaCortaPrefab_4",
                     "components": [],
-                    "x": -42.198225868668544,
-                    "y": 148.3978345079431
+                    "x": -43.198225868668544,
+                    "y": 147.3978345079431
                 },
                 {
                     "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
                     "id": "a89a4263-b0c0-4265-a46a-72e0a78c5a39",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "texture"
                     ],
                     "label": "plataformaLargaPrefab_1",
                     "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "plataform_2piel.png"
+                    },
                     "x": -311.60013588105437,
                     "y": 145.7304888642561
                 },
@@ -152,10 +240,12 @@
                         "x",
                         "y",
                         "platformsLayer",
-                        "texture"
+                        "texture",
+                        "semillasLayers"
                     ],
                     "label": "playerPrefab",
                     "platformsLayer": "[plataformasLayer]",
+                    "semillasLayers": "[semillasLayers]",
                     "components": [],
                     "texture": {
                         "key": "character",
@@ -165,6 +255,178 @@
                     "y": 101
                 }
             ]
+        },
+        {
+            "type": "Layer",
+            "id": "8bc6d558-b821-4f60-925c-35025a9d1c12",
+            "label": "semillasLayers",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
+                    "id": "ee8899da-9cb3-44d2-be6c-29d95a8b46d7",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "semilla_png",
+                    "components": [],
+                    "x": 248,
+                    "y": 48
+                },
+                {
+                    "prefabId": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
+                    "id": "f19457bc-c2a0-4c96-a45c-135d3087c0a1",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "semilla_png_1",
+                    "components": [],
+                    "x": 61.510868072509766,
+                    "y": -42.15974426269531
+                },
+                {
+                    "prefabId": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
+                    "id": "930e006d-b160-47de-aa90-52193483cdbe",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "semilla_png_2",
+                    "components": [],
+                    "x": -150.985595703125,
+                    "y": -44.815948486328125
+                },
+                {
+                    "prefabId": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
+                    "id": "c07d0e64-84ef-4f56-b568-aa136a19db3e",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "semilla_png_3",
+                    "components": [],
+                    "x": -336.9200134277344,
+                    "y": -82.0028305053711
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "7c636ea1-bb3c-42cf-9e9b-8acae76611ea",
+            "label": "macetasLayer",
+            "components": [],
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "d76847f6-711a-450a-9a24-b3d25a5480b0",
+                    "label": "tierra_png_3",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "tierra.png"
+                    },
+                    "x": 523,
+                    "y": 218
+                },
+                {
+                    "type": "Image",
+                    "id": "f0fbd590-c780-4f1b-9103-d37a8ad7c485",
+                    "label": "tierra_png_2",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "tierra.png"
+                    },
+                    "x": 357,
+                    "y": 219
+                },
+                {
+                    "type": "Image",
+                    "id": "45362090-5312-4b02-bc5d-9623a8630547",
+                    "label": "tierra_png_1",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "tierra.png"
+                    },
+                    "x": -43,
+                    "y": 114
+                },
+                {
+                    "type": "Image",
+                    "id": "8c14a160-1850-474e-9d5f-6bd78827072f",
+                    "label": "tierra_png",
+                    "components": [],
+                    "texture": {
+                        "key": "plataformas",
+                        "frame": "tierra.png"
+                    },
+                    "x": -170,
+                    "y": 372
+                }
+            ]
+        },
+        {
+            "type": "Image",
+            "id": "454ea8c9-052b-4bc5-a588-190f85790ff7",
+            "label": "plataform_1rojo_png",
+            "components": [],
+            "texture": {
+                "key": "plataformas",
+                "frame": "plataform_1rojo.png"
+            },
+            "x": 223,
+            "y": 951
+        },
+        {
+            "type": "Image",
+            "id": "167ca727-1e43-43ce-a50e-80a7c85a3f80",
+            "label": "plataform_1piel_png",
+            "components": [],
+            "texture": {
+                "key": "plataformas",
+                "frame": "plataform_1piel.png"
+            },
+            "x": 594,
+            "y": 856
+        },
+        {
+            "type": "Image",
+            "id": "19afe2ad-1f72-431b-8c2f-78fc94ff5eff",
+            "label": "plataform_1rojo_png_1",
+            "components": [],
+            "texture": {
+                "key": "plataformas",
+                "frame": "plataform_1rojo.png"
+            },
+            "x": -157,
+            "y": 1020
+        },
+        {
+            "type": "Image",
+            "id": "b3580f49-7663-4561-b671-a91f31989dcc",
+            "label": "plataform_1rojo_png_2",
+            "components": [],
+            "texture": {
+                "key": "plataformas",
+                "frame": "plataform_1rojo.png"
+            },
+            "x": 787,
+            "y": 1284
+        },
+        {
+            "type": "Image",
+            "id": "b6750ae7-f61d-40a1-8396-65b5821e866e",
+            "label": "plataform_1piel_png_1",
+            "components": [],
+            "texture": {
+                "key": "plataformas",
+                "frame": "plataform_1piel.png"
+            },
+            "x": 76,
+            "y": 1397
         }
     ],
     "plainObjects": [],

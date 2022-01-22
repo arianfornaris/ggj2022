@@ -46,6 +46,17 @@
                 "id": "expression",
                 "expressionType": "Phaser.GameObjects.Layer[]"
             }
+        },
+        {
+            "name": "semillasLayers",
+            "label": "Semillas Layers",
+            "tooltip": "Property 1",
+            "defValue": "[]",
+            "customDefinition": false,
+            "type": {
+                "id": "expression",
+                "expressionType": "Phaser.GameObjects.Layer[]"
+            }
         }
     ]
 }
