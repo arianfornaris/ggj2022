@@ -1,0 +1,31 @@
+{
+    "id": "6f9becfc-2b5b-4083-8765-a752a59101be",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "superClassName": "Phaser.Physics.Arcade.Sprite",
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT"
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "cb63d04d-ba5d-4257-82f9-e114b7f089ac",
+            "label": "sprite",
+            "components": [],
+            "texture": {},
+            "x": 281,
+            "y": 183
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

@@ -2,9 +2,26 @@
     "section1": {
         "files": [
             {
+                "url": "assets/environment/background.png",
+                "type": "image",
+                "key": "background"
+            },
+            {
+                "atlasURL": "assets/character/character.json",
+                "textureURL": "assets/character/character.png",
+                "type": "atlas",
+                "key": "character"
+            },
+            {
                 "url": "assets/FufuSuperDino.png",
                 "type": "image",
                 "key": "FufuSuperDino"
+            },
+            {
+                "atlasURL": "assets/environment/plataformas.json",
+                "textureURL": "assets/environment/plataformas.png",
+                "type": "atlas",
+                "key": "plataformas"
             }
         ]
     },
@@ -12,6 +29,7 @@
         "app": "Phaser Editor 2D - Asset Pack Editor",
         "contentType": "phasereditor2d.pack.core.AssetContentType",
         "url": "https://phasereditor2d.com",
-        "version": 2
+        "version": 2,
+        "showAllFilesInBlocks": false
     }
 }

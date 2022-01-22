@@ -1,0 +1,28 @@
+{"frames": {
+
+"plataform1.png":
+{
+	"frame": {"x":0,"y":0,"w":120,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
+	"sourceSize": {"w":120,"h":120}
+},
+"plataform2.png":
+{
+	"frame": {"x":120,"y":0,"w":330,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":330,"h":100},
+	"sourceSize": {"w":330,"h":100}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "plataformas.png",
+	"format": "RGBA8888",
+	"size": {"w":450,"h":120},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:0d45757445e3f7defa6774ac8ff58573:1d8bc08d05afd761966dd4cc06c49928:9d06137e571379e0644f85df28983fb5$"
+}
+}

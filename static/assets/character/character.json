@@ -1,0 +1,28 @@
+{"frames": {
+
+"Bicho.png":
+{
+	"frame": {"x":0,"y":0,"w":140,"h":130},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
+	"sourceSize": {"w":140,"h":130}
+},
+"Conejo.png":
+{
+	"frame": {"x":0,"y":130,"w":139,"h":129},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":139,"h":129},
+	"sourceSize": {"w":139,"h":129}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "character.png",
+	"format": "RGBA8888",
+	"size": {"w":140,"h":259},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:105f9ef3e48e57ee0f753e87a3c16835:aa914564f3c54c46cc6c8572db1e9b2c:42e475aa4a03af306bdc7acb5ff91d19$"
+}
+}

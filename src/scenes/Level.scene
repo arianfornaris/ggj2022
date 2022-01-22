@@ -12,34 +12,166 @@
     "displayList": [
         {
             "type": "Image",
-            "id": "bb2d413c-02b3-404d-b1c0-cf46ce1e7f07",
-            "label": "fufuSuperDino",
+            "id": "de5d2bb0-ec62-44f9-9a5c-2855175545f7",
+            "label": "background",
             "components": [
-                "PushOnClick"
+                "Parallax"
             ],
             "texture": {
-                "key": "FufuSuperDino"
+                "key": "background"
             },
-            "x": 400,
-            "y": 235
+            "originX": 0,
+            "originY": 0
         },
         {
-            "type": "Text",
-            "id": "5c228da6-971a-4347-84e8-9f62464ba76d",
-            "label": "text",
+            "type": "Layer",
+            "id": "d466a028-203e-44bf-baa8-25dfa408bdfd",
+            "label": "plataformasLayer",
             "components": [],
-            "x": 400,
-            "y": 436,
-            "text": "Phaser 3 + Phaser Editor 2D\nWebpack + TypeScript",
-            "align": "center",
-            "fontFamily": "Arial",
-            "fontSize": "3em"
+            "list": [
+                {
+                    "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
+                    "id": "81c0b150-76c1-4740-98a1-a15fcea2cc68",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plataformaLargaPrefab",
+                    "components": [],
+                    "x": 445,
+                    "y": 251
+                },
+                {
+                    "prefabId": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
+                    "id": "0ec46bfd-2499-40e6-af74-170f90728214",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plataformaCortaPrefab",
+                    "components": [],
+                    "x": 226,
+                    "y": 251
+                },
+                {
+                    "prefabId": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
+                    "id": "917d28fc-3704-4d09-a0c7-4c0ec7575725",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plataformaCortaPrefab_1",
+                    "components": [],
+                    "x": 675.3177522831313,
+                    "y": 151.06518015163007
+                },
+                {
+                    "prefabId": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
+                    "id": "0df581ec-0878-48bd-a133-9039bfd1eded",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plataformaCortaPrefab_2",
+                    "components": [],
+                    "x": 720.6626282258102,
+                    "y": 4.361169748845714
+                },
+                {
+                    "prefabId": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
+                    "id": "c8e19594-cc5c-4316-85d9-61bc17d8f938",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plataformaCortaPrefab_3",
+                    "components": [],
+                    "x": 109.84047582148979,
+                    "y": 167.069254013752
+                },
+                {
+                    "prefabId": "f81977f1-4bd6-4fca-bac7-45a371edbfed",
+                    "id": "cb598c4c-6186-4092-a660-0e21e4827333",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plataformaCortaPrefab_4",
+                    "components": [],
+                    "x": -42.198225868668544,
+                    "y": 148.3978345079431
+                },
+                {
+                    "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
+                    "id": "a89a4263-b0c0-4265-a46a-72e0a78c5a39",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plataformaLargaPrefab_1",
+                    "components": [],
+                    "x": -311.60013588105437,
+                    "y": 145.7304888642561
+                },
+                {
+                    "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
+                    "id": "5b7c07d5-a772-41f9-8ea1-3a7b2f8e060e",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plataformaLargaPrefab_2",
+                    "components": [],
+                    "x": -124.88594082296518,
+                    "y": 401.795670658207
+                },
+                {
+                    "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
+                    "id": "7a429512-578d-47a5-8fc1-2242f0059b51",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plataformaLargaPrefab_3",
+                    "components": [],
+                    "x": 886.0380581344034,
+                    "y": 396.460979370833
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "23791bac-5a41-47eb-8e66-5cf402903c2b",
+            "label": "charactersLayer",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "689bc614-f50f-48fd-8440-15b337e8094d",
+                    "id": "0339bf24-c7d5-4d4b-8f1b-459cde88ea70",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "platformsLayer",
+                        "texture"
+                    ],
+                    "label": "playerPrefab",
+                    "platformsLayer": "[plataformasLayer]",
+                    "components": [],
+                    "texture": {
+                        "key": "character",
+                        "frame": "Bicho.png"
+                    },
+                    "x": 410,
+                    "y": 101
+                }
+            ]
         }
     ],
     "plainObjects": [],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
-        "contentType": "phasereditor2d.core.scene.SceneContentType"
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
     }
 }

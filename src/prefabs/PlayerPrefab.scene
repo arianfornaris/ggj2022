@@ -1,0 +1,51 @@
+{
+    "id": "689bc614-f50f-48fd-8440-15b337e8094d",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT"
+    },
+    "displayList": [
+        {
+            "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
+            "id": "b367ae60-9cb4-4507-ba1e-fae4175fd786",
+            "unlock": [
+                "x",
+                "y",
+                "texture"
+            ],
+            "label": "arcadeSpritePrefab",
+            "components": [],
+            "texture": {
+                "key": "character",
+                "frame": "Conejo.png"
+            },
+            "x": 337,
+            "y": 152
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    },
+    "prefabProperties": [
+        {
+            "name": "platformsLayer",
+            "label": "Platforms Layer",
+            "tooltip": "Property 1",
+            "defValue": "[]",
+            "customDefinition": false,
+            "type": {
+                "id": "expression",
+                "expressionType": "Phaser.GameObjects.Layer[]"
+            }
+        }
+    ]
+}
