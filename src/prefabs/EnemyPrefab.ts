@@ -79,6 +79,15 @@ export default class EnemyPrefab extends ArcadeSpritePrefab {
 				this._eating = false;
 			}
 		});
+
+		try {
+
+			this.scene.sound.play("Comeflor");
+
+		} catch (e) {
+			
+			console.log(e);
+		}
 	}
 
 	killEnemy() {

@@ -18,6 +18,20 @@
                 "key": "character"
             },
             {
+                "url": [
+                    "assets/audio/Comeflor.ogg"
+                ],
+                "type": "audio",
+                "key": "Comeflor"
+            },
+            {
+                "url": [
+                    "assets/audio/DisparaFuego.ogg"
+                ],
+                "type": "audio",
+                "key": "DisparaFuego"
+            },
+            {
                 "url": "assets/environment/flor6.png",
                 "type": "image",
                 "key": "flor6"
@@ -33,10 +47,24 @@
                 "key": "FufuSuperDino"
             },
             {
+                "url": [
+                    "assets/audio/Jump.ogg"
+                ],
+                "type": "audio",
+                "key": "Jump"
+            },
+            {
                 "atlasURL": "assets/environment/plataformas.json",
                 "textureURL": "assets/environment/plataformas.png",
                 "type": "atlas",
                 "key": "plataformas"
+            },
+            {
+                "url": [
+                    "assets/audio/sembrar.ogg"
+                ],
+                "type": "audio",
+                "key": "sembrar"
             },
             {
                 "atlasURL": "assets/ui/ui.json",

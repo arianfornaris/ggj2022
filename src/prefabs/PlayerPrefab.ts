@@ -84,6 +84,15 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 			this.body.velocity.y = PLAYER_VELOCITY_UP;
 
 			this._jumpCount++;
+
+			try {
+
+				this.scene.sound.play("Jump");
+
+			} catch (e) {
+
+				console.log(e);
+			}
 		}
 	}
 
@@ -276,6 +285,15 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		if (!this._goodBoyState) {
 
 			flor.killFlor();
+
+			try {
+
+				this.scene.sound.play("DisparaFuego");
+
+			} catch (e) {
+
+				console.log(e);
+			}
 		}
 	}
 
@@ -341,6 +359,15 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		const bullet = new BulletPrefab(this.scene, this.x - 30, this.y + 20);
 
 		bullet.addToDisplayList(this.bulletLayer);
+
+		try {
+
+			this.scene.sound.play("DisparaFuego");
+
+		} catch (e) {
+
+			console.log(e);
+		}
 	}
 
 	private plant() {
@@ -358,6 +385,15 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 				flor.addToWorld(semilla, this._currentMaceta);
 
 				this._currentMaceta.flor = flor;
+
+				try {
+
+					this.scene.sound.play("sembrar");
+
+				} catch (e) {
+
+					console.log(e);
+				}
 			}
 		}
 	}
