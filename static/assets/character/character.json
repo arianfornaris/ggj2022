@@ -154,19 +154,19 @@
 },
 "Enemigo_fuego1.png":
 {
-	"frame": {"x":500,"y":390,"w":80,"h":74},
+	"frame": {"x":500,"y":390,"w":115,"h":85},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":74},
-	"sourceSize": {"w":80,"h":74}
+	"spriteSourceSize": {"x":0,"y":0,"w":115,"h":85},
+	"sourceSize": {"w":115,"h":85}
 },
 "Enemigo_fuego2.png":
 {
-	"frame": {"x":580,"y":390,"w":80,"h":74},
+	"frame": {"x":615,"y":390,"w":115,"h":85},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":74},
-	"sourceSize": {"w":80,"h":74}
+	"spriteSourceSize": {"x":0,"y":0,"w":115,"h":85},
+	"sourceSize": {"w":115,"h":85}
 },
 "Flor_0.png":
 {
@@ -245,8 +245,8 @@
 	"version": "1.0",
 	"image": "character.png",
 	"format": "RGBA8888",
-	"size": {"w":705,"h":640},
+	"size": {"w":730,"h":640},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:733cc22e94b26ad1fabde96daa34c54d:e0d33bd53599df53e5fb0d31226b71d3:42e475aa4a03af306bdc7acb5ff91d19$"
+	"smartupdate": "$TexturePacker:SmartUpdate:6749abc1aba19b6f4a09971562f41144:e1541dd00dfb265e67ceadc3ad1018f5:42e475aa4a03af306bdc7acb5ff91d19$"
 }
 }

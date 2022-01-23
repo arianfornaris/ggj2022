@@ -91,7 +91,6 @@ export default class EnemyPrefab extends ArcadeSpritePrefab {
 			duration: 500,
 			x: "-=40",
 			y: "-=40",
-			scale: 0.8,
 			onComplete: () => this.destroy()
 		});
 	}
