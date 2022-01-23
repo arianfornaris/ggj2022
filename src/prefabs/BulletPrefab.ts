@@ -12,6 +12,8 @@ export default class BulletPrefab extends ArcadeSpritePrefab {
 
 		this.scaleX = 1;
 		this.scaleY = 1;
+		this.flipX = true;
+		this.flipY = false;
 
 		/* START-USER-CTR-CODE */
 
