@@ -29,7 +29,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	public platformsLayer: Phaser.GameObjects.Layer[] = [];
 	public semillasLayers: Phaser.GameObjects.Layer[] = [];
-	public controller: {changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab, realFireButton: Phaser.GameObjects.Image} | undefined;
+	public controller: { changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab, realFireButton: Phaser.GameObjects.Image } | undefined;
 	public macetasLayers: Phaser.GameObjects.Layer[] = [];
 	public floresLayers: Phaser.GameObjects.Layer[] = [];
 	public bulletLayer: Phaser.GameObjects.Layer | undefined;
@@ -132,6 +132,48 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		this.updateFlores();
 
 		this.checkBoundaries();
+
+		this.checkGameOver();
+	}
+
+	private _gameOver = false;
+
+	private checkGameOver() {
+
+		if (this._gameOver) {
+
+			return;
+		}
+
+		for (const layer of this.macetasLayers) {
+
+			for (const obj of layer.list) {
+
+				const maceta = obj as MacetaPrefab;
+
+				if (!maceta.flor) {
+
+					return;
+				}
+			}
+		}
+
+		// gameover!!!
+
+		this._gameOver = true;
+
+		this.body.enable = false;
+
+		this.scene.add.tween({
+			targets: this.scene.cameras.main,
+			zoom: 1.4,
+			ease: Phaser.Math.Easing.Quadratic.Out,
+			duration: 500
+		});
+
+		this.removeFromDisplayList();
+
+		this.scene.add.existing(this);
 	}
 
 	private checkBoundaries() {
@@ -192,7 +234,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 			ease: Phaser.Math.Easing.Elastic.InOut
 		});
 
-		this.controller?.realFireButton.setFrame(this._goodBoyState? "siembra.png" : "disparo.png");
+		this.controller?.realFireButton.setFrame(this._goodBoyState ? "siembra.png" : "disparo.png");
 	}
 
 	private initCamera() {

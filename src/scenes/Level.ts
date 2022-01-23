@@ -330,8 +330,6 @@ export default class Level extends Phaser.Scene {
 			(enemy as EnemyPrefab).eatFlor(obj as any);
 		});
 
-		console.log(this.bulletLayer.list);
-
 		arcade.overlap(this.enemyLayer.list, this.bulletLayer.list, (enemy, bullet) => {
 
 			(enemy as EnemyPrefab).killEnemy();
