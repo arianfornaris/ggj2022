@@ -26,18 +26,18 @@ export default class EnemyPrefab extends ArcadeSpritePrefab {
 		}
 
 		this.scene.add.tween({
-			targets: this,  
+			targets: this,
 			delay: 2000 + Math.random() * 8000,
 			y: this.maceta.y - 40,
 			repeat: -1,
 			yoyo: true,
 			duration: 6000,
-			repeatDelay: 3000, 
+			repeatDelay: 3000,
 			ease: Phaser.Math.Easing.Quadratic.Out
 		});
 
 		this.scene.add.tween({
-			targets: this,  
+			targets: this,
 			angle: {
 				from: -20,
 				to: 20
@@ -82,10 +82,13 @@ export default class EnemyPrefab extends ArcadeSpritePrefab {
 
 		try {
 
-			this.scene.sound.play("Comeflor");
+			this.scene.sound.play("Comeflor", {
+				rate: 0.2
+			});
+
 
 		} catch (e) {
-			
+
 			console.log(e);
 		}
 	}
@@ -102,6 +105,15 @@ export default class EnemyPrefab extends ArcadeSpritePrefab {
 			y: "-=40",
 			onComplete: () => this.destroy()
 		});
+
+		try {
+
+			this.scene.sound.play("fire");
+
+		} catch (e) {
+
+			console.log(e);
+		}
 	}
 
 	/* END-USER-CODE */

@@ -37,6 +37,13 @@
                 "key": "Ficha espacial"
             },
             {
+                "url": [
+                    "assets/audio/fire.ogg"
+                ],
+                "type": "audio",
+                "key": "fire"
+            },
+            {
                 "url": "assets/environment/flor6.png",
                 "type": "image",
                 "key": "flor6"
