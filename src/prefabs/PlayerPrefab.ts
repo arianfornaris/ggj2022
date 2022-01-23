@@ -182,7 +182,15 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 		this._goodBoyState = !this._goodBoyState;
 
-		this.body.velocity.x = PLAYER_VELOCITY_MOVE * (this._goodBoyState ? 1 : -1);
+		this.body.velocity.x = PLAYER_VELOCITY_MOVE * (this._goodBoyState ? 1 : -1); 
+
+		this.scene.add.tween({
+			targets: this,
+			alpha: 0.8,
+			yoyo: true,
+			duration: 100,
+			ease: Phaser.Math.Easing.Elastic.InOut
+		})
 	}
 
 	private initCamera() {
