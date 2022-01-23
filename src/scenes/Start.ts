@@ -33,6 +33,15 @@ export default class Start extends Phaser.Scene {
 		this.editorCreate();
 
 		this.input.once("pointerdown", () => this.scene.start("Help"));
+
+		try {
+
+			this.sound.play("music", { loop: true });
+
+		} catch (e) {
+
+			console.log(e);
+		}
 	}
 
 	/* END-USER-CODE */

@@ -41,7 +41,7 @@ export default class FlorPrefab extends ArcadeSpritePrefab {
 
 	killFlor() {
 
-		if (!this.body.enable) {
+		if (!this.body || !this.body.enable) {
 
 			return;
 		}

@@ -71,6 +71,13 @@
                 "key": "Menu Fondo"
             },
             {
+                "url": [
+                    "assets/audio/music.ogg"
+                ],
+                "type": "audio",
+                "key": "music"
+            },
+            {
                 "atlasURL": "assets/environment/plataformas.json",
                 "textureURL": "assets/environment/plataformas.png",
                 "type": "atlas",
