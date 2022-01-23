@@ -4,7 +4,7 @@
 	"description": "Conejo cultiva las flores y las defiende de las plagas. Con el conocimiento y la fuerza (en equilibrio).",
 	"theme_color": "#1d113d",
 	"background_color": "#1d113d",
-	"display": "fullScreen",
+	"display": "fullscreen",
 	"orientation": "landscape",
 	"scope": "/",
 	"start_url": "/",
