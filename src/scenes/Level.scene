@@ -411,7 +411,7 @@
                         "texture",
                         "y"
                     ],
-                    "label": "tierra_png_3",
+                    "label": "maceta3",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
@@ -428,7 +428,7 @@
                         "texture",
                         "y"
                     ],
-                    "label": "tierra_png_2",
+                    "label": "maceta5",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
@@ -445,7 +445,7 @@
                         "texture",
                         "y"
                     ],
-                    "label": "tierra_png_1",
+                    "label": "maceta1",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
@@ -462,7 +462,7 @@
                         "texture",
                         "y"
                     ],
-                    "label": "tierra_png",
+                    "label": "maceta2",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
@@ -479,7 +479,7 @@
                         "texture",
                         "y"
                     ],
-                    "label": "tierra_png_4",
+                    "label": "maceta4",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
@@ -496,7 +496,7 @@
                         "texture",
                         "y"
                     ],
-                    "label": "tierra_png_2_1",
+                    "label": "maceta6",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
@@ -513,7 +513,7 @@
                         "texture",
                         "y"
                     ],
-                    "label": "tierra_png_2_2",
+                    "label": "maceta7",
                     "components": [],
                     "texture": {
                         "key": "plataformas",
@@ -652,6 +652,112 @@
                     },
                     "x": 710,
                     "y": 522
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "1aa84ff1-82eb-445c-8165-11a1162948d6",
+            "label": "enemyLayer",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "c72dfa97-4adf-45f7-a82a-8e63af2ee877",
+                    "id": "ed07d541-5612-4fe5-b5b9-e4b5360f2a21",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "maceta"
+                    ],
+                    "label": "enemyPrefab1",
+                    "maceta": "maceta1",
+                    "components": [],
+                    "x": 386,
+                    "y": -299
+                },
+                {
+                    "prefabId": "c72dfa97-4adf-45f7-a82a-8e63af2ee877",
+                    "id": "f96ce838-5dd1-4f9b-9280-cd4735a5c8fe",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "maceta"
+                    ],
+                    "label": "enemyPrefab2",
+                    "maceta": "maceta2",
+                    "components": [],
+                    "x": 779,
+                    "y": -302
+                },
+                {
+                    "prefabId": "c72dfa97-4adf-45f7-a82a-8e63af2ee877",
+                    "id": "a42d1ee8-bb77-4b72-bbf7-2a0340592e68",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "maceta"
+                    ],
+                    "label": "enemyPrefab3",
+                    "maceta": "maceta3",
+                    "components": [],
+                    "x": 1138,
+                    "y": -182
+                },
+                {
+                    "prefabId": "c72dfa97-4adf-45f7-a82a-8e63af2ee877",
+                    "id": "4bedcb7d-41e4-4176-8ee7-28013f91999c",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "maceta"
+                    ],
+                    "label": "enemyPrefab4",
+                    "maceta": "maceta4",
+                    "components": [],
+                    "x": 1835,
+                    "y": -212
+                },
+                {
+                    "prefabId": "c72dfa97-4adf-45f7-a82a-8e63af2ee877",
+                    "id": "06ae79e8-51f6-4185-9d5f-4db9e23f8a10",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "maceta"
+                    ],
+                    "label": "enemyPrefab5",
+                    "maceta": "maceta5",
+                    "components": [],
+                    "x": 2122,
+                    "y": -187
+                },
+                {
+                    "prefabId": "c72dfa97-4adf-45f7-a82a-8e63af2ee877",
+                    "id": "6dfefa1a-b049-407a-9e60-b925db7a4895",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "maceta"
+                    ],
+                    "label": "enemyPrefab6",
+                    "maceta": "maceta6",
+                    "components": [],
+                    "x": 2750,
+                    "y": -187
+                },
+                {
+                    "prefabId": "c72dfa97-4adf-45f7-a82a-8e63af2ee877",
+                    "id": "da920860-215b-4498-bfc0-e091548b4daa",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "maceta"
+                    ],
+                    "label": "enemyPrefab7",
+                    "maceta": "maceta7",
+                    "components": [],
+                    "x": 3442,
+                    "y": -154
                 }
             ]
         }

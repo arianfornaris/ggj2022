@@ -10,6 +10,7 @@ import PlayerPrefab from "../prefabs/PlayerPrefab";
 import SemillaPrefab from "../prefabs/SemillaPrefab";
 import MacetaPrefab from "./MacetaPrefab";
 import ControllerButtonPrefab from "../prefabs/ControllerButtonPrefab";
+import EnemyPrefab from "../prefabs/EnemyPrefab";
 
 export default class Level extends Phaser.Scene {
 
@@ -130,33 +131,33 @@ export default class Level extends Phaser.Scene {
 		// macetasLayer
 		const macetasLayer = this.add.layer();
 
-		// tierra_png_3
-		const tierra_png_3 = new MacetaPrefab(this, 1146, 260, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_3);
+		// maceta3
+		const maceta3 = new MacetaPrefab(this, 1146, 260, "plataformas", "tierra.png");
+		macetasLayer.add(maceta3);
 
-		// tierra_png_2
-		const tierra_png_2 = new MacetaPrefab(this, 2113, 269, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_2);
+		// maceta5
+		const maceta5 = new MacetaPrefab(this, 2113, 269, "plataformas", "tierra.png");
+		macetasLayer.add(maceta5);
 
-		// tierra_png_1
-		const tierra_png_1 = new MacetaPrefab(this, 389, 194, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_1);
+		// maceta1
+		const maceta1 = new MacetaPrefab(this, 389, 194, "plataformas", "tierra.png");
+		macetasLayer.add(maceta1);
 
-		// tierra_png
-		const tierra_png = new MacetaPrefab(this, 784, 231, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png);
+		// maceta2
+		const maceta2 = new MacetaPrefab(this, 784, 231, "plataformas", "tierra.png");
+		macetasLayer.add(maceta2);
 
-		// tierra_png_4
-		const tierra_png_4 = new MacetaPrefab(this, 1839, 260, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_4);
+		// maceta4
+		const maceta4 = new MacetaPrefab(this, 1839, 260, "plataformas", "tierra.png");
+		macetasLayer.add(maceta4);
 
-		// tierra_png_2_1
-		const tierra_png_2_1 = new MacetaPrefab(this, 2762, 266, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_2_1);
+		// maceta6
+		const maceta6 = new MacetaPrefab(this, 2762, 266, "plataformas", "tierra.png");
+		macetasLayer.add(maceta6);
 
-		// tierra_png_2_2
-		const tierra_png_2_2 = new MacetaPrefab(this, 3449, 254, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_2_2);
+		// maceta7
+		const maceta7 = new MacetaPrefab(this, 3449, 254, "plataformas", "tierra.png");
+		macetasLayer.add(maceta7);
 
 		// floresLayer
 		const floresLayer = this.add.layer();
@@ -189,6 +190,37 @@ export default class Level extends Phaser.Scene {
 		// saltar_png
 		const saltar_png = this.add.image(710, 522, "ui", "saltar.png");
 		controllerLayer.add(saltar_png);
+
+		// enemyLayer
+		const enemyLayer = this.add.layer();
+
+		// enemyPrefab1
+		const enemyPrefab1 = new EnemyPrefab(this, 386, -299);
+		enemyLayer.add(enemyPrefab1);
+
+		// enemyPrefab2
+		const enemyPrefab2 = new EnemyPrefab(this, 779, -302);
+		enemyLayer.add(enemyPrefab2);
+
+		// enemyPrefab3
+		const enemyPrefab3 = new EnemyPrefab(this, 1138, -182);
+		enemyLayer.add(enemyPrefab3);
+
+		// enemyPrefab4
+		const enemyPrefab4 = new EnemyPrefab(this, 1835, -212);
+		enemyLayer.add(enemyPrefab4);
+
+		// enemyPrefab5
+		const enemyPrefab5 = new EnemyPrefab(this, 2122, -187);
+		enemyLayer.add(enemyPrefab5);
+
+		// enemyPrefab6
+		const enemyPrefab6 = new EnemyPrefab(this, 2750, -187);
+		enemyLayer.add(enemyPrefab6);
+
+		// enemyPrefab7
+		const enemyPrefab7 = new EnemyPrefab(this, 3442, -154);
+		enemyLayer.add(enemyPrefab7);
 
 		// fondo (components)
 		const fondoParallax = new Parallax(fondo);
@@ -239,6 +271,27 @@ export default class Level extends Phaser.Scene {
 		// saltar_png (components)
 		const saltar_pngParallax = new Parallax(saltar_png);
 		saltar_pngParallax.factor = 0;
+
+		// enemyPrefab1 (prefab fields)
+		enemyPrefab1.maceta = maceta1;
+
+		// enemyPrefab2 (prefab fields)
+		enemyPrefab2.maceta = maceta2;
+
+		// enemyPrefab3 (prefab fields)
+		enemyPrefab3.maceta = maceta3;
+
+		// enemyPrefab4 (prefab fields)
+		enemyPrefab4.maceta = maceta4;
+
+		// enemyPrefab5 (prefab fields)
+		enemyPrefab5.maceta = maceta5;
+
+		// enemyPrefab6 (prefab fields)
+		enemyPrefab6.maceta = maceta6;
+
+		// enemyPrefab7 (prefab fields)
+		enemyPrefab7.maceta = maceta7;
 
 		this.player = player;
 

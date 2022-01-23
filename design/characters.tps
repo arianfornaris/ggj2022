@@ -217,6 +217,21 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">Enemigo/Enemigo.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>20,15,40,30</rect>
+                <key>scale9Paddings</key>
+                <rect>20,15,40,30</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">Flore Nueva/Flor_0.png</key>
             <key type="filename">Flore Nueva/Flor_1.png</key>
             <key type="filename">Flore Nueva/Flor_2.png</key>
@@ -256,6 +271,7 @@
             <filename>Flore Nueva/Flor_1.png</filename>
             <filename>Flore Nueva/Flor_2.png</filename>
             <filename>Flore Nueva/Flor_4.png</filename>
+            <filename>Enemigo/Enemigo.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -144,9 +144,17 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":130},
 	"sourceSize": {"w":140,"h":130}
 },
+"Enemigo.png":
+{
+	"frame": {"x":420,"y":390,"w":80,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":60},
+	"sourceSize": {"w":80,"h":60}
+},
 "Flor_0.png":
 {
-	"frame": {"x":420,"y":390,"w":120,"h":120},
+	"frame": {"x":500,"y":390,"w":120,"h":120},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
@@ -154,7 +162,7 @@
 },
 "Flor_1.png":
 {
-	"frame": {"x":540,"y":390,"w":120,"h":120},
+	"frame": {"x":0,"y":520,"w":120,"h":120},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
@@ -162,7 +170,7 @@
 },
 "Flor_2.png":
 {
-	"frame": {"x":0,"y":520,"w":120,"h":120},
+	"frame": {"x":120,"y":520,"w":120,"h":120},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
@@ -170,7 +178,7 @@
 },
 "Flor_4.png":
 {
-	"frame": {"x":120,"y":520,"w":120,"h":120},
+	"frame": {"x":240,"y":520,"w":120,"h":120},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
@@ -183,6 +191,6 @@
 	"format": "RGBA8888",
 	"size": {"w":700,"h":640},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:83b93903dde5aa3685f8484c79899918:ba57ba3ce68f4f463039f6fd4441f02a:42e475aa4a03af306bdc7acb5ff91d19$"
+	"smartupdate": "$TexturePacker:SmartUpdate:2ff53879805a584c3dc3d569b9aadabe:13faf09a0a4b475b8ed15018161f8aca:42e475aa4a03af306bdc7acb5ff91d19$"
 }
 }
