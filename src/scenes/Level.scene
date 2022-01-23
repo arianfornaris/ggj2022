@@ -112,7 +112,7 @@
                         "frame": "plataform_2piel.png"
                     },
                     "x": 445,
-                    "y": 285.9
+                    "y": 224
                 },
                 {
                     "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
@@ -129,7 +129,7 @@
                         "frame": "plataform_2piel.png"
                     },
                     "x": 785,
-                    "y": 321
+                    "y": 257
                 },
                 {
                     "prefabId": "abb16a33-b19c-433c-9e5b-1807b2d18e4a",
@@ -300,8 +300,8 @@
                         "key": "character",
                         "frame": "Bicho.png"
                     },
-                    "x": 410,
-                    "y": 101
+                    "x": 446,
+                    "y": 35
                 }
             ]
         },
@@ -452,7 +452,7 @@
                         "frame": "tierra.png"
                     },
                     "x": 389,
-                    "y": 256
+                    "y": 194
                 },
                 {
                     "prefabId": "76b90121-7073-4f33-a969-f32d7904416f",
@@ -469,7 +469,7 @@
                         "frame": "tierra.png"
                     },
                     "x": 784,
-                    "y": 295
+                    "y": 231
                 },
                 {
                     "prefabId": "76b90121-7073-4f33-a969-f32d7904416f",
@@ -538,66 +538,6 @@
             "components": [],
             "list": [
                 {
-                    "type": "Image",
-                    "id": "b96d9a85-3090-4c71-9e38-91b8ae725900",
-                    "label": "action_png",
-                    "components": [
-                        "Parallax"
-                    ],
-                    "Parallax.factor": 0,
-                    "texture": {
-                        "key": "ui",
-                        "frame": "action.png"
-                    },
-                    "x": 703,
-                    "y": 324
-                },
-                {
-                    "type": "Image",
-                    "id": "56a63468-e724-4f4a-a97d-bd3c2d4067fd",
-                    "label": "left_png",
-                    "components": [
-                        "Parallax"
-                    ],
-                    "Parallax.factor": 0,
-                    "texture": {
-                        "key": "ui",
-                        "frame": "left.png"
-                    },
-                    "x": 78,
-                    "y": 500
-                },
-                {
-                    "type": "Image",
-                    "id": "e39bf9fd-4498-43b5-846f-f3dbc8ca670a",
-                    "label": "up_png",
-                    "components": [
-                        "Parallax"
-                    ],
-                    "Parallax.factor": 0,
-                    "texture": {
-                        "key": "ui",
-                        "frame": "up.png"
-                    },
-                    "x": 699,
-                    "y": 500
-                },
-                {
-                    "type": "Image",
-                    "id": "c031d47f-52fd-4a1d-8daf-9e6cf73c96e4",
-                    "label": "right_png",
-                    "components": [
-                        "Parallax"
-                    ],
-                    "Parallax.factor": 0,
-                    "texture": {
-                        "key": "ui",
-                        "frame": "right.png"
-                    },
-                    "x": 137,
-                    "y": 500
-                },
-                {
                     "prefabId": "a8c174ca-ac12-4ce3-8890-1ab1372cf835",
                     "id": "15b05117-c523-4fd0-9629-835e05550c86",
                     "unlock": [
@@ -606,17 +546,21 @@
                         "action",
                         "player",
                         "width",
-                        "height"
+                        "height",
+                        "originX",
+                        "originY"
                     ],
                     "label": "upButton",
                     "components": [
                         "Parallax"
                     ],
                     "Parallax.factor": 0,
-                    "x": 643,
-                    "y": 516,
-                    "width": 348,
-                    "height": 184
+                    "x": 632,
+                    "y": 380,
+                    "originX": 0,
+                    "originY": 0,
+                    "width": 162,
+                    "height": 220
                 },
                 {
                     "prefabId": "a8c174ca-ac12-4ce3-8890-1ab1372cf835",
@@ -648,17 +592,66 @@
                         "action",
                         "player",
                         "width",
-                        "height"
+                        "height",
+                        "originX",
+                        "originY"
                     ],
                     "label": "fireButton",
                     "components": [
                         "Parallax"
                     ],
                     "Parallax.factor": 0,
-                    "x": 703,
-                    "y": 323,
-                    "width": 220,
-                    "height": 147
+                    "x": 420,
+                    "y": 380,
+                    "originX": 0,
+                    "originY": 0,
+                    "width": 187,
+                    "height": 220
+                },
+                {
+                    "type": "Image",
+                    "id": "48312f18-168b-4041-af2c-ee69021fa037",
+                    "label": "cambio_png",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0,
+                    "texture": {
+                        "key": "ui",
+                        "frame": "Cambio.png"
+                    },
+                    "x": 136,
+                    "y": 522
+                },
+                {
+                    "type": "Image",
+                    "id": "551d1b60-5850-415d-827b-d1781cec2381",
+                    "label": "siembra_png",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0,
+                    "texture": {
+                        "key": "ui",
+                        "frame": "siembra.png"
+                    },
+                    "x": 538,
+                    "y": 522
+                },
+                {
+                    "type": "Image",
+                    "id": "ffbf5165-3b3c-4570-a299-201031efd148",
+                    "label": "saltar_png",
+                    "components": [
+                        "Parallax"
+                    ],
+                    "Parallax.factor": 0,
+                    "texture": {
+                        "key": "ui",
+                        "frame": "saltar.png"
+                    },
+                    "x": 710,
+                    "y": 522
                 }
             ]
         }

@@ -50,11 +50,11 @@ export default class Level extends Phaser.Scene {
 		const plataformasLayer = this.add.layer();
 
 		// plataformaLargaPrefab
-		const plataformaLargaPrefab = new PlataformaLargaPrefab(this, 445, 285.9, "plataformas", "plataform_2piel.png");
+		const plataformaLargaPrefab = new PlataformaLargaPrefab(this, 445, 224, "plataformas", "plataform_2piel.png");
 		plataformasLayer.add(plataformaLargaPrefab);
 
 		// plataformaLargaPrefab_1
-		const plataformaLargaPrefab_1 = new PlataformaLargaPrefab(this, 785, 321, "plataformas", "plataform_2piel.png");
+		const plataformaLargaPrefab_1 = new PlataformaLargaPrefab(this, 785, 257, "plataformas", "plataform_2piel.png");
 		plataformasLayer.add(plataformaLargaPrefab_1);
 
 		// plataformaLargaPrefab_2
@@ -93,7 +93,7 @@ export default class Level extends Phaser.Scene {
 		const charactersLayer = this.add.layer();
 
 		// player
-		const player = new PlayerPrefab(this, 410, 101, "character", "Bicho.png");
+		const player = new PlayerPrefab(this, 446, 35, "character", "Bicho.png");
 		charactersLayer.add(player);
 
 		// semillasLayers
@@ -139,11 +139,11 @@ export default class Level extends Phaser.Scene {
 		macetasLayer.add(tierra_png_2);
 
 		// tierra_png_1
-		const tierra_png_1 = new MacetaPrefab(this, 389, 256, "plataformas", "tierra.png");
+		const tierra_png_1 = new MacetaPrefab(this, 389, 194, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_1);
 
 		// tierra_png
-		const tierra_png = new MacetaPrefab(this, 784, 295, "plataformas", "tierra.png");
+		const tierra_png = new MacetaPrefab(this, 784, 231, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png);
 
 		// tierra_png_4
@@ -164,24 +164,9 @@ export default class Level extends Phaser.Scene {
 		// controllerLayer
 		const controllerLayer = this.add.layer();
 
-		// action_png
-		const action_png = this.add.image(703, 324, "ui", "action.png");
-		controllerLayer.add(action_png);
-
-		// left_png
-		const left_png = this.add.image(78, 500, "ui", "left.png");
-		controllerLayer.add(left_png);
-
-		// up_png
-		const up_png = this.add.image(699, 500, "ui", "up.png");
-		controllerLayer.add(up_png);
-
-		// right_png
-		const right_png = this.add.image(137, 500, "ui", "right.png");
-		controllerLayer.add(right_png);
-
 		// upButton
-		const upButton = new ControllerButtonPrefab(this, 643, 516, 348, 184);
+		const upButton = new ControllerButtonPrefab(this, 632, 380, 162, 220);
+		upButton.setOrigin(0, 0);
 		controllerLayer.add(upButton);
 
 		// changeButton
@@ -189,8 +174,21 @@ export default class Level extends Phaser.Scene {
 		controllerLayer.add(changeButton);
 
 		// fireButton
-		const fireButton = new ControllerButtonPrefab(this, 703, 323, 220, 147);
+		const fireButton = new ControllerButtonPrefab(this, 420, 380, 187, 220);
+		fireButton.setOrigin(0, 0);
 		controllerLayer.add(fireButton);
+
+		// cambio_png
+		const cambio_png = this.add.image(136, 522, "ui", "Cambio.png");
+		controllerLayer.add(cambio_png);
+
+		// siembra_png
+		const siembra_png = this.add.image(538, 522, "ui", "siembra.png");
+		controllerLayer.add(siembra_png);
+
+		// saltar_png
+		const saltar_png = this.add.image(710, 522, "ui", "saltar.png");
+		controllerLayer.add(saltar_png);
 
 		// fondo (components)
 		const fondoParallax = new Parallax(fondo);
@@ -218,22 +216,6 @@ export default class Level extends Phaser.Scene {
 		player.macetasLayers = [macetasLayer];
 		player.floresLayers = [floresLayer];
 
-		// action_png (components)
-		const action_pngParallax = new Parallax(action_png);
-		action_pngParallax.factor = 0;
-
-		// left_png (components)
-		const left_pngParallax = new Parallax(left_png);
-		left_pngParallax.factor = 0;
-
-		// up_png (components)
-		const up_pngParallax = new Parallax(up_png);
-		up_pngParallax.factor = 0;
-
-		// right_png (components)
-		const right_pngParallax = new Parallax(right_png);
-		right_pngParallax.factor = 0;
-
 		// upButton (components)
 		const upButtonParallax = new Parallax(upButton);
 		upButtonParallax.factor = 0;
@@ -245,6 +227,18 @@ export default class Level extends Phaser.Scene {
 		// fireButton (components)
 		const fireButtonParallax = new Parallax(fireButton);
 		fireButtonParallax.factor = 0;
+
+		// cambio_png (components)
+		const cambio_pngParallax = new Parallax(cambio_png);
+		cambio_pngParallax.factor = 0;
+
+		// siembra_png (components)
+		const siembra_pngParallax = new Parallax(siembra_png);
+		siembra_pngParallax.factor = 0;
+
+		// saltar_png (components)
+		const saltar_pngParallax = new Parallax(saltar_png);
+		saltar_pngParallax.factor = 0;
 
 		this.player = player;
 
