@@ -111,8 +111,6 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 			}
 		}
 
-		this.debugText.text = "pressed btns " + pressed.size;
-
 		// play animation
 
 		if (this.body.touching.down) {
@@ -273,9 +271,6 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		this.controller?.upButton.on("pointerdown", () => this.jump());
 		this.controller?.changeButton.on("pointerdown", () => this.changeCharacter());
 		this.controller?.fireButton.on("pointerdown", () => this.doAction());
-
-		this.debugText = this.scene.add.text(10, 10, "debug");
-		this.debugText.setScrollFactor(0, 0);
 	}
 
 	private doAction() {
