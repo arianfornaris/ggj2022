@@ -18,7 +18,9 @@
                 "y",
                 "texture",
                 "scaleX",
-                "scaleY"
+                "scaleY",
+                "flipX",
+                "flipY"
             ],
             "label": "arcadeSpritePrefab",
             "components": [],
@@ -29,7 +31,9 @@
             "x": 457,
             "y": 288,
             "scaleX": 1,
-            "scaleY": 1
+            "scaleY": 1,
+            "flipX": true,
+            "flipY": false
         }
     ],
     "plainObjects": [],

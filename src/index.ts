@@ -44,9 +44,7 @@ window.addEventListener('load', function () {
 
 	game.scene.start("Boot");
 
-	this.document.addEventListener("pointerdown", () => {
-
-		game.scale.startFullscreen();
-	});
-
+	// this.document.addEventListener("pointerdown", () => {
+	// 	game.scale.startFullscreen();
+	// });
 });
