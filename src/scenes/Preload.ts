@@ -42,7 +42,7 @@ export default class Preload extends Phaser.Scene {
 
 		this.load.pack("asset-pack", preloadPackUrl);
 
-		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Level"));
+		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Start"));
 	}
 
 	/* END-USER-CODE */
