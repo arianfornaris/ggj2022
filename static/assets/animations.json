@@ -44,9 +44,8 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 4,
-            "skipMissedFrames": true,
-            "repeat": -1
+            "frameRate": 10,
+            "skipMissedFrames": true
         },
         {
             "key": "Bicho-Walk",
@@ -113,9 +112,8 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 4,
-            "skipMissedFrames": true,
-            "repeat": -1
+            "frameRate": 10,
+            "skipMissedFrames": true
         },
         {
             "key": "Conejo-Walk",
@@ -135,6 +133,129 @@
                 }
             ],
             "frameRate": 4,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "Flor",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "character",
+                    "frame": "Flor_0.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Flor_1.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Flor_2.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Flor_4.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 4,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "Bicho-Down",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "character",
+                    "frame": "Bicho-Down.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "Conejo-Down",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "character",
+                    "frame": "Conejo_Down.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 1,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "fuego",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "character",
+                    "frame": "fuego1.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "fuego2.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "fuego3.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "fuego4.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "fuego5.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "enemigo-die",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "character",
+                    "frame": "Enemigo_fuego1.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
+                    "frame": "Enemigo_fuego2.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 8,
             "skipMissedFrames": true,
             "repeat": -1
         }

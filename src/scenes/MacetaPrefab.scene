@@ -1,0 +1,42 @@
+{
+    "id": "76b90121-7073-4f33-a969-f32d7904416f",
+    "settings": {
+        "createMethodName": "",
+        "preloadMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "exportClass": true,
+        "autoImport": true,
+        "generateAwakeHandler": false,
+        "compilerInsertSpaces": false,
+        "compilerTabSize": 4,
+        "borderWidth": 800,
+        "borderHeight": 600,
+        "borderX": 0,
+        "borderY": 0
+    },
+    "sceneType": "PREFAB",
+    "displayList": [
+        {
+            "unlock": [
+                "x",
+                "texture",
+                "y"
+            ],
+            "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
+            "id": "b55bfb1c-a206-4f28-a5c8-6501403be7f0",
+            "label": "tierra_png_2_3",
+            "components": [],
+            "texture": {
+                "key": "plataformas",
+                "frame": "tierra.png"
+            },
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}

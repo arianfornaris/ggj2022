@@ -1,5 +1,5 @@
 {
-    "id": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
+    "id": "9e7de42c-fc17-40ae-b649-16fcf82d2efc",
     "sceneType": "PREFAB",
     "settings": {
         "exportClass": true,
@@ -12,22 +12,24 @@
     "displayList": [
         {
             "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
-            "id": "b3b8549b-7a7c-4584-928b-9be5c0d78416",
+            "id": "d38c0837-f215-4416-bb30-df71af80239c",
             "unlock": [
                 "x",
+                "y",
                 "texture",
-                "originX",
-                "originY"
+                "scaleX",
+                "scaleY"
             ],
-            "label": "semilla_png_3",
+            "label": "arcadeSpritePrefab",
             "components": [],
             "texture": {
-                "key": "plataformas",
-                "frame": "semilla.png"
+                "key": "character",
+                "frame": "fuego1.png"
             },
-            "x": 0,
-            "originX": 0.5,
-            "originY": 0.7370809535381321
+            "x": 457,
+            "y": 288,
+            "scaleX": 1,
+            "scaleY": 1
         }
     ],
     "plainObjects": [],

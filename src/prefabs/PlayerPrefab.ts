@@ -1,8 +1,11 @@
 
 // You can write more code here
 
+import MacetaPrefab from "~/scenes/MacetaPrefab";
 import ArcadeSpritePrefab from "./ArcadeSpritePrefab";
+import BulletPrefab from "./BulletPrefab";
 import ControllerButtonPrefab from "./ControllerButtonPrefab";
+import FlorPrefab from "./FlorPrefab";
 import SemillaPrefab from "./SemillaPrefab";
 
 const PLAYER_VELOCITY_UP = -600;
@@ -15,7 +18,7 @@ const WORLD_BOTTOM = 1300;
 export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
-		super(scene, x ?? 337, y ?? 152, texture || "character", frame ?? "Conejo.png");
+		super(scene, x ?? 337, y ?? 152, texture || "character", frame ?? "Bicho-Idle_1.png");
 
 		/* START-USER-CTR-CODE */
 
@@ -26,13 +29,17 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	public platformsLayer: Phaser.GameObjects.Layer[] = [];
 	public semillasLayers: Phaser.GameObjects.Layer[] = [];
-	public controller: {changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab} | undefined;
+	public controller: { changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab, realFireButton: Phaser.GameObjects.Image } | undefined;
+	public macetasLayers: Phaser.GameObjects.Layer[] = [];
+	public floresLayers: Phaser.GameObjects.Layer[] = [];
+	public bulletLayer: Phaser.GameObjects.Layer | undefined;
 
 	/* START-USER-CODE */
 
 	private _goodBoyState = true;
-	private _buttonUpDown = false;
 	private _jumpCount = 0;
+	private _semillas: SemillaPrefab[] = [];
+	private _currentMaceta?: MacetaPrefab;
 
 	private debugText!: Phaser.GameObjects.Text;
 
@@ -56,6 +63,11 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		this.body.velocity.x = PLAYER_VELOCITY_MOVE;
 	}
 
+	private get characterName() {
+
+		return this._goodBoyState ? "Conejo" : "Bicho";
+	}
+
 	private jump() {
 
 		// jump!
@@ -63,6 +75,8 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		if (this.body.touching.down) {
 
 			this._jumpCount = 0;
+
+			this.play(this.characterName + "-Up", true);
 		}
 
 		if (this._jumpCount < 3) {
@@ -97,38 +111,113 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 			}
 		}
 
-		this.debugText.text = "pressed btns " + pressed.size;
-
 		// play animation
 
-		const charName = this._goodBoyState ? "Conejo" : "Bicho";
+		if (this.body.touching.down) {
 
-		if (this.x === this._lastX) {
-
-			this.play(charName + "-Idle", true);
-
-		} else if (this.body.touching.down) {
-
-			this.play(charName + "-Walk", true);
+			this.play(this.characterName + "-Walk", true);
 
 		} else {
 
-			this.play(charName + "-Up", true);
+			if (this.body.velocity.y > 0) {
+
+				this.play(this.characterName + "-Down", true);
+			}
+		}
+
+		this.updateSemillas();
+
+		this.updateMacetas();
+
+		this.updateFlores();
+
+		this.checkBoundaries();
+
+		this.checkGameOver();
+	}
+
+	private _gameOver = false;
+
+	private checkGameOver() {
+
+		if (this._gameOver) {
+
+			return;
+		}
+
+		for (const layer of this.macetasLayers) {
+
+			for (const obj of layer.list) {
+
+				const maceta = obj as MacetaPrefab;
+
+				if (!maceta.flor) {
+
+					return;
+				}
+			}
+		}
+
+		// gameover!!!
+
+		this._gameOver = true;
+
+		this.body.enable = false;
+
+		this.scene.add.tween({
+			targets: this.scene.cameras.main,
+			zoom: 1.4,
+			ease: Phaser.Math.Easing.Quadratic.Out,
+			duration: 500
+		});
+
+		this.removeFromDisplayList();
+
+		this.scene.add.existing(this);
+	}
+
+	private checkBoundaries() {
+
+		if (this.x < 300) {
+
+			this.x = 300;
+		}
+
+		if (this.x > 3650) {
+
+			this.x = 3650;
 		}
 	}
 
-	private _lastX = 0;
+	private updateMacetas() {
+
+		this._currentMaceta = undefined;
+
+		for (const layer of this.macetasLayers) {
+
+			this.arcade.overlap(this, layer.list, (player, obj) => {
+
+				this._currentMaceta = obj as MacetaPrefab;
+			});
+		}
+	}
+
+	private updateSemillas() {
+
+		const falling = this.anims.currentAnim && this.anims.currentAnim.key.indexOf("Down") > 0;
+
+		for (let i = 0; i < this._semillas.length; i++) {
+
+			const semilla = this._semillas[i];
+
+			semilla.x = this.x - 40 + i + semilla.randomOffset;
+			semilla.y = this.y + 25 - i * semilla.height * 0.2 - (falling ? 30 : 0);
+		}
+	}
 
 	private initTiming() {
 
-		this.scene.time.addEvent({
-			delay: 1000,
-			repeat: -1,
-			callback: () => {
-
-				this._lastX = this.x;
-			}
-		});
+		//TODO
 	}
 
 	private changeCharacter() {
@@ -136,6 +225,16 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		this._goodBoyState = !this._goodBoyState;
 
 		this.body.velocity.x = PLAYER_VELOCITY_MOVE * (this._goodBoyState ? 1 : -1);
+
+		this.scene.add.tween({
+			targets: this,
+			alpha: 0.8,
+			yoyo: true,
+			duration: 100,
+			ease: Phaser.Math.Easing.Elastic.InOut
+		});
+
+		this.controller?.realFireButton.setFrame(this._goodBoyState ? "siembra.png" : "disparo.png");
 	}
 
 	private initCamera() {
@@ -158,27 +257,109 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 		for (const layer of this.semillasLayers) {
 
-			this.arcade.add.overlap(this, layer.list, (player, obj) => this.playerVsSemilla(player as any, obj as any));
+			this.arcade.add.overlap(this, layer.list, (player, obj) => this.playerVsSemilla(
+				obj as any));
 		}
 	}
 
-	private playerVsSemilla(player: PlayerPrefab, semilla: SemillaPrefab) {
+	private updateFlores() {
+
+		for (const layer of this.floresLayers) {
+
+			this.arcade.overlap(this, layer.list, (player, obj) => this.playerVsFlor(
+				obj as any));
+		}
+	}
+
+	private playerVsFlor(flor: FlorPrefab) {
+
+		if (!this._goodBoyState) {
+
+			flor.killFlor();
+		}
+	}
+
+	private playerVsSemilla(semilla: SemillaPrefab) {
 
 		if (this._goodBoyState) {
 
-			semilla.attachToPlayer(this);
+			this.attachToPlayer(semilla);
 		}
+	}
+
+	private attachToPlayer(semilla: SemillaPrefab) {
+
+		semilla.randomOffset = Phaser.Math.Between(0, 5);
+		this._semillas.push(semilla);
+
+		semilla.body.enable = false;
+
+		this.scene.add.tween({
+			targets: semilla,
+			scaleX: 0.5,
+			scaleY: 0.5,
+			duration: 300,
+			ease: Phaser.Math.Easing.Quadratic.Out
+		});
 	}
 
 	private initInput() {
 
 		this.scene.input.keyboard.on("keydown-SPACE", () => this.changeCharacter());
 		this.scene.input.keyboard.on("keydown-UP", () => this.jump());
+		this.scene.input.keyboard.on("keydown-ENTER", () => this.doAction());
+		this.scene.input.keyboard.on("keydown-DOWN", () => this.doAction());
+
 		this.controller?.upButton.on("pointerdown", () => this.jump());
 		this.controller?.changeButton.on("pointerdown", () => this.changeCharacter());
+		this.controller?.fireButton.on("pointerdown", () => this.doAction());
+	}
 
-		this.debugText = this.scene.add.text(10, 10, "debug");
-		this.debugText.setScrollFactor(0, 0);
+	private doAction() {
+
+		if (this._goodBoyState) {
+
+			this.plant();
+
+		} else {
+
+			this.fire();
+		}
+	}
+
+	private _lastFire = 0;
+
+	private fire() {
+
+		if (this.scene.time.now - this._lastFire < 200) {
+
+			return;
+		}
+
+		this._lastFire = this.scene.time.now;
+
+		const bullet = new BulletPrefab(this.scene, this.x - 30, this.y + 20);
+
+		bullet.addToDisplayList(this.bulletLayer);
+	}
+
+	private plant() {
+
+		if (this._currentMaceta && !this._currentMaceta.flor) {
+
+			const semilla = this._semillas.pop();
+
+			if (semilla) {
+
+				const flor = new FlorPrefab(this.scene, this._currentMaceta.x, this._currentMaceta.y - 10);
+
+				flor.addToDisplayList(this.floresLayers[0]);
+
+				flor.addToWorld(semilla, this._currentMaceta);
+
+				this._currentMaceta.flor = flor;
+			}
+		}
 	}
 
 	/* END-USER-CODE */

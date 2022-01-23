@@ -11,38 +11,61 @@ export default class SemillaPrefab extends ArcadeSpritePrefab {
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
 		super(scene, x, y, texture || "plataformas", frame ?? "semilla.png");
 
+		this.setOrigin(0.5, 0.7370809535381321);
+
 		/* START-USER-CTR-CODE */
 
-		this.scene.events.on("update", () => this.updatePrefab());
+		this.scene.events.once("scene-awake", () => this.awakePrefab());
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
 
-	private _player!: PlayerPrefab;
+	randomOffset = 0;
+	private _initX = 0;
+	private _initY = 0;
 
-	attachToPlayer(player: PlayerPrefab) {
+	private awakePrefab() {
 
-		this._player = player;
+		this._initX = this.x;
+		this._initY = this.y;
+	}
 
-		this.body.enable = false;
+	welcomeBack() {
+
+		this.visible = true;
 
 		this.scene.add.tween({
 			targets: this,
-			scaleX: 0.5,
-			scaleY: 0.5,
-			duration: 200,
-			ease: Phaser.Math.Easing.Quadratic.In
-		})
-	}
+			alpha: {
+				from: 0,
+				to: 1
+			},
+			scaleX: 1,
+			scaleY: 1,
+			duration: 1000,
+		});
 
-	private updatePrefab() {
+		this.scene.add.tween({
+			targets: this,
+			angle: {
+				from: 0,
+				to: 360
+			},
+			duration: 1000
+		});
 
-		if (this._player) {
+		this.scene.add.tween({
+			targets: this,
+			x: this._initX,
+			y: this._initY,
+			duration: 2 * Phaser.Math.Distance.Between(this.x, this.y, this._initX, this._initY),
+			onComplete: () => {
 
-			this.x = this._player.x - 40;
-			this.y = this._player.y + 25;
-		}
+				this.body.enable = true;
+				this.body.reset(this.x, this.y);
+			}
+		});
 	}
 
 	/* END-USER-CODE */

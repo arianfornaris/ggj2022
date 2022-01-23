@@ -1,5 +1,5 @@
 {
-    "id": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
+    "id": "c72dfa97-4adf-45f7-a82a-8e63af2ee877",
     "sceneType": "PREFAB",
     "settings": {
         "exportClass": true,
@@ -12,22 +12,18 @@
     "displayList": [
         {
             "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
-            "id": "b3b8549b-7a7c-4584-928b-9be5c0d78416",
+            "id": "d87fd3e0-fafd-4a64-9928-f3ef15f8bf86",
             "unlock": [
                 "x",
-                "texture",
-                "originX",
-                "originY"
+                "texture"
             ],
-            "label": "semilla_png_3",
+            "label": "enemigo_png",
             "components": [],
             "texture": {
-                "key": "plataformas",
-                "frame": "semilla.png"
+                "key": "character",
+                "frame": "Enemigo.png"
             },
-            "x": 0,
-            "originX": 0.5,
-            "originY": 0.7370809535381321
+            "x": 311
         }
     ],
     "plainObjects": [],
@@ -36,5 +32,18 @@
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 3
-    }
+    },
+    "prefabProperties": [
+        {
+            "name": "maceta",
+            "label": "Maceta",
+            "tooltip": "maceta",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "expression",
+                "expressionType": "MacetaPrefab | undefined"
+            }
+        }
+    ]
 }

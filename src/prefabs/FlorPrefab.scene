@@ -1,5 +1,5 @@
 {
-    "id": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
+    "id": "0aca9e22-1fc6-4705-8176-a760a531bdbf",
     "sceneType": "PREFAB",
     "settings": {
         "exportClass": true,
@@ -12,22 +12,22 @@
     "displayList": [
         {
             "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
-            "id": "b3b8549b-7a7c-4584-928b-9be5c0d78416",
+            "id": "c4d8f7ae-4b9e-4d4d-acb5-a69e304826ff",
             "unlock": [
                 "x",
                 "texture",
                 "originX",
                 "originY"
             ],
-            "label": "semilla_png_3",
+            "label": "flor_0_png",
             "components": [],
             "texture": {
-                "key": "plataformas",
-                "frame": "semilla.png"
+                "key": "character",
+                "frame": "Flor_0.png"
             },
-            "x": 0,
-            "originX": 0.5,
-            "originY": 0.7370809535381321
+            "x": 295.1435546875,
+            "originX": 0.45952969342702377,
+            "originY": 0.9739790052061869
         }
     ],
     "plainObjects": [],

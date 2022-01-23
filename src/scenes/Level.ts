@@ -1,5 +1,5 @@
 
-// You can write more code here
+import FlorPrefab from "~/prefabs/FlorPrefab";
 
 /* START OF COMPILED CODE */
 
@@ -8,6 +8,8 @@ import Parallax from "../components/Parallax";
 import PlataformaLargaPrefab from "../prefabs/PlataformaLargaPrefab";
 import PlayerPrefab from "../prefabs/PlayerPrefab";
 import SemillaPrefab from "../prefabs/SemillaPrefab";
+import MacetaPrefab from "./MacetaPrefab";
+import EnemyPrefab from "../prefabs/EnemyPrefab";
 import ControllerButtonPrefab from "../prefabs/ControllerButtonPrefab";
 
 export default class Level extends Phaser.Scene {
@@ -49,11 +51,11 @@ export default class Level extends Phaser.Scene {
 		const plataformasLayer = this.add.layer();
 
 		// plataformaLargaPrefab
-		const plataformaLargaPrefab = new PlataformaLargaPrefab(this, 445, 285.9, "plataformas", "plataform_2piel.png");
+		const plataformaLargaPrefab = new PlataformaLargaPrefab(this, 445, 224, "plataformas", "plataform_2piel.png");
 		plataformasLayer.add(plataformaLargaPrefab);
 
 		// plataformaLargaPrefab_1
-		const plataformaLargaPrefab_1 = new PlataformaLargaPrefab(this, 785, 321, "plataformas", "plataform_2piel.png");
+		const plataformaLargaPrefab_1 = new PlataformaLargaPrefab(this, 785, 257, "plataformas", "plataform_2piel.png");
 		plataformasLayer.add(plataformaLargaPrefab_1);
 
 		// plataformaLargaPrefab_2
@@ -92,7 +94,7 @@ export default class Level extends Phaser.Scene {
 		const charactersLayer = this.add.layer();
 
 		// player
-		const player = new PlayerPrefab(this, 410, 101, "character", "Bicho.png");
+		const player = new PlayerPrefab(this, 446, 35, "character", "Bicho.png");
 		charactersLayer.add(player);
 
 		// semillasLayers
@@ -129,67 +131,77 @@ export default class Level extends Phaser.Scene {
 		// macetasLayer
 		const macetasLayer = this.add.layer();
 
-		// tierra_png_3
-		const tierra_png_3 = this.add.image(523, 260, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_3);
+		// maceta3
+		const maceta3 = new MacetaPrefab(this, 1146, 260, "plataformas", "tierra.png");
+		macetasLayer.add(maceta3);
 
-		// tierra_png_2
-		const tierra_png_2 = this.add.image(1170, 261, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_2);
+		// maceta5
+		const maceta5 = new MacetaPrefab(this, 2113, 269, "plataformas", "tierra.png");
+		macetasLayer.add(maceta5);
 
-		// tierra_png_1
-		const tierra_png_1 = this.add.image(-676, 118, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_1);
+		// maceta1
+		const maceta1 = new MacetaPrefab(this, 389, 194, "plataformas", "tierra.png");
+		macetasLayer.add(maceta1);
 
-		// tierra_png
-		const tierra_png = this.add.image(-347, 517, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png);
+		// maceta2
+		const maceta2 = new MacetaPrefab(this, 784, 231, "plataformas", "tierra.png");
+		macetasLayer.add(maceta2);
 
-		// tierra_png_4
-		const tierra_png_4 = this.add.image(1093, 506, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_4);
+		// maceta4
+		const maceta4 = new MacetaPrefab(this, 1839, 260, "plataformas", "tierra.png");
+		macetasLayer.add(maceta4);
 
-		// tierra_png_2_1
-		const tierra_png_2_1 = this.add.image(1843, 261, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_2_1);
+		// maceta6
+		const maceta6 = new MacetaPrefab(this, 2762, 266, "plataformas", "tierra.png");
+		macetasLayer.add(maceta6);
 
-		// tierra_png_2_2
-		const tierra_png_2_2 = this.add.image(2098, 276, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_2_2);
+		// maceta7
+		const maceta7 = new MacetaPrefab(this, 3449, 254, "plataformas", "tierra.png");
+		macetasLayer.add(maceta7);
 
-		// tierra_png_2_3
-		const tierra_png_2_3 = this.add.image(2896, 257, "plataformas", "tierra.png");
-		macetasLayer.add(tierra_png_2_3);
+		// floresLayer
+		const floresLayer = this.add.layer();
 
-		// flor6
-		const flor6 = this.add.image(1187, 188, "flor6");
-		macetasLayer.add(flor6);
+		// enemyLayer
+		const enemyLayer = this.add.layer();
 
-		// flor6_1
-		const flor6_1 = this.add.image(2110, 205, "flor6");
-		macetasLayer.add(flor6_1);
+		// enemyPrefab1
+		const enemyPrefab1 = new EnemyPrefab(this, 386, -299);
+		enemyLayer.add(enemyPrefab1);
+
+		// enemyPrefab2
+		const enemyPrefab2 = new EnemyPrefab(this, 779, -302);
+		enemyLayer.add(enemyPrefab2);
+
+		// enemyPrefab3
+		const enemyPrefab3 = new EnemyPrefab(this, 1138, -182);
+		enemyLayer.add(enemyPrefab3);
+
+		// enemyPrefab4
+		const enemyPrefab4 = new EnemyPrefab(this, 1835, -212);
+		enemyLayer.add(enemyPrefab4);
+
+		// enemyPrefab5
+		const enemyPrefab5 = new EnemyPrefab(this, 2122, -187);
+		enemyLayer.add(enemyPrefab5);
+
+		// enemyPrefab6
+		const enemyPrefab6 = new EnemyPrefab(this, 2750, -187);
+		enemyLayer.add(enemyPrefab6);
+
+		// enemyPrefab7
+		const enemyPrefab7 = new EnemyPrefab(this, 3442, -154);
+		enemyLayer.add(enemyPrefab7);
+
+		// bulletLayer
+		const bulletLayer = this.add.layer();
 
 		// controllerLayer
 		const controllerLayer = this.add.layer();
 
-		// action_png
-		const action_png = this.add.image(723, 321, "ui", "action.png");
-		controllerLayer.add(action_png);
-
-		// left_png
-		const left_png = this.add.image(78, 500, "ui", "left.png");
-		controllerLayer.add(left_png);
-
-		// up_png
-		const up_png = this.add.image(699, 500, "ui", "up.png");
-		controllerLayer.add(up_png);
-
-		// right_png
-		const right_png = this.add.image(137, 500, "ui", "right.png");
-		controllerLayer.add(right_png);
-
 		// upButton
-		const upButton = new ControllerButtonPrefab(this, 643, 516, 348, 184);
+		const upButton = new ControllerButtonPrefab(this, 632, 380, 162, 220);
+		upButton.setOrigin(0, 0);
 		controllerLayer.add(upButton);
 
 		// changeButton
@@ -197,8 +209,21 @@ export default class Level extends Phaser.Scene {
 		controllerLayer.add(changeButton);
 
 		// fireButton
-		const fireButton = new ControllerButtonPrefab(this, 723, 320);
+		const fireButton = new ControllerButtonPrefab(this, 420, 380, 187, 220);
+		fireButton.setOrigin(0, 0);
 		controllerLayer.add(fireButton);
+
+		// cambio_png
+		const cambio_png = this.add.image(136, 522, "ui", "Cambio.png");
+		controllerLayer.add(cambio_png);
+
+		// realFireButton
+		const realFireButton = this.add.image(538, 522, "ui", "siembra.png");
+		controllerLayer.add(realFireButton);
+
+		// saltar_png
+		const saltar_png = this.add.image(710, 522, "ui", "saltar.png");
+		controllerLayer.add(saltar_png);
 
 		// fondo (components)
 		const fondoParallax = new Parallax(fondo);
@@ -222,23 +247,31 @@ export default class Level extends Phaser.Scene {
 		// player (prefab fields)
 		player.platformsLayer = [plataformasLayer];
 		player.semillasLayers = [semillasLayers];
-		player.controller = {changeButton, upButton, fireButton};
+		player.controller = {changeButton, upButton, fireButton, realFireButton};
+		player.macetasLayers = [macetasLayer];
+		player.floresLayers = [floresLayer];
+		player.bulletLayer = bulletLayer;
 
-		// action_png (components)
-		const action_pngParallax = new Parallax(action_png);
-		action_pngParallax.factor = 0;
+		// enemyPrefab1 (prefab fields)
+		enemyPrefab1.maceta = maceta1;
 
-		// left_png (components)
-		const left_pngParallax = new Parallax(left_png);
-		left_pngParallax.factor = 0;
+		// enemyPrefab2 (prefab fields)
+		enemyPrefab2.maceta = maceta2;
 
-		// up_png (components)
-		const up_pngParallax = new Parallax(up_png);
-		up_pngParallax.factor = 0;
+		// enemyPrefab3 (prefab fields)
+		enemyPrefab3.maceta = maceta3;
 
-		// right_png (components)
-		const right_pngParallax = new Parallax(right_png);
-		right_pngParallax.factor = 0;
+		// enemyPrefab4 (prefab fields)
+		enemyPrefab4.maceta = maceta4;
+
+		// enemyPrefab5 (prefab fields)
+		enemyPrefab5.maceta = maceta5;
+
+		// enemyPrefab6 (prefab fields)
+		enemyPrefab6.maceta = maceta6;
+
+		// enemyPrefab7 (prefab fields)
+		enemyPrefab7.maceta = maceta7;
 
 		// upButton (components)
 		const upButtonParallax = new Parallax(upButton);
@@ -252,12 +285,30 @@ export default class Level extends Phaser.Scene {
 		const fireButtonParallax = new Parallax(fireButton);
 		fireButtonParallax.factor = 0;
 
+		// cambio_png (components)
+		const cambio_pngParallax = new Parallax(cambio_png);
+		cambio_pngParallax.factor = 0;
+
+		// realFireButton (components)
+		const realFireButtonParallax = new Parallax(realFireButton);
+		realFireButtonParallax.factor = 0;
+
+		// saltar_png (components)
+		const saltar_pngParallax = new Parallax(saltar_png);
+		saltar_pngParallax.factor = 0;
+
 		this.player = player;
+		this.floresLayer = floresLayer;
+		this.enemyLayer = enemyLayer;
+		this.bulletLayer = bulletLayer;
 
 		this.events.emit("scene-awake");
 	}
 
 	private player!: PlayerPrefab;
+	private floresLayer!: Phaser.GameObjects.Layer;
+	private enemyLayer!: Phaser.GameObjects.Layer;
+	private bulletLayer!: Phaser.GameObjects.Layer;
 
 	/* START-USER-CODE */
 
@@ -271,6 +322,20 @@ export default class Level extends Phaser.Scene {
 	update() {
 
 		this.player.updatePrefab();
+
+		const arcade = this.physics as Phaser.Physics.Arcade.ArcadePhysics;
+
+		arcade.overlap(this.enemyLayer.list, this.floresLayer.list, (enemy, obj) => {
+
+			(enemy as EnemyPrefab).eatFlor(obj as any);
+		});
+
+		arcade.overlap(this.enemyLayer.list, this.bulletLayer.list, (enemy, bullet) => {
+
+			(enemy as EnemyPrefab).killEnemy();
+
+			bullet.destroy();
+		});
 	}
 
 	/* END-USER-CODE */
