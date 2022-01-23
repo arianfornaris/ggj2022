@@ -32,6 +32,11 @@
                 "key": "DisparaFuego"
             },
             {
+                "url": "assets/ui/Ficha espacial.png",
+                "type": "image",
+                "key": "Ficha espacial"
+            },
+            {
                 "url": "assets/environment/flor6.png",
                 "type": "image",
                 "key": "flor6"
@@ -52,6 +57,11 @@
                 ],
                 "type": "audio",
                 "key": "Jump"
+            },
+            {
+                "url": "assets/ui/Menu Fondo.png",
+                "type": "image",
+                "key": "Menu Fondo"
             },
             {
                 "atlasURL": "assets/environment/plataformas.json",

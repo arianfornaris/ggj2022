@@ -2,6 +2,8 @@ import Phaser from "phaser";
 import Level from "./scenes/Level";
 import preloadPackUrl from "../static/assets/preload-asset-pack.json";
 import Preload from "./scenes/Preload";
+import Start from "./scenes/Start";
+import Help from "./scenes/Help";
 
 class Boot extends Phaser.Scene {
 
@@ -39,7 +41,7 @@ window.addEventListener('load', function () {
 		input: {
 			"activePointers": 3
 		},
-		scene: [Boot, Preload, Level]
+		scene: [Boot, Preload, Start, Help, Level]
 	});
 
 	game.scene.start("Boot");
