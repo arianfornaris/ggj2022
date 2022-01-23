@@ -1,13 +1,13 @@
 import MacetaPrefab from "~/scenes/MacetaPrefab";
+import ArcadeSpritePrefab from "./ArcadeSpritePrefab";
+import FlorPrefab from "./FlorPrefab";
 
 /* START OF COMPILED CODE */
 
-import Phaser from "phaser";
-
-export default class EnemyPrefab extends Phaser.GameObjects.Image {
+export default class EnemyPrefab extends ArcadeSpritePrefab {
 
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
-		super(scene, x ?? 311, y ?? 187, texture || "character", frame ?? "Enemigo.png");
+		super(scene, x, y, texture || "character", frame ?? "Enemigo.png");
 
 		/* START-USER-CTR-CODE */
 		this.scene.events.once("scene-awake", () => this.awakePrefab());
@@ -46,6 +46,38 @@ export default class EnemyPrefab extends Phaser.GameObjects.Image {
 			yoyo: true,
 			duration: 2000,
 			ease: Phaser.Math.Easing.Quadratic.Out
+		});
+	}
+
+	private _eating = false;
+
+	eatFlor(flor: FlorPrefab) {
+
+		if (this._eating) {
+
+			return;
+		}
+
+		this._eating = true;
+
+		this.scene.add.tween({
+			targets: flor,
+			angle: {
+				from: -5,
+				to: 5,
+			},
+			repeat: 10,
+			duration: 100
+		});
+
+		this.scene.time.addEvent({
+			delay: 1000,
+			callback: () => {
+
+				flor.killFlor();
+
+				this._eating = false;
+			}
 		});
 	}
 

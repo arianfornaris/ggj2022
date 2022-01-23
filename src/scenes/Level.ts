@@ -1,5 +1,5 @@
 
-// You can write more code here
+import FlorPrefab from "~/prefabs/FlorPrefab";
 
 /* START OF COMPILED CODE */
 
@@ -244,7 +244,7 @@ export default class Level extends Phaser.Scene {
 		// player (prefab fields)
 		player.platformsLayer = [plataformasLayer];
 		player.semillasLayers = [semillasLayers];
-		player.controller = {changeButton, upButton, fireButton};
+		player.controller = { changeButton, upButton, fireButton };
 		player.macetasLayers = [macetasLayer];
 		player.floresLayers = [floresLayer];
 
@@ -294,11 +294,15 @@ export default class Level extends Phaser.Scene {
 		enemyPrefab7.maceta = maceta7;
 
 		this.player = player;
+		this.floresLayer = floresLayer;
+		this.enemyLayer = enemyLayer;
 
 		this.events.emit("scene-awake");
 	}
 
 	private player!: PlayerPrefab;
+	private floresLayer!: Phaser.GameObjects.Layer;
+	private enemyLayer!: Phaser.GameObjects.Layer;
 
 	/* START-USER-CODE */
 
@@ -312,6 +316,13 @@ export default class Level extends Phaser.Scene {
 	update() {
 
 		this.player.updatePrefab();
+
+		const arcade = this.physics as Phaser.Physics.Arcade.ArcadePhysics;
+
+		arcade.overlap(this.enemyLayer.list, this.floresLayer.list, (enemy, obj) => {
+
+			(enemy as EnemyPrefab).eatFlor(obj as any);
+		});
 	}
 
 	/* END-USER-CODE */

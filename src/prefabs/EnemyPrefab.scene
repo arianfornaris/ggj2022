@@ -11,16 +11,19 @@
     },
     "displayList": [
         {
-            "type": "Image",
+            "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
             "id": "d87fd3e0-fafd-4a64-9928-f3ef15f8bf86",
+            "unlock": [
+                "x",
+                "texture"
+            ],
             "label": "enemigo_png",
             "components": [],
             "texture": {
                 "key": "character",
                 "frame": "Enemigo.png"
             },
-            "x": 311,
-            "y": 187
+            "x": 311
         }
     ],
     "plainObjects": [],

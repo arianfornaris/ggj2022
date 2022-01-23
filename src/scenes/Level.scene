@@ -528,6 +528,7 @@
             "type": "Layer",
             "id": "66e605f7-6852-4b8b-807d-57fe04d6be7e",
             "label": "floresLayer",
+            "scope": "CLASS",
             "components": [],
             "list": []
         },
@@ -659,6 +660,7 @@
             "type": "Layer",
             "id": "1aa84ff1-82eb-445c-8165-11a1162948d6",
             "label": "enemyLayer",
+            "scope": "CLASS",
             "components": [],
             "list": [
                 {

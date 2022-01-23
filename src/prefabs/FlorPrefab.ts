@@ -10,6 +10,8 @@ export default class FlorPrefab extends ArcadeSpritePrefab {
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
 		super(scene, x, y, texture || "character", frame ?? "Flor_0.png");
 
+		this.setOrigin(0.45952969342702377, 0.9739790052061869);
+
 		/* START-USER-CTR-CODE */
 		this.play("Flor");
 		this.body.setCircle(40, 20, 20);
@@ -38,6 +40,11 @@ export default class FlorPrefab extends ArcadeSpritePrefab {
 	}
 
 	killFlor() {
+
+		if (!this.body.enable) {
+
+			return;
+		}
 
 		this.body.enable = false;
 		this.scene.add.tween({

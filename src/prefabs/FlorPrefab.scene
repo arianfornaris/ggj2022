@@ -15,7 +15,9 @@
             "id": "c4d8f7ae-4b9e-4d4d-acb5-a69e304826ff",
             "unlock": [
                 "x",
-                "texture"
+                "texture",
+                "originX",
+                "originY"
             ],
             "label": "flor_0_png",
             "components": [],
@@ -23,7 +25,9 @@
                 "key": "character",
                 "frame": "Flor_0.png"
             },
-            "x": 300
+            "x": 295.1435546875,
+            "originX": 0.45952969342702377,
+            "originY": 0.9739790052061869
         }
     ],
     "plainObjects": [],

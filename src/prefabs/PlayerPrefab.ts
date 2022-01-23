@@ -290,7 +290,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 			if (semilla) {
 
-				const flor = new FlorPrefab(this.scene, this._currentMaceta.x, this._currentMaceta.y - 70);
+				const flor = new FlorPrefab(this.scene, this._currentMaceta.x, this._currentMaceta.y - 10);
 
 				flor.addToDisplayList(this.floresLayers[0]);
 
