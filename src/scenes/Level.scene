@@ -293,7 +293,7 @@
                     "scope": "CLASS",
                     "platformsLayer": "[plataformasLayer]",
                     "semillasLayers": "[semillasLayers]",
-                    "controller": "{changeButton, upButton, fireButton}",
+                    "controller": "{changeButton, upButton, fireButton, realFireButton}",
                     "macetasLayers": "[macetasLayer]",
                     "floresLayers": "[floresLayer]",
                     "bulletLayer": "bulletLayer",
@@ -744,7 +744,7 @@
                 {
                     "type": "Image",
                     "id": "551d1b60-5850-415d-827b-d1781cec2381",
-                    "label": "siembra_png",
+                    "label": "realFireButton",
                     "components": [
                         "Parallax"
                     ],

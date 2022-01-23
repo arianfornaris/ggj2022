@@ -217,9 +217,9 @@ export default class Level extends Phaser.Scene {
 		const cambio_png = this.add.image(136, 522, "ui", "Cambio.png");
 		controllerLayer.add(cambio_png);
 
-		// siembra_png
-		const siembra_png = this.add.image(538, 522, "ui", "siembra.png");
-		controllerLayer.add(siembra_png);
+		// realFireButton
+		const realFireButton = this.add.image(538, 522, "ui", "siembra.png");
+		controllerLayer.add(realFireButton);
 
 		// saltar_png
 		const saltar_png = this.add.image(710, 522, "ui", "saltar.png");
@@ -247,7 +247,7 @@ export default class Level extends Phaser.Scene {
 		// player (prefab fields)
 		player.platformsLayer = [plataformasLayer];
 		player.semillasLayers = [semillasLayers];
-		player.controller = {changeButton, upButton, fireButton};
+		player.controller = {changeButton, upButton, fireButton, realFireButton};
 		player.macetasLayers = [macetasLayer];
 		player.floresLayers = [floresLayer];
 		player.bulletLayer = bulletLayer;
@@ -289,9 +289,9 @@ export default class Level extends Phaser.Scene {
 		const cambio_pngParallax = new Parallax(cambio_png);
 		cambio_pngParallax.factor = 0;
 
-		// siembra_png (components)
-		const siembra_pngParallax = new Parallax(siembra_png);
-		siembra_pngParallax.factor = 0;
+		// realFireButton (components)
+		const realFireButtonParallax = new Parallax(realFireButton);
+		realFireButtonParallax.factor = 0;
 
 		// saltar_png (components)
 		const saltar_pngParallax = new Parallax(saltar_png);
@@ -335,7 +335,7 @@ export default class Level extends Phaser.Scene {
 		arcade.overlap(this.enemyLayer.list, this.bulletLayer.list, (enemy, bullet) => {
 
 			(enemy as EnemyPrefab).killEnemy();
-			
+
 			bullet.destroy();
 		});
 	}

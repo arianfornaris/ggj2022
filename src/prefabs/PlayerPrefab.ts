@@ -29,7 +29,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	public platformsLayer: Phaser.GameObjects.Layer[] = [];
 	public semillasLayers: Phaser.GameObjects.Layer[] = [];
-	public controller: { changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab } | undefined;
+	public controller: {changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab, realFireButton: Phaser.GameObjects.Image} | undefined;
 	public macetasLayers: Phaser.GameObjects.Layer[] = [];
 	public floresLayers: Phaser.GameObjects.Layer[] = [];
 	public bulletLayer: Phaser.GameObjects.Layer | undefined;
@@ -192,7 +192,9 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 			yoyo: true,
 			duration: 100,
 			ease: Phaser.Math.Easing.Elastic.InOut
-		})
+		});
+
+		this.controller?.realFireButton.setFrame(this._goodBoyState? "siembra.png" : "disparo.png");
 	}
 
 	private initCamera() {
