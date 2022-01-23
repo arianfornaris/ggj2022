@@ -28,8 +28,9 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	public platformsLayer: Phaser.GameObjects.Layer[] = [];
 	public semillasLayers: Phaser.GameObjects.Layer[] = [];
-	public controller: { changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab } | undefined;
+	public controller: {changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab} | undefined;
 	public macetasLayers: Phaser.GameObjects.Layer[] = [];
+	public floresLayers: Phaser.GameObjects.Layer[] = [];
 
 	/* START-USER-CODE */
 
@@ -127,6 +128,8 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		this.updateSemillas();
 
 		this.updateMacetas();
+
+		this.updateFlores();
 	}
 
 	private updateMacetas() {
@@ -192,6 +195,23 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		}
 	}
 
+	private updateFlores() {
+
+		for (const layer of this.floresLayers) {
+
+			this.arcade.overlap(this, layer.list, (player, obj) => this.playerVsFlor(
+				obj as any));
+		}
+	}
+
+	private playerVsFlor(flor: FlorPrefab) {
+
+		if (!this._goodBoyState) {
+
+			flor.killFlor();
+		}
+	}
+
 	private playerVsSemilla(semilla: SemillaPrefab) {
 
 		if (this._goodBoyState) {
@@ -224,6 +244,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 		this.controller?.upButton.on("pointerdown", () => this.jump());
 		this.controller?.changeButton.on("pointerdown", () => this.changeCharacter());
+		this.controller?.fireButton.on("pointerdown", () => this.doAction());
 
 		this.debugText = this.scene.add.text(10, 10, "debug");
 		this.debugText.setScrollFactor(0, 0);
@@ -247,7 +268,9 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 				const flor = new FlorPrefab(this.scene, this._currentMaceta.x, this._currentMaceta.y - 70);
 
-				flor.addToWorld(semilla);
+				flor.addToDisplayList(this.floresLayers[0]);
+
+				flor.addToWorld(semilla, this._currentMaceta);
 
 				this._currentMaceta.flor = flor;
 			}

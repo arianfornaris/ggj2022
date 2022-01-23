@@ -79,6 +79,17 @@
                 "id": "expression",
                 "expressionType": "Phaser.GameObjects.Layer[]"
             }
+        },
+        {
+            "name": "floresLayers",
+            "label": "Flores Layers",
+            "tooltip": "Flores layers",
+            "defValue": "[]",
+            "customDefinition": false,
+            "type": {
+                "id": "expression",
+                "expressionType": "Phaser.GameObjects.Layer[]"
+            }
         }
     ]
 }

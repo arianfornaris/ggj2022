@@ -285,7 +285,8 @@
                         "texture",
                         "semillasLayers",
                         "controller",
-                        "macetasLayers"
+                        "macetasLayers",
+                        "floresLayers"
                     ],
                     "label": "player",
                     "scope": "CLASS",
@@ -293,6 +294,7 @@
                     "semillasLayers": "[semillasLayers]",
                     "controller": "{changeButton, upButton, fireButton}",
                     "macetasLayers": "[macetasLayer]",
+                    "floresLayers": "[floresLayer]",
                     "components": [],
                     "texture": {
                         "key": "character",
@@ -392,6 +394,18 @@
                     "components": [],
                     "x": 2865,
                     "y": 44
+                },
+                {
+                    "prefabId": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
+                    "id": "f5244915-090e-4a73-b97b-4b37950b6d68",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "semilla_png_1_3_1",
+                    "components": [],
+                    "x": 479.2417009826234,
+                    "y": 45.385218240884065
                 }
             ]
         },
@@ -517,10 +531,17 @@
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 3559,
+                    "x": 3449,
                     "y": 254
                 }
             ]
+        },
+        {
+            "type": "Layer",
+            "id": "66e605f7-6852-4b8b-807d-57fe04d6be7e",
+            "label": "floresLayer",
+            "components": [],
+            "list": []
         },
         {
             "type": "Layer",
@@ -540,8 +561,8 @@
                         "key": "ui",
                         "frame": "action.png"
                     },
-                    "x": 723,
-                    "y": 321
+                    "x": 703,
+                    "y": 324
                 },
                 {
                     "type": "Image",
@@ -637,15 +658,19 @@
                         "x",
                         "y",
                         "action",
-                        "player"
+                        "player",
+                        "width",
+                        "height"
                     ],
                     "label": "fireButton",
                     "components": [
                         "Parallax"
                     ],
                     "Parallax.factor": 0,
-                    "x": 723,
-                    "y": 320
+                    "x": 703,
+                    "y": 323,
+                    "width": 220,
+                    "height": 147
                 }
             ]
         }

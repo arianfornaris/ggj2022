@@ -1,14 +1,14 @@
+import MacetaPrefab from "~/scenes/MacetaPrefab";
+import ArcadeSpritePrefab from "./ArcadeSpritePrefab";
 import SemillaPrefab from "./SemillaPrefab";
 
 
 /* START OF COMPILED CODE */
 
-import Phaser from "phaser";
-
-export default class FlorPrefab extends Phaser.GameObjects.Sprite {
+export default class FlorPrefab extends ArcadeSpritePrefab {
 
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
-		super(scene, x ?? 300, y ?? 146, texture || "character", frame ?? "Flor_0.png");
+		super(scene, x, y, texture || "character", frame ?? "Flor_0.png");
 
 		/* START-USER-CTR-CODE */
 		this.play("Flor");
@@ -17,14 +17,15 @@ export default class FlorPrefab extends Phaser.GameObjects.Sprite {
 
 	/* START-USER-CODE */
 
-	semilla?: SemillaPrefab;
+	semilla!: SemillaPrefab;
+	maceta!: MacetaPrefab;
 
-	addToWorld(semilla: SemillaPrefab) {
+	addToWorld(semilla: SemillaPrefab, maceta: MacetaPrefab) {
 
 		this.semilla = semilla;
+		this.maceta = maceta;
+
 		semilla.visible = false;
-		
-		this.scene.add.existing(this);
 
 		this.scene.add.tween({
 			targets: this, alpha: {
@@ -32,6 +33,25 @@ export default class FlorPrefab extends Phaser.GameObjects.Sprite {
 				to: 1
 			}
 		});
+	}
+
+	killFlor() {
+
+		this.body.enable = false;
+		this.scene.add.tween({
+			targets: this,
+			alpha: 0,
+			duration: 500,
+			y: "-= 100",
+			onComplete: () => {
+
+				this.destroy();
+			}
+		});
+
+		this.semilla.welcomeBack();
+
+		delete this.maceta.flor;
 	}
 
 	/* END-USER-CODE */

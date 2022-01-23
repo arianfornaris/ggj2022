@@ -127,6 +127,10 @@ export default class Level extends Phaser.Scene {
 		const semilla_png_1_3 = new SemillaPrefab(this, 2865, 44);
 		semillasLayers.add(semilla_png_1_3);
 
+		// semilla_png_1_3_1
+		const semilla_png_1_3_1 = new SemillaPrefab(this, 479.2417009826234, 45.385218240884065);
+		semillasLayers.add(semilla_png_1_3_1);
+
 		// macetasLayer
 		const macetasLayer = this.add.layer();
 
@@ -155,14 +159,17 @@ export default class Level extends Phaser.Scene {
 		macetasLayer.add(tierra_png_2_1);
 
 		// tierra_png_2_2
-		const tierra_png_2_2 = new MacetaPrefab(this, 3559, 254, "plataformas", "tierra.png");
+		const tierra_png_2_2 = new MacetaPrefab(this, 3449, 254, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_2_2);
+
+		// floresLayer
+		const floresLayer = this.add.layer();
 
 		// controllerLayer
 		const controllerLayer = this.add.layer();
 
 		// action_png
-		const action_png = this.add.image(723, 321, "ui", "action.png");
+		const action_png = this.add.image(703, 324, "ui", "action.png");
 		controllerLayer.add(action_png);
 
 		// left_png
@@ -186,7 +193,7 @@ export default class Level extends Phaser.Scene {
 		controllerLayer.add(changeButton);
 
 		// fireButton
-		const fireButton = new ControllerButtonPrefab(this, 723, 320);
+		const fireButton = new ControllerButtonPrefab(this, 703, 323, 220, 147);
 		controllerLayer.add(fireButton);
 
 		// fondo (components)
@@ -213,6 +220,7 @@ export default class Level extends Phaser.Scene {
 		player.semillasLayers = [semillasLayers];
 		player.controller = {changeButton, upButton, fireButton};
 		player.macetasLayers = [macetasLayer];
+		player.floresLayers = [floresLayer];
 
 		// action_png (components)
 		const action_pngParallax = new Parallax(action_png);

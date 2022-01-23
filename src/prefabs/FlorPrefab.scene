@@ -11,16 +11,19 @@
     },
     "displayList": [
         {
-            "type": "Sprite",
+            "prefabId": "6f9becfc-2b5b-4083-8765-a752a59101be",
             "id": "c4d8f7ae-4b9e-4d4d-acb5-a69e304826ff",
+            "unlock": [
+                "x",
+                "texture"
+            ],
             "label": "flor_0_png",
             "components": [],
             "texture": {
                 "key": "character",
                 "frame": "Flor_0.png"
             },
-            "x": 300,
-            "y": 146
+            "x": 300
         }
     ],
     "plainObjects": [],
