@@ -217,8 +217,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">Enemigo final/Enemigo_fuego1.png</key>
-            <key type="filename">Enemigo final/Enemigo_fuego2.png</key>
+            <key type="filename">Enemigo HECHOl/Enemigo_fuego1.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -230,6 +229,21 @@
                 <rect>29,21,57,43</rect>
                 <key>scale9Paddings</key>
                 <rect>29,21,57,43</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">Enemigo HECHOl/Enemigo_fuego2.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>30,21,59,43</rect>
+                <key>scale9Paddings</key>
+                <rect>30,21,59,43</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -312,8 +326,8 @@
             <filename>Fuego/fuego3.png</filename>
             <filename>Fuego/fuego4.png</filename>
             <filename>Fuego/fuego5.png</filename>
-            <filename>Enemigo final/Enemigo_fuego1.png</filename>
-            <filename>Enemigo final/Enemigo_fuego2.png</filename>
+            <filename>Enemigo HECHOl/Enemigo_fuego1.png</filename>
+            <filename>Enemigo HECHOl/Enemigo_fuego2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

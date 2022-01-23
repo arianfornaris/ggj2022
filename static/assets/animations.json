@@ -244,12 +244,18 @@
             "frames": [
                 {
                     "key": "character",
+                    "frame": "Enemigo_fuego1.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "character",
                     "frame": "Enemigo_fuego2.png",
                     "duration": 0,
                     "keyframe": false
                 }
             ],
-            "frameRate": 8,
+            "frameRate": 4,
             "skipMissedFrames": true,
             "repeat": -1
         }
