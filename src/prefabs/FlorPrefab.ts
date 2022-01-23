@@ -27,6 +27,7 @@ export default class FlorPrefab extends ArcadeSpritePrefab {
 		this.maceta = maceta;
 
 		semilla.visible = false;
+		semilla.setPosition(this.x, this.y);
 
 		this.scene.add.tween({
 			targets: this, alpha: {

@@ -15,7 +15,9 @@
             "id": "b3b8549b-7a7c-4584-928b-9be5c0d78416",
             "unlock": [
                 "x",
-                "texture"
+                "texture",
+                "originX",
+                "originY"
             ],
             "label": "semilla_png_3",
             "components": [],
@@ -23,7 +25,9 @@
                 "key": "plataformas",
                 "frame": "semilla.png"
             },
-            "x": 0
+            "x": 0,
+            "originX": 0.5,
+            "originY": 0.7370809535381321
         }
     ],
     "plainObjects": [],

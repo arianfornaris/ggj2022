@@ -7,10 +7,11 @@ import PlayerPrefab from "./PlayerPrefab";
 /* START OF COMPILED CODE */
 
 export default class SemillaPrefab extends ArcadeSpritePrefab {
-	
 
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
 		super(scene, x, y, texture || "plataformas", frame ?? "semilla.png");
+
+		this.setOrigin(0.5, 0.7370809535381321);
 
 		/* START-USER-CTR-CODE */
 
@@ -31,7 +32,7 @@ export default class SemillaPrefab extends ArcadeSpritePrefab {
 	}
 
 	welcomeBack() {
-	
+
 		this.visible = true;
 
 		this.scene.add.tween({
@@ -40,12 +41,26 @@ export default class SemillaPrefab extends ArcadeSpritePrefab {
 				from: 0,
 				to: 1
 			},
-			x: this._initX,
-			y: this._initY,
 			scaleX: 1,
 			scaleY: 1,
 			duration: 1000,
-			onComplete:() => {
+		});
+
+		this.scene.add.tween({
+			targets: this,
+			angle: {
+				from: 0,
+				to: 360
+			},
+			duration: 1000
+		});
+
+		this.scene.add.tween({
+			targets: this,
+			x: this._initX,
+			y: this._initY,
+			duration: 2 * Phaser.Math.Distance.Between(this.x, this.y, this._initX, this._initY),
+			onComplete: () => {
 
 				this.body.enable = true;
 				this.body.reset(this.x, this.y);

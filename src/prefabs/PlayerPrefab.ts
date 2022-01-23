@@ -254,8 +254,8 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 			targets: semilla,
 			scaleX: 0.5,
 			scaleY: 0.5,
-			duration: 200,
-			ease: Phaser.Math.Easing.Quadratic.In
+			duration: 300,
+			ease: Phaser.Math.Easing.Quadratic.Out
 		});
 	}
 
