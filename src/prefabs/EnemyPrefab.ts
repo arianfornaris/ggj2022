@@ -81,6 +81,21 @@ export default class EnemyPrefab extends ArcadeSpritePrefab {
 		});
 	}
 
+	killEnemy() {
+
+		this.play("enemigo-die");
+
+		this.scene.add.tween({
+			targets: this,
+			alpha: 0.5,
+			duration: 500,
+			x: "-=40",
+			y: "-=40",
+			scale: 0.8,
+			onComplete: () => this.destroy()
+		});
+	}
+
 	/* END-USER-CODE */
 }
 

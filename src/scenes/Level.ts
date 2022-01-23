@@ -9,8 +9,8 @@ import PlataformaLargaPrefab from "../prefabs/PlataformaLargaPrefab";
 import PlayerPrefab from "../prefabs/PlayerPrefab";
 import SemillaPrefab from "../prefabs/SemillaPrefab";
 import MacetaPrefab from "./MacetaPrefab";
-import ControllerButtonPrefab from "../prefabs/ControllerButtonPrefab";
 import EnemyPrefab from "../prefabs/EnemyPrefab";
+import ControllerButtonPrefab from "../prefabs/ControllerButtonPrefab";
 
 export default class Level extends Phaser.Scene {
 
@@ -162,35 +162,6 @@ export default class Level extends Phaser.Scene {
 		// floresLayer
 		const floresLayer = this.add.layer();
 
-		// controllerLayer
-		const controllerLayer = this.add.layer();
-
-		// upButton
-		const upButton = new ControllerButtonPrefab(this, 632, 380, 162, 220);
-		upButton.setOrigin(0, 0);
-		controllerLayer.add(upButton);
-
-		// changeButton
-		const changeButton = new ControllerButtonPrefab(this, 116, 513, 254, 194);
-		controllerLayer.add(changeButton);
-
-		// fireButton
-		const fireButton = new ControllerButtonPrefab(this, 420, 380, 187, 220);
-		fireButton.setOrigin(0, 0);
-		controllerLayer.add(fireButton);
-
-		// cambio_png
-		const cambio_png = this.add.image(136, 522, "ui", "Cambio.png");
-		controllerLayer.add(cambio_png);
-
-		// siembra_png
-		const siembra_png = this.add.image(538, 522, "ui", "siembra.png");
-		controllerLayer.add(siembra_png);
-
-		// saltar_png
-		const saltar_png = this.add.image(710, 522, "ui", "saltar.png");
-		controllerLayer.add(saltar_png);
-
 		// enemyLayer
 		const enemyLayer = this.add.layer();
 
@@ -222,6 +193,38 @@ export default class Level extends Phaser.Scene {
 		const enemyPrefab7 = new EnemyPrefab(this, 3442, -154);
 		enemyLayer.add(enemyPrefab7);
 
+		// bulletLayer
+		const bulletLayer = this.add.layer();
+
+		// controllerLayer
+		const controllerLayer = this.add.layer();
+
+		// upButton
+		const upButton = new ControllerButtonPrefab(this, 632, 380, 162, 220);
+		upButton.setOrigin(0, 0);
+		controllerLayer.add(upButton);
+
+		// changeButton
+		const changeButton = new ControllerButtonPrefab(this, 116, 513, 254, 194);
+		controllerLayer.add(changeButton);
+
+		// fireButton
+		const fireButton = new ControllerButtonPrefab(this, 420, 380, 187, 220);
+		fireButton.setOrigin(0, 0);
+		controllerLayer.add(fireButton);
+
+		// cambio_png
+		const cambio_png = this.add.image(136, 522, "ui", "Cambio.png");
+		controllerLayer.add(cambio_png);
+
+		// siembra_png
+		const siembra_png = this.add.image(538, 522, "ui", "siembra.png");
+		controllerLayer.add(siembra_png);
+
+		// saltar_png
+		const saltar_png = this.add.image(710, 522, "ui", "saltar.png");
+		controllerLayer.add(saltar_png);
+
 		// fondo (components)
 		const fondoParallax = new Parallax(fondo);
 		fondoParallax.factor = 0;
@@ -244,9 +247,31 @@ export default class Level extends Phaser.Scene {
 		// player (prefab fields)
 		player.platformsLayer = [plataformasLayer];
 		player.semillasLayers = [semillasLayers];
-		player.controller = { changeButton, upButton, fireButton };
+		player.controller = {changeButton, upButton, fireButton};
 		player.macetasLayers = [macetasLayer];
 		player.floresLayers = [floresLayer];
+		player.bulletLayer = bulletLayer;
+
+		// enemyPrefab1 (prefab fields)
+		enemyPrefab1.maceta = maceta1;
+
+		// enemyPrefab2 (prefab fields)
+		enemyPrefab2.maceta = maceta2;
+
+		// enemyPrefab3 (prefab fields)
+		enemyPrefab3.maceta = maceta3;
+
+		// enemyPrefab4 (prefab fields)
+		enemyPrefab4.maceta = maceta4;
+
+		// enemyPrefab5 (prefab fields)
+		enemyPrefab5.maceta = maceta5;
+
+		// enemyPrefab6 (prefab fields)
+		enemyPrefab6.maceta = maceta6;
+
+		// enemyPrefab7 (prefab fields)
+		enemyPrefab7.maceta = maceta7;
 
 		// upButton (components)
 		const upButtonParallax = new Parallax(upButton);
@@ -272,30 +297,10 @@ export default class Level extends Phaser.Scene {
 		const saltar_pngParallax = new Parallax(saltar_png);
 		saltar_pngParallax.factor = 0;
 
-		// enemyPrefab1 (prefab fields)
-		enemyPrefab1.maceta = maceta1;
-
-		// enemyPrefab2 (prefab fields)
-		enemyPrefab2.maceta = maceta2;
-
-		// enemyPrefab3 (prefab fields)
-		enemyPrefab3.maceta = maceta3;
-
-		// enemyPrefab4 (prefab fields)
-		enemyPrefab4.maceta = maceta4;
-
-		// enemyPrefab5 (prefab fields)
-		enemyPrefab5.maceta = maceta5;
-
-		// enemyPrefab6 (prefab fields)
-		enemyPrefab6.maceta = maceta6;
-
-		// enemyPrefab7 (prefab fields)
-		enemyPrefab7.maceta = maceta7;
-
 		this.player = player;
 		this.floresLayer = floresLayer;
 		this.enemyLayer = enemyLayer;
+		this.bulletLayer = bulletLayer;
 
 		this.events.emit("scene-awake");
 	}
@@ -303,6 +308,7 @@ export default class Level extends Phaser.Scene {
 	private player!: PlayerPrefab;
 	private floresLayer!: Phaser.GameObjects.Layer;
 	private enemyLayer!: Phaser.GameObjects.Layer;
+	private bulletLayer!: Phaser.GameObjects.Layer;
 
 	/* START-USER-CODE */
 
@@ -322,6 +328,15 @@ export default class Level extends Phaser.Scene {
 		arcade.overlap(this.enemyLayer.list, this.floresLayer.list, (enemy, obj) => {
 
 			(enemy as EnemyPrefab).eatFlor(obj as any);
+		});
+
+		console.log(this.bulletLayer.list);
+
+		arcade.overlap(this.enemyLayer.list, this.bulletLayer.list, (enemy, bullet) => {
+
+			(enemy as EnemyPrefab).killEnemy();
+			
+			bullet.destroy();
 		});
 	}
 

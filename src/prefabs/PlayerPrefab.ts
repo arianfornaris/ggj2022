@@ -3,6 +3,7 @@
 
 import MacetaPrefab from "~/scenes/MacetaPrefab";
 import ArcadeSpritePrefab from "./ArcadeSpritePrefab";
+import BulletPrefab from "./BulletPrefab";
 import ControllerButtonPrefab from "./ControllerButtonPrefab";
 import FlorPrefab from "./FlorPrefab";
 import SemillaPrefab from "./SemillaPrefab";
@@ -28,9 +29,10 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 	public platformsLayer: Phaser.GameObjects.Layer[] = [];
 	public semillasLayers: Phaser.GameObjects.Layer[] = [];
-	public controller: {changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab} | undefined;
+	public controller: { changeButton: ControllerButtonPrefab, upButton: ControllerButtonPrefab, fireButton: ControllerButtonPrefab } | undefined;
 	public macetasLayers: Phaser.GameObjects.Layer[] = [];
 	public floresLayers: Phaser.GameObjects.Layer[] = [];
+	public bulletLayer: Phaser.GameObjects.Layer | undefined;
 
 	/* START-USER-CODE */
 
@@ -182,7 +184,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 
 		this._goodBoyState = !this._goodBoyState;
 
-		this.body.velocity.x = PLAYER_VELOCITY_MOVE * (this._goodBoyState ? 1 : -1); 
+		this.body.velocity.x = PLAYER_VELOCITY_MOVE * (this._goodBoyState ? 1 : -1);
 
 		this.scene.add.tween({
 			targets: this,
@@ -279,7 +281,27 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		if (this._goodBoyState) {
 
 			this.plant();
+
+		} else {
+
+			this.fire();
 		}
+	}
+
+	private _lastFire = 0;
+
+	private fire() {
+
+		if (this.scene.time.now - this._lastFire < 200) {
+
+			return;
+		}
+
+		this._lastFire = this.scene.time.now;
+
+		const bullet = new BulletPrefab(this.scene, this.x - 30, this.y + 20);
+
+		bullet.addToDisplayList(this.bulletLayer);
 	}
 
 	private plant() {

@@ -232,6 +232,22 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">Enemigo/Enemigo_fuego1.png</key>
+            <key type="filename">Enemigo/Enemigo_fuego2.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>20,19,40,37</rect>
+                <key>scale9Paddings</key>
+                <rect>20,19,40,37</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">Flore Nueva/Flor_0.png</key>
             <key type="filename">Flore Nueva/Flor_1.png</key>
             <key type="filename">Flore Nueva/Flor_2.png</key>
@@ -247,6 +263,25 @@
                 <rect>30,30,60,60</rect>
                 <key>scale9Paddings</key>
                 <rect>30,30,60,60</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">Fuego/fuego1.png</key>
+            <key type="filename">Fuego/fuego2.png</key>
+            <key type="filename">Fuego/fuego3.png</key>
+            <key type="filename">Fuego/fuego4.png</key>
+            <key type="filename">Fuego/fuego5.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,6,23,13</rect>
+                <key>scale9Paddings</key>
+                <rect>11,6,23,13</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -272,6 +307,13 @@
             <filename>Flore Nueva/Flor_2.png</filename>
             <filename>Flore Nueva/Flor_4.png</filename>
             <filename>Enemigo/Enemigo.png</filename>
+            <filename>Fuego/fuego1.png</filename>
+            <filename>Fuego/fuego2.png</filename>
+            <filename>Fuego/fuego3.png</filename>
+            <filename>Fuego/fuego4.png</filename>
+            <filename>Fuego/fuego5.png</filename>
+            <filename>Enemigo/Enemigo_fuego1.png</filename>
+            <filename>Enemigo/Enemigo_fuego2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

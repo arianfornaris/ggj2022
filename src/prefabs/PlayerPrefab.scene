@@ -90,6 +90,17 @@
                 "id": "expression",
                 "expressionType": "Phaser.GameObjects.Layer[]"
             }
+        },
+        {
+            "name": "bulletLayer",
+            "label": "BulletLayer",
+            "tooltip": "bullet layer",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "expression",
+                "expressionType": "Phaser.GameObjects.Layer | undefined"
+            }
         }
     ]
 }

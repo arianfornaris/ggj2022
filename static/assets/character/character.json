@@ -146,21 +146,29 @@
 },
 "Enemigo.png":
 {
-	"frame": {"x":420,"y":390,"w":80,"h":60},
+	"frame": {"x":420,"y":390,"w":80,"h":74},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":60},
-	"sourceSize": {"w":80,"h":60}
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":74},
+	"sourceSize": {"w":80,"h":74}
+},
+"Enemigo_fuego1.png":
+{
+	"frame": {"x":500,"y":390,"w":80,"h":74},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":74},
+	"sourceSize": {"w":80,"h":74}
+},
+"Enemigo_fuego2.png":
+{
+	"frame": {"x":580,"y":390,"w":80,"h":74},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":74},
+	"sourceSize": {"w":80,"h":74}
 },
 "Flor_0.png":
-{
-	"frame": {"x":500,"y":390,"w":120,"h":120},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
-	"sourceSize": {"w":120,"h":120}
-},
-"Flor_1.png":
 {
 	"frame": {"x":0,"y":520,"w":120,"h":120},
 	"rotated": false,
@@ -168,7 +176,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
 	"sourceSize": {"w":120,"h":120}
 },
-"Flor_2.png":
+"Flor_1.png":
 {
 	"frame": {"x":120,"y":520,"w":120,"h":120},
 	"rotated": false,
@@ -176,21 +184,69 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
 	"sourceSize": {"w":120,"h":120}
 },
-"Flor_4.png":
+"Flor_2.png":
 {
 	"frame": {"x":240,"y":520,"w":120,"h":120},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
 	"sourceSize": {"w":120,"h":120}
+},
+"Flor_4.png":
+{
+	"frame": {"x":360,"y":520,"w":120,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":120},
+	"sourceSize": {"w":120,"h":120}
+},
+"fuego1.png":
+{
+	"frame": {"x":480,"y":520,"w":45,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":25},
+	"sourceSize": {"w":45,"h":25}
+},
+"fuego2.png":
+{
+	"frame": {"x":525,"y":520,"w":45,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":25},
+	"sourceSize": {"w":45,"h":25}
+},
+"fuego3.png":
+{
+	"frame": {"x":570,"y":520,"w":45,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":25},
+	"sourceSize": {"w":45,"h":25}
+},
+"fuego4.png":
+{
+	"frame": {"x":615,"y":520,"w":45,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":25},
+	"sourceSize": {"w":45,"h":25}
+},
+"fuego5.png":
+{
+	"frame": {"x":660,"y":520,"w":45,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":25},
+	"sourceSize": {"w":45,"h":25}
 }},
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "character.png",
 	"format": "RGBA8888",
-	"size": {"w":700,"h":640},
+	"size": {"w":705,"h":640},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:2ff53879805a584c3dc3d569b9aadabe:13faf09a0a4b475b8ed15018161f8aca:42e475aa4a03af306bdc7acb5ff91d19$"
+	"smartupdate": "$TexturePacker:SmartUpdate:733cc22e94b26ad1fabde96daa34c54d:e0d33bd53599df53e5fb0d31226b71d3:42e475aa4a03af306bdc7acb5ff91d19$"
 }
 }
