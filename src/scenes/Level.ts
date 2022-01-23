@@ -127,15 +127,11 @@ export default class Level extends Phaser.Scene {
 		const semilla_png_1_3 = new SemillaPrefab(this, 2865, 44);
 		semillasLayers.add(semilla_png_1_3);
 
-		// semilla_png_1_3_1
-		const semilla_png_1_3_1 = new SemillaPrefab(this, 479.2417009826234, 45.385218240884065);
-		semillasLayers.add(semilla_png_1_3_1);
-
 		// macetasLayer
 		const macetasLayer = this.add.layer();
 
 		// tierra_png_3
-		const tierra_png_3 = new MacetaPrefab(this, 1171, 260, "plataformas", "tierra.png");
+		const tierra_png_3 = new MacetaPrefab(this, 1146, 260, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png_3);
 
 		// tierra_png_2
@@ -147,7 +143,7 @@ export default class Level extends Phaser.Scene {
 		macetasLayer.add(tierra_png_1);
 
 		// tierra_png
-		const tierra_png = new MacetaPrefab(this, 828, 295, "plataformas", "tierra.png");
+		const tierra_png = new MacetaPrefab(this, 784, 295, "plataformas", "tierra.png");
 		macetasLayer.add(tierra_png);
 
 		// tierra_png_4

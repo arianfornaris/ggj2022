@@ -130,6 +130,21 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		this.updateMacetas();
 
 		this.updateFlores();
+
+		this.checkBoundaries();
+	}
+
+	private checkBoundaries() {
+
+		if (this.x < 300) {
+
+			this.x = 300;
+		}
+
+		if (this.x > 3650) {
+
+			this.x = 3650;
+		}
 	}
 
 	private updateMacetas() {
@@ -241,6 +256,7 @@ export default class PlayerPrefab extends ArcadeSpritePrefab {
 		this.scene.input.keyboard.on("keydown-SPACE", () => this.changeCharacter());
 		this.scene.input.keyboard.on("keydown-UP", () => this.jump());
 		this.scene.input.keyboard.on("keydown-ENTER", () => this.doAction());
+		this.scene.input.keyboard.on("keydown-DOWN", () => this.doAction());
 
 		this.controller?.upButton.on("pointerdown", () => this.jump());
 		this.controller?.changeButton.on("pointerdown", () => this.changeCharacter());

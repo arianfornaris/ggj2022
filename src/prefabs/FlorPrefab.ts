@@ -12,6 +12,7 @@ export default class FlorPrefab extends ArcadeSpritePrefab {
 
 		/* START-USER-CTR-CODE */
 		this.play("Flor");
+		this.body.setCircle(40, 20, 20);
 		/* END-USER-CTR-CODE */
 	}
 

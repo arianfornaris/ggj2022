@@ -394,18 +394,6 @@
                     "components": [],
                     "x": 2865,
                     "y": 44
-                },
-                {
-                    "prefabId": "a7b0aaa6-37c2-4ced-a924-871d8e862fd2",
-                    "id": "f5244915-090e-4a73-b97b-4b37950b6d68",
-                    "unlock": [
-                        "x",
-                        "y"
-                    ],
-                    "label": "semilla_png_1_3_1",
-                    "components": [],
-                    "x": 479.2417009826234,
-                    "y": 45.385218240884065
                 }
             ]
         },
@@ -429,7 +417,7 @@
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 1171,
+                    "x": 1146,
                     "y": 260
                 },
                 {
@@ -480,7 +468,7 @@
                         "key": "plataformas",
                         "frame": "tierra.png"
                     },
-                    "x": 828,
+                    "x": 784,
                     "y": 295
                 },
                 {
